@@ -1,0 +1,31 @@
+\section{Introduction}\label{sec:intro}
+
+Several synthetic-dollar protocols now take stablecoin deposits on-chain and lend them to companies that operate GPU clusters, paying depositors from the interest. USD.AI is one of the larger ones. It has a \$100\,M credit facility from Bullish~\cite{bullish2025}, and its tokens have been proposed as collateral on Aave~\cite{aavearfc}. Futures on GPU rental prices are also being built so lenders can hedge the same risk~\cite{architect2026}. Lenders, risk curators and auditors are pricing GPU-backed credit, but nobody has published an independent account of what the chain shows about it.
+
+The GPUs, the borrowers' revenues and the loan agreements are off-chain. The liabilities are not. Every deposit, loan disbursement, repayment, fee, redemption request and bridge transfer leaves an event log on a public chain. Those logs cannot prove that a GPU exists. They can show how much was lent, to how many borrowers, at what rates, how much has been repaid, whether the yield credited to holders is backed by cash, who holds the tokens and how quickly holders can exit. A depositor or a risk curator needs those numbers before relying on the off-chain story.
+
+We rebuild USD.AI from raw logs using the Covalent GoldRush API~\cite{goldrush} and the protocol's source code~\cite{usdaisrc}, and ask seven questions:
+\begin{enumerate}
+\item[RQ1] Where does deposited money go?
+\item[RQ2] Where does the yield come from, and is NAV growth backed by cash from borrowers?
+\item[RQ3] Who holds the yield-bearing token?
+\item[RQ4] How concentrated are the borrowers?
+\item[RQ5] How do redemptions behave, and do they follow GPU rental prices?
+\item[RQ6] Which chains does the protocol live on?
+\item[RQ7] How large is GPU credit compared with the compute actually bought and paid for on-chain, on Akash and Livepeer?
+\end{enumerate}
+We also check every headline number against the vault's own accounting at a single block, and we trace one kind of vault outflow, escrow pre-funding, to where the money ended up.
+
+\textbf{Contributions.}
+\begin{enumerate}
+\item An open, tested pipeline that decodes every event from source-code signatures, follows loans through a V1 to V2 migration and through refinancings, and reproduces all results offline from a hash-verified dataset.
+\item A reconstruction of a GPU-backed loan book from chain data: \NLoans{} loans to \NBorrowers{} borrowers, \Originated{} originated and \Outstanding{} outstanding.
+\item A cash-coverage test that separates yield received in cash from yield credited through NAV.
+\item A reconstruction of the collateral from the protocol's hardware-token metadata: model, unit count, stated value and loan-to-value for every active loan.
+\item Measurements of holder concentration, the redemption queue and supply across five chains.
+\item A reconciliation showing that \DTShare{} of reported vault assets is an escrow claim on funds that were redeemed to PYUSD and sent onward before any matching loan existed.
+\item A comparison of GPU credit with spending on two decentralized compute markets over the same period.
+\item Monitoring indicators that lenders and curators can run with the same code.
+\end{enumerate}
+
+Earlier empirical work on DeFi lending studied interest rates and liquidations in over-collateralized markets with on-chain collateral~\cite{gudgeon2020defi,qin2021liquidations,werner2022sok}. Stablecoin research models peg stability and run risk~\cite{klagesmundt2020stablecoins,gorton2023wildcat,diamond1983runs}. A GPU-backed dollar fits neither. Its collateral is off-chain and illiquid, its assets are term loans, and holders exit through a queue that an administrator services. Our earlier paper modeled the economic life of GPUs as assets~\cite{cerron2026gpu}. This one looks at the debt financed against them.

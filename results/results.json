@@ -1,0 +1,4514 @@
+{
+ "activity": {
+  "0x015e8730dbf9a2954af53b7d1e9a87f97ddc1b09": [
+   "arbitrum-mainnet"
+  ],
+  "0x02d57837308005decab3822ea4a2394e77d0aa4b": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "ink-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "zksync-mainnet"
+  ],
+  "0x0a367b2e9261983b10e19601cacda05a04f65dc8": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sonic-mainnet"
+  ],
+  "0x0b2b2b2076d95dda7817e785989fe353fe955ef9": [
+   "arbitrum-mainnet",
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x0c6465740bd78e3e520fa1b1ad916e876872349c": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "bsc-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x0f2595e256d679518f77cf8432b21a1cdb01dcb6": [
+   "arbitrum-mainnet",
+   "arbitrum-nova-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "moonbeam-moonriver",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "zksync-mainnet"
+  ],
+  "0x112c5750367e4e82300e2420f356a85d085a0f05": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "eth-mainnet",
+   "matic-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x1c5d1e513d94fee11e169567518ce8b49425ac1f": [
+   "arbitrum-mainnet"
+  ],
+  "0x1fce0b50c48a7bf67022a82dec9c26e02683bf52": [
+   "base-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x2450d9d75a8e341fd4eecac70ed9c84aca820320": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x25624e2b05616a3c754c20e7be8841cad8e66723": [
+   "arbitrum-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x2595b1bd2944d213360e73c928c5d1636ccc2d99": [
+   "avalanche-mainnet",
+   "base-mainnet",
+   "bsc-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet"
+  ],
+  "0x287d2dd50114c9dec32d2ecaa3c480524ea64819": [
+   "base-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x28b6182569e04234ef77ba48869dea352933d168": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "linea-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sei-mainnet",
+   "sonic-mainnet",
+   "zksync-mainnet"
+  ],
+  "0x28bf6006d87de7f44445905aa4f5cb8c0d8cba02": [
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet"
+  ],
+  "0x299b3082b260d445ee32c3511102d0e3fb41cef0": [
+   "arbitrum-mainnet",
+   "arbitrum-nova-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet",
+   "unichain-mainnet"
+  ],
+  "0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sonic-mainnet"
+  ],
+  "0x3f63f5f318bfdf13abb53bc26ac4c080801b39d7": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x45b3091f31b1dc9f577e03973bb6de4c77a894d3": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x4a73789dc444b2c6bf207fbdd257effc008c4f58": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x4ba161ba1ed0edb68e9a544a0ebeaa768a176d96": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x4bb21783233043f382776208d37eccb1355ceebb": [
+   "apechain-mainnet",
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x522c53f972fa3ec06c9ba162274099c27501408a": [
+   "arbitrum-mainnet"
+  ],
+  "0x52aa899454998be5b000ad077a46bbe360f4e497": [
+   "avalanche-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "linea-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet",
+   "sonic-mainnet"
+  ],
+  "0x5a484f96ee51ec56c273513502942a72fc26e37e": [
+   "apechain-mainnet",
+   "arbitrum-mainnet",
+   "arbitrum-nova-mainnet",
+   "avalanche-mainnet",
+   "axie-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "ink-mainnet",
+   "linea-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sei-mainnet",
+   "sonic-mainnet",
+   "taiko-mainnet",
+   "unichain-mainnet",
+   "world-mainnet",
+   "zetachain-mainnet",
+   "zksync-mainnet"
+  ],
+  "0x5c60bba8f711d5d0805e4ac6dda6921460e30b93": [
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x5edcbc20cac67adc2e724d4348ff85132b085b82": [
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sonic-mainnet"
+  ],
+  "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f": [
+   "arbitrum-mainnet",
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x601afacd8fbdbf44e71201b13d449441621332b9": [
+   "arbitrum-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x6034ae654911e23baa2c10a414bafb7a187923ef": [
+   "arbitrum-mainnet"
+  ],
+  "0x633c3153e42c629775924a070702f70a0ee1d079": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x64447901dc34bd610ac562b2c612784a9954d39d": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x672643ad5a5db85ae9cdecc2fd0dd1b5da6bbe31": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x6a2f60fc617ce66c4f868b9d7fbf07f300ddb50b": [
+   "arbitrum-mainnet",
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x6ec33cecea8b5e0423699a2866504ff3af3cf53f": [
+   "arbitrum-mainnet",
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "zetachain-mainnet"
+  ],
+  "0x705ea374556e303e20f4344675660f57521f930d": [
+   "eth-mainnet"
+  ],
+  "0x767d33217e7d2670695ffe2a104548b780f4f5d8": [
+   "plasma-mainnet"
+  ],
+  "0x7a608ae1d67a085f8d93b01fc32a29677639c9b1": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet"
+  ],
+  "0x7a994bfdd4d18ff95597b5e0c741249fd4479ca9": [
+   "base-mainnet",
+   "optimism-mainnet"
+  ],
+  "0x7b79dfbc125e8284432907fa3ba15f63843d4462": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x7c5ed528421ebe86e759fbfc626b6631f9a7854e": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x7ced676fd52ccba493333be1556de7c65bfb20af": [
+   "arbitrum-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x7d4112588b5d9a1a50b4253a6b0386bd39d95723": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "linea-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x818d1b45a6e6bfe6cd5bb662b76361c3c7db72a8": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "moonbeam-moonriver",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet",
+   "zksync-mainnet"
+  ],
+  "0x85001cc4867c5e1c22da4b79bb8852b9e2a06da0": [
+   "base-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet"
+  ],
+  "0x85483aee461914342c6838eae61a23d7d995e5e3": [
+   "arbitrum-mainnet"
+  ],
+  "0x87366451db8ac4c83c3d65077a80fa6067757688": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x8cfde17b2919d6c571cca1763a1cfd2677df9b3a": [
+   "arbitrum-mainnet"
+  ],
+  "0x8db66b7de0aad23bf724d2c2f7672d40da122fb9": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x91676b847597c0cde3a31f5cb882cfb77c4e6700": [
+   "arbitrum-mainnet",
+   "eth-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x923e7d892e6f5c3f993b8ebd27e5535c770afc61": [
+   "arbitrum-mainnet",
+   "arbitrum-nova-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "megaeth-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x980220ab08b33cab03e7c895fa05ec2b42de0b17": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x9c3cedb4737275d31ae4ce35e198267d0017a286": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0x9c839aca36e5a020744ac52c66d74ab93fc84a7f": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0x9c9431b1b2856af594587e9d53406f5b98192b20": [
+   "eth-mainnet"
+  ],
+  "0xa151339e0ab512dfb97c5c1828ef6b77aa8320b7": [
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xa52090c48e88afeac9af137f6fb50c62f1a5a575": [
+   "apechain-mainnet",
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xaadea03f6d6f198bdc9229bd8113aced19031773": [
+   "plasma-mainnet"
+  ],
+  "0xaae6fe82cc9fffa0871bdc94a7e95b720cf925b0": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "plasma-mainnet"
+  ],
+  "0xac20cd734c65baf48a1476447af7d3e3165dc739": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xaec4b88923d257d46d600cc70be86aa080658540": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb": [
+   "arbitrum-mainnet",
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "axie-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "fantom-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "ink-mainnet",
+   "linea-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sei-mainnet",
+   "unichain-mainnet",
+   "world-mainnet",
+   "zksync-mainnet"
+  ],
+  "0xbce39c25ef9cf423695895965a9bba70e06790ff": [
+   "arbitrum-mainnet"
+  ],
+  "0xbe50943188b9a486b24d01d7a7a4e832f1c2d2a6": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "unichain-mainnet"
+  ],
+  "0xbeedea7a42b4bc0d3dd6c74b5693bbfc8a196dba": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xc174ec23b7a9765871839cfa9c872123c9b794f2": [
+   "apechain-mainnet",
+   "arbitrum-mainnet",
+   "arc-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "ink-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "megaeth-mainnet",
+   "monad-mainnet",
+   "moonbeam-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "robinhood-mainnet",
+   "scroll-mainnet",
+   "unichain-mainnet"
+  ],
+  "0xc991b09a2b6ca5bcf88780d657a3ffdde2205398": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet"
+  ],
+  "0xd30468b95350367be14d539554d4289edefdf13a": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xd791a05c936aa86739dfa4304e686b914232eba9": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "linea-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xe090d9d417e54116c50e5d5dde1509af91102ec3": [
+   "avalanche-mainnet",
+   "hyperevm-mainnet",
+   "monad-mainnet",
+   "plasma-mainnet"
+  ],
+  "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9": [
+   "arbitrum-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xe3bed316190097ab08ed57d3b1c9ef23ae5b2cfa": [
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xe7f56834b879de54589712f35de40501d362e8e2": [
+   "arbitrum-mainnet"
+  ],
+  "0xeaa315d60e6d5617bae9a3ac9c87d88a7d3430d8": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "berachain-mainnet",
+   "blast-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "celo-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "matic-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ],
+  "0xed41a12ea862f31df054e9bd3af1dd59486c6029": [
+   "arbitrum-mainnet",
+   "avalanche-mainnet",
+   "base-mainnet",
+   "berachain-mainnet",
+   "bnb-opbnb-mainnet",
+   "bsc-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "hyperevm-mainnet",
+   "linea-mainnet",
+   "mantle-mainnet",
+   "matic-mainnet",
+   "monad-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet",
+   "sei-mainnet"
+  ],
+  "0xefc645aef6c484adb71fe02e94e9519bb8cde332": [
+   "arbitrum-mainnet",
+   "berachain-mainnet",
+   "eth-mainnet",
+   "gnosis-mainnet",
+   "optimism-mainnet",
+   "plasma-mainnet",
+   "scroll-mainnet"
+  ]
+ },
+ "activity_stats": {
+  "borrower_chains_max": 12,
+  "borrower_chains_median": 7.0,
+  "borrower_chains_min": 4,
+  "borrowers": 10,
+  "holder_chains_max": 29,
+  "holder_chains_median": 10.0,
+  "holder_chains_min": 1,
+  "holders": 66
+ },
+ "akash": {
+  "active_gpu_max": 529,
+  "active_gpu_min": 40,
+  "active_gpu_now": 263,
+  "gpu_total_now": 390,
+  "models": {
+   "a100-80Gi": {
+    "available": 72,
+    "price_med": 1.49,
+    "price_wavg": 1.67,
+    "total": 200
+   },
+   "a10g-24Gi": {
+    "available": 3,
+    "price_med": 0.18,
+    "price_wavg": 0.18,
+    "total": 3
+   },
+   "b300-288Gi": {
+    "available": 0,
+    "price_med": 0.23,
+    "price_wavg": 0.23,
+    "total": 24
+   },
+   "gtx1050-2Gi": {
+    "available": 1,
+    "price_med": 0.14,
+    "price_wavg": 0.14,
+    "total": 1
+   },
+   "h100-80Gi": {
+    "available": 6,
+    "price_med": 2.56,
+    "price_wavg": 2.73,
+    "total": 69
+   },
+   "m4000-8Gi": {
+    "available": 1,
+    "price_med": 0.05,
+    "price_wavg": 0.05,
+    "total": 1
+   },
+   "p4-8Gi": {
+    "available": 2,
+    "price_med": 0.06,
+    "price_wavg": 0.06,
+    "total": 2
+   },
+   "p40-24Gi": {
+    "available": 1,
+    "price_med": 0.15,
+    "price_wavg": 0.15,
+    "total": 1
+   },
+   "pro6000se-96Gi": {
+    "available": 8,
+    "price_med": 2.04,
+    "price_wavg": 2.02,
+    "total": 25
+   },
+   "pro6000we-96Gi": {
+    "available": 1,
+    "price_med": 1.44,
+    "price_wavg": 1.44,
+    "total": 1
+   },
+   "rtx3060-12Gi": {
+    "available": 0,
+    "price_med": 0.08,
+    "price_wavg": 0.08,
+    "total": 1
+   },
+   "rtx3060ti-8Gi": {
+    "available": 6,
+    "price_med": 0.14,
+    "price_wavg": 0.14,
+    "total": 6
+   },
+   "rtx3090-24Gi": {
+    "available": 0,
+    "price_med": 0.15,
+    "price_wavg": 0.15,
+    "total": 11
+   },
+   "rtx4000ada-20Gi": {
+    "available": 1,
+    "price_med": 0.29,
+    "price_wavg": 0.29,
+    "total": 7
+   },
+   "rtx4000sada-20Gi": {
+    "available": 0,
+    "price_med": 0.14,
+    "price_wavg": 0.14,
+    "total": 1
+   },
+   "rtx4080-16Gi": {
+    "available": 0,
+    "price_med": 0.15,
+    "price_wavg": 0.15,
+    "total": 1
+   },
+   "rtx4090-24Gi": {
+    "available": 2,
+    "price_med": 0.34,
+    "price_wavg": 0.34,
+    "total": 4
+   },
+   "rtx5090-32Gi": {
+    "available": 0,
+    "price_med": 0.57,
+    "price_wavg": 0.57,
+    "total": 2
+   },
+   "t4-16Gi": {
+    "available": 2,
+    "price_med": 0.16,
+    "price_wavg": 0.16,
+    "total": 2
+   },
+   "v100-16Gi": {
+    "available": 4,
+    "price_med": 0.25,
+    "price_wavg": 0.25,
+    "total": 4
+   },
+   "v100-32Gi": {
+    "available": 8,
+    "price_med": 0.23,
+    "price_wavg": 0.21,
+    "total": 10
+   }
+  },
+  "monthly_usd": {
+   "2021-03": 958.1723167896246,
+   "2021-04": 354.00840833423666,
+   "2021-05": 356.51702333195016,
+   "2021-06": 629.6684948617819,
+   "2021-07": 914.8635924134782,
+   "2021-08": 5223.449769385043,
+   "2021-09": 12358.107621034,
+   "2021-10": 7475.309017615968,
+   "2021-11": 5241.896923095139,
+   "2021-12": 3065.810529552056,
+   "2022-01": 10053.978876684972,
+   "2022-02": 5664.052792599145,
+   "2022-03": 3750.657919448928,
+   "2022-04": 4996.282774436524,
+   "2022-05": 2986.57062439489,
+   "2022-06": 2177.885475198456,
+   "2022-07": 4367.529653633821,
+   "2022-08": 3075.9551700574343,
+   "2022-09": 3270.414713071427,
+   "2022-10": 2523.545164177048,
+   "2022-11": 1734.7305222932432,
+   "2022-12": 1874.7342294746852,
+   "2023-01": 1811.9548809421385,
+   "2023-02": 2429.2522697733148,
+   "2023-03": 1693.7185747264398,
+   "2023-04": 2396.1339872651515,
+   "2023-05": 2921.082435200379,
+   "2023-06": 3550.692547873138,
+   "2023-07": 2876.5275361412655,
+   "2023-08": 3627.6021640085446,
+   "2023-09": 10105.831412241609,
+   "2023-10": 14609.601919836683,
+   "2023-11": 37355.320500291935,
+   "2023-12": 59601.26875059576,
+   "2024-01": 49307.92892009962,
+   "2024-02": 42676.34769710974,
+   "2024-03": 71396.52509625177,
+   "2024-04": 77189.77024133712,
+   "2024-05": 59919.35719286583,
+   "2024-06": 39014.72010575091,
+   "2024-07": 72086.24139488343,
+   "2024-08": 119637.63189740686,
+   "2024-09": 112139.67061787623,
+   "2024-10": 144663.62343654138,
+   "2024-11": 275061.741754074,
+   "2024-12": 321460.66699647094,
+   "2025-01": 357244.8245441778,
+   "2025-02": 356818.88620844454,
+   "2025-03": 309700.30278540193,
+   "2025-04": 239537.66314717045,
+   "2025-05": 308995.8689601763,
+   "2025-06": 270295.14274721924,
+   "2025-07": 332601.2180080117,
+   "2025-08": 305127.3412290518,
+   "2025-09": 214138.28236371098,
+   "2025-10": 171224.50529177833,
+   "2025-11": 132072.56488454007,
+   "2025-12": 157285.82813485156,
+   "2026-01": 104004.40193763185,
+   "2026-02": 64427.08579235157,
+   "2026-03": 85101.09967887303,
+   "2026-04": 104403.80087785058,
+   "2026-05": 164007.35049103224,
+   "2026-06": 219678.85093206834,
+   "2026-07": 230563.77951047654,
+   "2026-08": 287963.1126504434,
+   "2026-09": 287937.1174428682,
+   "2026-10": 145334.80557441214
+  },
+  "providers_now": 58,
+  "retrieved_at": "2026-10-22T19:22:46+00:00",
+  "usd_all_time": 6459046.995126261,
+  "usd_window": 3463100.749790294
+ },
+ "book_health": {
+  "active": 21,
+  "late_over_45d": [],
+  "loans": [
+   {
+    "age_days": 266,
+    "days_since_payment": 24,
+    "last_payment": "2026-09-27",
+    "maturity": "2028-08-15",
+    "outstanding": 1786508.2552073703,
+    "root": "0xaab64e2d4a4e6c39c0216fd540935093607093c2ea81393bc22c861bff326232"
+   },
+   {
+    "age_days": 256,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-09-24",
+    "outstanding": 60345.8333292637,
+    "root": "0x8e0a968ed1854e1f2b62c70c53b10c4efbd9fd893b5fddd918166eb2abc5f95a"
+   },
+   {
+    "age_days": 256,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-09-24",
+    "outstanding": 60345.83333016815,
+    "root": "0x196e8b5bd231a782bb023324df2b695092b54d140980e0ebcfbfc3f55260ce76"
+   },
+   {
+    "age_days": 256,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-09-24",
+    "outstanding": 60345.83333016815,
+    "root": "0x3dd21d776db9cbdac1c5f1077a0046be2baed6b08b30f46aea3c5f81133757b7"
+   },
+   {
+    "age_days": 256,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-09-24",
+    "outstanding": 60345.83333016815,
+    "root": "0x3047c57b06074d55a3fe804ec5e8b9325d445462e9946dd89f755cfb5741b338"
+   },
+   {
+    "age_days": 246,
+    "days_since_payment": 20,
+    "last_payment": "2026-10-01",
+    "maturity": "2028-10-04",
+    "outstanding": 3438231.7947245995,
+    "root": "0xe4ed597cd290ff2c855659ff0bc8206146c1a9bd48ba2e90253bd81c60bfd919"
+   },
+   {
+    "age_days": 230,
+    "days_since_payment": 22,
+    "last_payment": "2026-09-29",
+    "maturity": "2028-11-19",
+    "outstanding": 7132467.820392558,
+    "root": "0xe321e6759b10299f6a403ad72a46fc699d7d466779f277b6955aa8acd7b08daf"
+   },
+   {
+    "age_days": 226,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-11-23",
+    "outstanding": 62470.833331422466,
+    "root": "0x58255b96f0dae4c8e8e21e8c43d238f095aa5ac3be7afce2456a0e552f932a6c"
+   },
+   {
+    "age_days": 226,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-11-23",
+    "outstanding": 62470.833331422466,
+    "root": "0xfe3478d859184793e97b82f394dad7facd63e1ab8521c6cc939983c075365491"
+   },
+   {
+    "age_days": 226,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2028-11-23",
+    "outstanding": 62470.833331422466,
+    "root": "0xacbc25f966d804b6ac755f544519a7397a37947db4907cb13c4fb2b35b558fde"
+   },
+   {
+    "age_days": 224,
+    "days_since_payment": 12,
+    "last_payment": "2026-10-09",
+    "maturity": "2028-04-29",
+    "outstanding": 398940.35577966325,
+    "root": "0x661ea7f0453ff837236074224f691134b2fb835ecfe0e94c4f101e104ecf86bb"
+   },
+   {
+    "age_days": 215,
+    "days_since_payment": 3,
+    "last_payment": "2026-10-18",
+    "maturity": "2028-12-04",
+    "outstanding": 157820.28189231406,
+    "root": "0x207fc4ca86f44ef43c6d95ed42aafb1a178289f33a2230ea865d15a8130eb47d"
+   },
+   {
+    "age_days": 198,
+    "days_since_payment": 16,
+    "last_payment": "2026-10-05",
+    "maturity": "2029-01-20",
+    "outstanding": 22351369.84415326,
+    "root": "0xe4b5c38fb3a137d055f0031e7d8534ca89963dbcb938425fdb6aa3d4b6bb40e4"
+   },
+   {
+    "age_days": 187,
+    "days_since_payment": 20,
+    "last_payment": "2026-10-01",
+    "maturity": "2029-01-31",
+    "outstanding": 14077042.611715946,
+    "root": "0x6e7f7518fd25857ac22bc72224e3441094cdc356abaf331c82caf4daa44f7504"
+   },
+   {
+    "age_days": 175,
+    "days_since_payment": 22,
+    "last_payment": "2026-09-29",
+    "maturity": "2029-04-28",
+    "outstanding": 10490171.21046715,
+    "root": "0xd02b09c87297425e7eb87f2c4ddb1870eda855f7645458b0399521b319dced16"
+   },
+   {
+    "age_days": 175,
+    "days_since_payment": 22,
+    "last_payment": "2026-09-29",
+    "maturity": "2029-04-28",
+    "outstanding": 31217550.19508167,
+    "root": "0x0357ad958e40e8db67e33de2114c7fc83aff9a7ed91b70704adadd7e76943e75"
+   },
+   {
+    "age_days": 78,
+    "days_since_payment": 21,
+    "last_payment": "2026-09-30",
+    "maturity": "2029-08-03",
+    "outstanding": 7319637.459371689,
+    "root": "0x7b8200dce30fca734b539b07999a86a824dd3c34470b3402cb3fa14ff86a69a6"
+   },
+   {
+    "age_days": 75,
+    "days_since_payment": 20,
+    "last_payment": "2026-10-01",
+    "maturity": "2029-08-06",
+    "outstanding": 14905804.4625,
+    "root": "0x3e42df0c8d79889e891cf5454e7f4fe65290e322feb691bb4127ea4a80f16f95"
+   },
+   {
+    "age_days": 48,
+    "days_since_payment": 20,
+    "last_payment": "2026-10-01",
+    "maturity": "2029-09-02",
+    "outstanding": 54404473.45,
+    "root": "0x45e3c30bc37ab233011a200f3ed38992ac8079b5ee3a4cceba045d0ee7dc6e2b"
+   },
+   {
+    "age_days": 37,
+    "days_since_payment": 20,
+    "last_payment": "2026-10-01",
+    "maturity": "2029-09-13",
+    "outstanding": 9561608.0,
+    "root": "0x50b0d9c015c4f33ea5b9346eebab6b09f1ec4c08ddefdff3b122d2b6bbac50cb"
+   },
+   {
+    "age_days": 5,
+    "days_since_payment": null,
+    "last_payment": "",
+    "maturity": "2029-10-15",
+    "outstanding": 4565270.0,
+    "root": "0xd97450479ee673d551e07943fb003ffa576a21d01be42f52c4d4ce68118197fa"
+   }
+  ],
+  "max_days_since_payment": 24,
+  "never_paid_older_than_45d": [],
+  "outstanding_by_maturity_year": {
+   "2028": 13342764.341310542,
+   "2029": 168892927.23328972
+  },
+  "term_days_max": 1095,
+  "term_days_min": 780,
+  "weighted_years_to_maturity": 2.5974585327793394
+ },
+ "breakeven": {
+  "breakeven_price": 3.213650393258249,
+  "mw_pledged": 6.84,
+  "pledged_gpus": 4560,
+  "price_full_utilization": 2.249555275280774
+ },
+ "collateral": {
+  "active_collateral_value": 272837420.278552,
+  "active_gpus": 4560,
+  "active_outstanding_with_collateral": 182235691.57460025,
+  "active_units": 630,
+  "book_ltv": 0.6679277768736694,
+  "ltv_max": 0.8,
+  "ltv_min": 0.4298926247625682,
+  "models_active": [
+   "B200",
+   "B300",
+   "H200",
+   "RTX 6000",
+   "other"
+  ],
+  "n_records": 85,
+  "per_loan": [
+   {
+    "borrower": "0x7c5ed528421ebe86e759fbfc626b6631f9a7854e",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 479935.48,
+    "root": "0xbf19ec938f91b22605a5a07e87aa6b3b8ff5d7daeaec3a75c3a810c5c3fd7454",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x8db66b7de0aad23bf724d2c2f7672d40da122fb9",
+    "collateral_value": 3281343.0,
+    "gpus": 64,
+    "ltv": 0.5444442276248994,
+    "ltv_at_origination": 0.7000000000000001,
+    "models": [
+     "B200",
+     "other"
+    ],
+    "n_items": 12,
+    "outstanding": 1786508.2552073703,
+    "principal": 2296940.1,
+    "root": "0xaab64e2d4a4e6c39c0216fd540935093607093c2ea81393bc22c861bff326232",
+    "status": "active",
+    "units": 36
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103450.0,
+    "gpus": 0,
+    "ltv": 0.5833333332939943,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "RTX 6000"
+    ],
+    "n_items": 1,
+    "outstanding": 60345.8333292637,
+    "principal": 77587.5,
+    "root": "0x8e0a968ed1854e1f2b62c70c53b10c4efbd9fd893b5fddd918166eb2abc5f95a",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103450.0,
+    "gpus": 0,
+    "ltv": 0.5833333333027371,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "other"
+    ],
+    "n_items": 1,
+    "outstanding": 60345.83333016815,
+    "principal": 77587.5,
+    "root": "0x196e8b5bd231a782bb023324df2b695092b54d140980e0ebcfbfc3f55260ce76",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103450.0,
+    "gpus": 0,
+    "ltv": 0.5833333333027371,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "other"
+    ],
+    "n_items": 1,
+    "outstanding": 60345.83333016815,
+    "principal": 77587.5,
+    "root": "0x3dd21d776db9cbdac1c5f1077a0046be2baed6b08b30f46aea3c5f81133757b7",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103450.0,
+    "gpus": 0,
+    "ltv": 0.5833333333027371,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "other"
+    ],
+    "n_items": 1,
+    "outstanding": 60345.83333016815,
+    "principal": 77587.5,
+    "root": "0x3047c57b06074d55a3fe804ec5e8b9325d445462e9946dd89f755cfb5741b338",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0xefc645aef6c484adb71fe02e94e9519bb8cde332",
+    "collateral_value": 6117776.64,
+    "gpus": 72,
+    "ltv": 0.5620067545853716,
+    "ltv_at_origination": 0.6999999950086443,
+    "models": [
+     "B300",
+     "RTX 6000"
+    ],
+    "n_items": 27,
+    "outstanding": 3438231.7947245995,
+    "principal": 4282443.617464,
+    "root": "0xe4ed597cd290ff2c855659ff0bc8206146c1a9bd48ba2e90253bd81c60bfd919",
+    "status": "active",
+    "units": 27
+   },
+   {
+    "borrower": "0xc991b09a2b6ca5bcf88780d657a3ffdde2205398",
+    "collateral_value": 15764706.68,
+    "gpus": 304,
+    "ltv": 0.4524326373570408,
+    "ltv_at_origination": 0.6216417595915588,
+    "models": [
+     "B200"
+    ],
+    "n_items": 1,
+    "outstanding": 7132467.820392558,
+    "principal": 9800000.0,
+    "root": "0xe321e6759b10299f6a403ad72a46fc699d7d466779f277b6955aa8acd7b08daf",
+    "status": "active",
+    "units": 38
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103400.0,
+    "gpus": 0,
+    "ltv": 0.6041666666481863,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "other"
+    ],
+    "n_items": 1,
+    "outstanding": 62470.833331422466,
+    "principal": 77550.0,
+    "root": "0x58255b96f0dae4c8e8e21e8c43d238f095aa5ac3be7afce2456a0e552f932a6c",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103400.0,
+    "gpus": 0,
+    "ltv": 0.6041666666481863,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "other"
+    ],
+    "n_items": 1,
+    "outstanding": 62470.833331422466,
+    "principal": 77550.0,
+    "root": "0xfe3478d859184793e97b82f394dad7facd63e1ab8521c6cc939983c075365491",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9",
+    "collateral_value": 103400.0,
+    "gpus": 0,
+    "ltv": 0.6041666666481863,
+    "ltv_at_origination": 0.75,
+    "models": [
+     "other"
+    ],
+    "n_items": 1,
+    "outstanding": 62470.833331422466,
+    "principal": 77550.0,
+    "root": "0xacbc25f966d804b6ac755f544519a7397a37947db4907cb13c4fb2b35b558fde",
+    "status": "active",
+    "units": 1
+   },
+   {
+    "borrower": "0x672643ad5a5db85ae9cdecc2fd0dd1b5da6bbe31",
+    "collateral_value": 928000.0,
+    "gpus": 32,
+    "ltv": 0.4298926247625682,
+    "ltv_at_origination": 0.5666766417359914,
+    "models": [
+     "H200",
+     "other"
+    ],
+    "n_items": 8,
+    "outstanding": 398940.35577966325,
+    "principal": 525875.923531,
+    "root": "0x661ea7f0453ff837236074224f691134b2fb835ecfe0e94c4f101e104ecf86bb",
+    "status": "active",
+    "units": 8
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xb1dc03c9b405db8e86dcda3ace01b5cd8ff127de0eb3b394687a51cf5c6eb2b5",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xd13ab531f2c58c083759b927322a0357ddc796a686b4d25f14fb5721ac720af0",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xcc94d86f4dc6771551bc374d7f895af66080deb01c6f6786f993f1241a6bc273",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xff05b5fe96a0cb9711cf1af6d1473230876420d1f52af55384dbb0437c2bd4c7",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x714d677b24828261fdafa4f9c97644f0f0e95064fda87f7c651786bd39ad5536",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x48409fb58560dd34bdc8a819a9c7ca283cf257f7d0ef431f6f563bc304fbf1a9",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x424678b0af9360ac9fcf684b801c57406a01fd14dadca27dd496b3b275354ca1",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x1f6fb0248fa504887b00ab100fb73bb0f9126f8e5624f6f053d8c2c90749470f",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x24fd06a16fcfaf08d49704f1b5ee4c535b272f05c29b6ea80a6e4abcf4a4fad9",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xc09f98a5e98348b9cc7cf0a7a7901ee66d9bd1b9cf56c351b482b0384596961b",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xf00696072a85f84f12a1c2d980b3c9eeeec6cba8bd1b5f5210fee76b48c3c5d3",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xf98fd3c9265f0255c90c8498a21418f02881ad5993441d8c8a1473b7de3733ab",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0xca58b694112cc002d61efbd234704418e087bcb9d0ee4b33c53a24f69b3f3471",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x198a8cbaa3fd8cdf64847ea14c329702ecbeef851b4824a5b58fb3cb80363718",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x7b79dfbc125e8284432907fa3ba15f63843d4462",
+    "collateral_value": 0,
+    "gpus": 0,
+    "ltv": null,
+    "ltv_at_origination": null,
+    "models": [],
+    "n_items": 0,
+    "outstanding": 0.0,
+    "principal": 29510.19,
+    "root": "0x4976069aa58a99b55ded6f59c85d4ce27d3770527ce3cda02a44a9b88ac3c239",
+    "status": "repaid",
+    "units": 0
+   },
+   {
+    "borrower": "0x45b3091f31b1dc9f577e03973bb6de4c77a894d3",
+    "collateral_value": 245655.0,
+    "gpus": 0,
+    "ltv": 0.642446853889862,
+    "ltv_at_origination": 0.8,
+    "models": [
+     "RTX 6000"
+    ],
+    "n_items": 3,
+    "outstanding": 157820.28189231406,
+    "principal": 196524.0,
+    "root": "0x207fc4ca86f44ef43c6d95ed42aafb1a178289f33a2230ea865d15a8130eb47d",
+    "status": "active",
+    "units": 3
+   },
+   {
+    "borrower": "0xaae6fe82cc9fffa0871bdc94a7e95b720cf925b0",
+    "collateral_value": 38316634.018552,
+    "gpus": 576,
+    "ltv": 0.5833333333332792,
+    "ltv_at_origination": 0.6999999999999896,
+    "models": [
+     "B300"
+    ],
+    "n_items": 1,
+    "outstanding": 22351369.84415326,
+    "principal": 26821643.812986,
+    "root": "0xe4b5c38fb3a137d055f0031e7d8534ca89963dbcb938425fdb6aa3d4b6bb40e4",
+    "status": "active",
+    "units": 72
+   },
+   {
+    "borrower": "0xefc645aef6c484adb71fe02e94e9519bb8cde332",
+    "collateral_value": 20494517.92,
+    "gpus": 600,
+    "ltv": 0.686868686868627,
+    "ltv_at_origination": 0.7999999999999999,
+    "models": [
+     "H200"
+    ],
+    "n_items": 1,
+    "outstanding": 14077042.611715946,
+    "principal": 16395614.336,
+    "root": "0x6e7f7518fd25857ac22bc72224e3441094cdc356abaf331c82caf4daa44f7504",
+    "status": "active",
+    "units": 75
+   },
+   {
+    "borrower": "0x64447901dc34bd610ac562b2c612784a9954d39d",
+    "collateral_value": 14119728.0,
+    "gpus": 256,
+    "ltv": 0.742944284087282,
+    "ltv_at_origination": 0.8000000424937365,
+    "models": [
+     "B200"
+    ],
+    "n_items": 1,
+    "outstanding": 10490171.21046715,
+    "principal": 11295783.0,
+    "root": "0xd02b09c87297425e7eb87f2c4ddb1870eda855f7645458b0399521b319dced16",
+    "status": "active",
+    "units": 32
+   },
+   {
+    "borrower": "0x64447901dc34bd610ac562b2c612784a9954d39d",
+    "collateral_value": 42734150.0,
+    "gpus": 768,
+    "ltv": 0.7305059348338897,
+    "ltv_at_origination": 0.7969155347655212,
+    "models": [
+     "B200"
+    ],
+    "n_items": 1,
+    "outstanding": 31217550.19508167,
+    "principal": 34055508.0,
+    "root": "0x0357ad958e40e8db67e33de2114c7fc83aff9a7ed91b70704adadd7e76943e75",
+    "status": "active",
+    "units": 96
+   },
+   {
+    "borrower": "0x64447901dc34bd610ac562b2c612784a9954d39d",
+    "collateral_value": 140192868.97,
+    "gpus": 2304,
+    "ltv": 0.0,
+    "ltv_at_origination": 0.6209543379030829,
+    "models": [
+     "B300"
+    ],
+    "n_items": 1,
+    "outstanding": 0.0,
+    "principal": 87053370.13,
+    "root": "0x7330b176758e746301d18b8610361ef188fdf6b53eaf2f6bf87b0400eb8981c3",
+    "status": "repaid",
+    "units": 288
+   },
+   {
+    "borrower": "0xd08f6009ec3665d1eda38e65152a34926b66359a",
+    "collateral_value": 14213752.84,
+    "gpus": 256,
+    "ltv": 0.5149686744779283,
+    "ltv_at_origination": 0.5276579721362314,
+    "models": [
+     "B200"
+    ],
+    "n_items": 1,
+    "outstanding": 7319637.459371689,
+    "principal": 7500000.0,
+    "root": "0x7b8200dce30fca734b539b07999a86a824dd3c34470b3402cb3fa14ff86a69a6",
+    "status": "active",
+    "units": 32
+   },
+   {
+    "borrower": "0xefc645aef6c484adb71fe02e94e9519bb8cde332",
+    "collateral_value": 19164605.73,
+    "gpus": 272,
+    "ltv": 0.7777777780821583,
+    "ltv_at_origination": 0.8000000003130772,
+    "models": [
+     "B300"
+    ],
+    "n_items": 1,
+    "outstanding": 14905804.4625,
+    "principal": 15331684.59,
+    "root": "0x3e42df0c8d79889e891cf5454e7f4fe65290e322feb691bb4127ea4a80f16f95",
+    "status": "active",
+    "units": 34
+   },
+   {
+    "borrower": "0xc991b09a2b6ca5bcf88780d657a3ffdde2205398",
+    "collateral_value": 7059864.09,
+    "gpus": 128,
+    "ltv": 0.0,
+    "ltv_at_origination": 0.6466512586929984,
+    "models": [
+     "B200"
+    ],
+    "n_items": 1,
+    "outstanding": 0.0,
+    "principal": 4565270.0,
+    "root": "0xcc3b0f364f07a9a0db653359c9bc258446af58bd76e3767dbbb56e06441c4774",
+    "status": "repaid",
+    "units": 16
+   },
+   {
+    "borrower": "0x7f12d559b447e69417c594a144dd3c9d43db8865",
+    "collateral_value": 77720676.36,
+    "gpus": 1040,
+    "ltv": 0.6999999999742669,
+    "ltv_at_origination": 0.6999999999742669,
+    "models": [
+     "B300"
+    ],
+    "n_items": 1,
+    "outstanding": 54404473.45,
+    "principal": 54404473.45,
+    "root": "0x45e3c30bc37ab233011a200f3ed38992ac8079b5ee3a4cceba045d0ee7dc6e2b",
+    "status": "active",
+    "units": 130
+   },
+   {
+    "borrower": "0x924370feda384b89404091bebf13a8368d241960",
+    "collateral_value": 11952010.0,
+    "gpus": 192,
+    "ltv": 0.8,
+    "ltv_at_origination": 0.8,
+    "models": [
+     "B300"
+    ],
+    "n_items": 1,
+    "outstanding": 9561608.0,
+    "principal": 9561608.0,
+    "root": "0x50b0d9c015c4f33ea5b9346eebab6b09f1ec4c08ddefdff3b122d2b6bbac50cb",
+    "status": "active",
+    "units": 24
+   },
+   {
+    "borrower": "0xc991b09a2b6ca5bcf88780d657a3ffdde2205398",
+    "collateral_value": 7059864.09,
+    "gpus": 128,
+    "ltv": 0.6466512586929984,
+    "ltv_at_origination": 0.6466512586929984,
+    "models": [
+     "B200"
+    ],
+    "n_items": 1,
+    "outstanding": 4565270.0,
+    "principal": 4565270.0,
+    "root": "0xd97450479ee673d551e07943fb003ffa576a21d01be42f52c4d4ce68118197fa",
+    "status": "active",
+    "units": 16
+   }
+  ],
+  "retrieved_at": "2026-10-24T15:15:55+00:00",
+  "unpledged": [
+   {
+    "depreciation_start": "On Borrow",
+    "gpus": 2304,
+    "manufacturer": "Supermicro",
+    "model": "B300",
+    "name": "NVIDIA B300 [288]",
+    "owner": "0xce242ccca55809933928ae9c77e50ef8ef927ff2",
+    "previously_secured": {
+     "borrower": "0x64447901dc34bd610ac562b2c612784a9954d39d",
+     "principal": 87053370.13,
+     "root": "0x7330b176758e746301d18b8610361ef188fdf6b53eaf2f6bf87b0400eb8981c3"
+    },
+    "serial": null,
+    "token_id": 1006,
+    "units": 288,
+    "useful_life_days": 1080,
+    "value_usd": 140192868.97
+   }
+  ],
+  "unpledged_value": 140192868.97,
+  "useful_life_days": [
+   1080,
+   1095
+  ]
+ },
+ "escrow": {
+  "activity": {
+   "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d": [
+    "arbitrum-mainnet",
+    "gnosis-mainnet",
+    "plasma-mainnet"
+   ],
+   "0x11687ca5235d669e8d52d7946b1605826cf521b1": [
+    "arbitrum-mainnet",
+    "berachain-mainnet",
+    "eth-mainnet",
+    "optimism-mainnet",
+    "plasma-mainnet"
+   ],
+   "0x24a92e28a8c5d8812dcfaf44bcb20cc0babd1392": [
+    "arbitrum-mainnet",
+    "avalanche-mainnet",
+    "base-mainnet",
+    "berachain-mainnet",
+    "blast-mainnet",
+    "bsc-mainnet",
+    "eth-mainnet",
+    "matic-mainnet",
+    "monad-mainnet",
+    "optimism-mainnet",
+    "plasma-mainnet",
+    "scroll-mainnet"
+   ],
+   "0x264bd8291fae1d75db2c5f573b07faa6715997b5": [
+    "arbitrum-mainnet",
+    "arbitrum-nova-mainnet",
+    "avalanche-mainnet",
+    "axie-mainnet",
+    "base-mainnet",
+    "berachain-mainnet",
+    "blast-mainnet",
+    "bsc-mainnet",
+    "celo-mainnet",
+    "fantom-mainnet",
+    "gnosis-mainnet",
+    "hyperevm-mainnet",
+    "ink-mainnet",
+    "linea-mainnet",
+    "mantle-mainnet",
+    "matic-mainnet",
+    "megaeth-mainnet",
+    "monad-mainnet",
+    "moonbeam-mainnet",
+    "optimism-mainnet",
+    "plasma-mainnet",
+    "robinhood-mainnet",
+    "scroll-mainnet",
+    "taiko-mainnet",
+    "unichain-mainnet",
+    "zksync-mainnet"
+   ],
+   "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f": [
+    "arbitrum-mainnet",
+    "arc-mainnet",
+    "avalanche-mainnet",
+    "base-mainnet",
+    "berachain-mainnet",
+    "blast-mainnet",
+    "bnb-opbnb-mainnet",
+    "eth-mainnet",
+    "gnosis-mainnet",
+    "matic-mainnet",
+    "monad-mainnet",
+    "optimism-mainnet",
+    "plasma-mainnet",
+    "robinhood-mainnet",
+    "scroll-mainnet"
+   ],
+   "0x6034ae654911e23baa2c10a414bafb7a187923ef": [
+    "arbitrum-mainnet"
+   ],
+   "0x728f9bfcc9a40144464656770d2c08492e903c28": [
+    "arbitrum-mainnet",
+    "plasma-mainnet"
+   ],
+   "0x844bb7b6223f6af028189bb34d6341a5733d6286": [
+    "arbitrum-mainnet",
+    "gnosis-mainnet",
+    "plasma-mainnet"
+   ],
+   "0xf845a0a05cbd91ac15c3e59d126de5dfbc2aabb7": [
+    "arbitrum-mainnet",
+    "avalanche-mainnet",
+    "base-mainnet",
+    "berachain-mainnet",
+    "blast-mainnet",
+    "bsc-mainnet",
+    "eth-mainnet",
+    "fantom-mainnet",
+    "gnosis-mainnet",
+    "hyperevm-mainnet",
+    "ink-mainnet",
+    "mantle-mainnet",
+    "matic-mainnet",
+    "monad-mainnet",
+    "moonbeam-mainnet",
+    "optimism-mainnet",
+    "plasma-mainnet",
+    "robinhood-mainnet",
+    "scroll-mainnet"
+   ],
+   "0xfd1c4a797e69b604ed1dc346630dce2742b9ca91": [
+    "arbitrum-mainnet",
+    "gnosis-mainnet",
+    "plasma-mainnet"
+   ]
+  },
+  "balances": {
+   "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d": {
+    "USDai": 136550.36
+   },
+   "0x11687ca5235d669e8d52d7946b1605826cf521b1": {},
+   "0x24a92e28a8c5d8812dcfaf44bcb20cc0babd1392": {
+    "ETH": 5.638321,
+    "PYUSD": 1.017762
+   },
+   "0x264bd8291fae1d75db2c5f573b07faa6715997b5": {
+    "ETH": 107480.87,
+    "PYUSD": 964421.44,
+    "USDC": 113149.414,
+    "USDG": 5141226.0
+   },
+   "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f": {
+    "ETH": 5.3083854,
+    "PYUSD": 4622932.0,
+    "USDC": 17301.4,
+    "USDai": 2284743.0,
+    "sUSDai": 11.121268
+   },
+   "0x6034ae654911e23baa2c10a414bafb7a187923ef": {
+    "USDai": 530822.44
+   },
+   "0x728f9bfcc9a40144464656770d2c08492e903c28": {},
+   "0x844bb7b6223f6af028189bb34d6341a5733d6286": {
+    "USDai": 31334.963
+   },
+   "0xf845a0a05cbd91ac15c3e59d126de5dfbc2aabb7": {
+    "ETH": 1858.091,
+    "PYUSD": 12099.743,
+    "USDG": 46365.336
+   },
+   "0xfd1c4a797e69b604ed1dc346630dce2742b9ca91": {}
+  },
+  "deposits_total": 223094624.73012245,
+  "flows": {
+   "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d": {
+    "in": [
+     [
+      "USDai",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      1769092.3
+     ]
+    ],
+    "out": [
+     [
+      "USDai",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      1632134.2
+     ]
+    ]
+   },
+   "0x11687ca5235d669e8d52d7946b1605826cf521b1": {
+    "in": [
+     [
+      "PYUSD",
+      "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      148227943.98
+     ],
+     [
+      "PYUSD",
+      "0x64447901dc34bd610ac562b2c612784a9954d39d",
+      127325695.88
+     ],
+     [
+      "PYUSD",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      62228837.55
+     ],
+     [
+      "PYUSD",
+      "0x034d28a39c5c48aaca4d87e7775fe202f6cbfc6b",
+      7350000.0
+     ],
+     [
+      "PYUSD",
+      "0xe8dce5fd992d5caca33613b86bcabc38301013f9",
+      2704.614
+     ],
+     [
+      "PYUSD",
+      "0x072ec947c6bf6b77f7ca6b33d92348e0e2dd740c",
+      1.354
+     ],
+     [
+      "PYUSD",
+      "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f",
+      1.354
+     ],
+     [
+      "PYUSD",
+      "0x541028ee5dcf0e691e301e436a09a6cc89b494a3",
+      1.354
+     ],
+     [
+      "PYUSD",
+      "0x817c043f80ced76793959ff7f8ea300f9c61f63f",
+      1.345
+     ],
+     [
+      "PYUSD",
+      "0x9e39d73a03b925bd16039b85847f120d3f2aa38c",
+      0.001
+     ]
+    ],
+    "out": [
+     [
+      "PYUSD",
+      "0xf845a0a05cbd91ac15c3e59d126de5dfbc2aabb7",
+      339633505.759856
+     ],
+     [
+      "PYUSD",
+      "0x264bd8291fae1d75db2c5f573b07faa6715997b5",
+      5501681.672144
+     ]
+    ]
+   },
+   "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f": {
+    "in": [
+     [
+      "PYUSD",
+      "0x0c2ed170f2bb1df1a44292ad621b577b3c9597d1",
+      5098251.714384
+     ],
+     [
+      "USDai",
+      "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+      2438050.647367061
+     ],
+     [
+      "PYUSD",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      1632134.2
+     ],
+     [
+      "PYUSD",
+      "0x264bd8291fae1d75db2c5f573b07faa6715997b5",
+      330416.69
+     ],
+     [
+      "USDai",
+      "0x1c2ed170de32846316784c4fd58a5e3c7563e12f",
+      150000.0
+     ],
+     [
+      "USDC",
+      "0x0c2ed170f2bb1df1a44292ad621b577b3c9597d1",
+      78164.92
+     ],
+     [
+      "USDai",
+      "0x25624e2b05616a3c754c20e7be8841cad8e66723",
+      898.3355245506355
+     ],
+     [
+      "PYUSD",
+      "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      10.0
+     ],
+     [
+      "USDai",
+      "0x0000000000000000000000000000000000000000",
+      2.75
+     ]
+    ],
+    "out": [
+     [
+      "PYUSD",
+      "0x728f9bfcc9a40144464656770d2c08492e903c28",
+      2423171.03
+     ],
+     [
+      "USDai",
+      "0x1c2ed170de32846316784c4fd58a5e3c7563e12f",
+      297373.8018836599
+     ],
+     [
+      "USDC",
+      "0x72974d1735642c49aa0195bc51f08968083190a2",
+      55817.063368
+     ],
+     [
+      "USDC",
+      "0x78767578465a2dbf0b0fb76ab2b1a0a0cef23751",
+      5000.0
+     ],
+     [
+      "PYUSD via USDai redemption",
+      "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f",
+      10.0
+     ],
+     [
+      "PYUSD",
+      "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+      1.354
+     ]
+    ]
+   },
+   "0x6034ae654911e23baa2c10a414bafb7a187923ef": {
+    "in": [
+     [
+      "USDai",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      5116719.141461102
+     ],
+     [
+      "USDai",
+      "0x1c2ed170de32846316784c4fd58a5e3c7563e12f",
+      2.0
+     ],
+     [
+      "USDai",
+      "0x034d28a39c5c48aaca4d87e7775fe202f6cbfc6b",
+      1.1
+     ]
+    ],
+    "out": [
+     [
+      "USDai",
+      "0x1c2ed170de32846316784c4fd58a5e3c7563e12f",
+      4584313.761461102
+     ],
+     [
+      "USDai",
+      "0xc991b09a2b6ca5bcf88780d657a3ffdde2205398",
+      1.0
+     ]
+    ]
+   },
+   "0x728f9bfcc9a40144464656770d2c08492e903c28": {
+    "in": [
+     [
+      "PYUSD",
+      "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f",
+      2423171.03
+     ],
+     [
+      "PYUSD",
+      "0xe8dce5fd992d5caca33613b86bcabc38301013f9",
+      10.0
+     ]
+    ],
+    "out": [
+     [
+      "PYUSD",
+      "0xf845a0a05cbd91ac15c3e59d126de5dfbc2aabb7",
+      2423171.03
+     ],
+     [
+      "PYUSD",
+      "0x264bd8291fae1d75db2c5f573b07faa6715997b5",
+      10.0
+     ]
+    ]
+   },
+   "0x844bb7b6223f6af028189bb34d6341a5733d6286": {
+    "in": [
+     [
+      "USDai",
+      "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+      223094624.73012248
+     ],
+     [
+      "PYUSD",
+      "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      69736158.04
+     ],
+     [
+      "USDai",
+      "0x25624e2b05616a3c754c20e7be8841cad8e66723",
+      9561608.0
+     ],
+     [
+      "USDai",
+      "0x24a92e28a8c5d8812dcfaf44bcb20cc0babd1392",
+      6006317.811117
+     ],
+     [
+      "USDai",
+      "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d",
+      1632134.2
+     ],
+     [
+      "USDai",
+      "0x072ec947c6bf6b77f7ca6b33d92348e0e2dd740c",
+      430250.29
+     ],
+     [
+      "USDai",
+      "0x0000000000000000000000000000000000000000",
+      427309.15
+     ],
+     [
+      "PYUSD",
+      "0x541028ee5dcf0e691e301e436a09a6cc89b494a3",
+      377645.0
+     ],
+     [
+      "PYUSD",
+      "0x072ec947c6bf6b77f7ca6b33d92348e0e2dd740c",
+      180795.671117
+     ],
+     [
+      "USDai",
+      "0xe8dce5fd992d5caca33613b86bcabc38301013f9",
+      40010.0
+     ]
+    ],
+    "out": [
+     [
+      "PYUSD via USDai redemption",
+      "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+      142352757.69
+     ],
+     [
+      "PYUSD via USDai redemption",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      69736158.04
+     ],
+     [
+      "PYUSD",
+      "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+      62228837.55
+     ],
+     [
+      "USDai",
+      "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+      16310126.57046793
+     ],
+     [
+      "PYUSD",
+      "0x24a92e28a8c5d8812dcfaf44bcb20cc0babd1392",
+      6006317.811117
+     ],
+     [
+      "USDai",
+      "0xfd1c4a797e69b604ed1dc346630dce2742b9ca91",
+      5875186.29
+     ],
+     [
+      "USDai",
+      "0x6034ae654911e23baa2c10a414bafb7a187923ef",
+      5116719.141461102
+     ],
+     [
+      "USDai",
+      "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d",
+      1769092.3
+     ],
+     [
+      "PYUSD",
+      "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f",
+      1632134.2
+     ],
+     [
+      "PYUSD",
+      "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      427309.15
+     ],
+     [
+      "USDai",
+      "0x072ec947c6bf6b77f7ca6b33d92348e0e2dd740c",
+      785.6
+     ],
+     [
+      "USDai",
+      "0x1c2ed170de32846316784c4fd58a5e3c7563e12f",
+      0.02
+     ]
+    ]
+   },
+   "0xfd1c4a797e69b604ed1dc346630dce2742b9ca91": {
+    "in": [
+     [
+      "USDai",
+      "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      5875186.29
+     ]
+    ],
+    "out": [
+     [
+      "PYUSD via USDai redemption",
+      "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+      5875186.29
+     ]
+    ]
+   }
+  },
+  "n_cancelled": 3,
+  "n_closed": 7,
+  "n_deposits": 9,
+  "open": [
+   {
+    "apr": 0.064999999970208,
+    "hash": "0x286fc1c56b9b9203188147559476436a74e99d8a169457c3ce2991672f7fd4e7",
+    "time": "2026-09-23T20:04:14Z",
+    "tx": "0xe0426f3a2a621f5d12295541c97279f9858982d4764b789462a5439ccc05e0fb",
+    "usd": 6444762.199999999
+   },
+   {
+    "apr": 0.064999999970208,
+    "hash": "0xee46a843cc873b58482bd7e068639b58dc01d89e33d6d3cf9c540a6058ef0433",
+    "time": "2026-09-23T20:32:47Z",
+    "tx": "0x8e2c781ab01336719afb8948332961018d87fec714e1797fcb9768883ca72dcd",
+    "usd": 122450481.89999999
+   }
+  ],
+  "summaries": {
+   "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d": {
+    "first": "2026-08-04T01:32:13Z",
+    "last": "2026-08-21T18:20:34Z",
+    "total": 5
+   },
+   "0x11687ca5235d669e8d52d7946b1605826cf521b1": {
+    "first": "2026-04-29T14:52:18Z",
+    "last": "2026-09-23T20:48:28Z",
+    "total": 56
+   },
+   "0x24a92e28a8c5d8812dcfaf44bcb20cc0babd1392": {
+    "first": "2025-05-28T08:34:12Z",
+    "last": "2026-10-22T18:40:43Z",
+    "total": 24060
+   },
+   "0x264bd8291fae1d75db2c5f573b07faa6715997b5": {
+    "first": "2024-03-20T13:55:51Z",
+    "last": "2026-10-22T18:59:34Z",
+    "total": 71576
+   },
+   "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f": {
+    "first": "2025-05-13T06:37:41Z",
+    "last": "2026-10-21T18:07:41Z",
+    "total": 252
+   },
+   "0x6034ae654911e23baa2c10a414bafb7a187923ef": {
+    "first": "2026-08-21T16:51:03Z",
+    "last": "2026-10-16T18:24:07Z",
+    "total": 12
+   },
+   "0x728f9bfcc9a40144464656770d2c08492e903c28": {
+    "first": "2026-10-07T21:39:33Z",
+    "last": "2026-10-20T12:50:58Z",
+    "total": 8
+   },
+   "0x844bb7b6223f6af028189bb34d6341a5733d6286": {
+    "first": "2026-06-25T23:39:22Z",
+    "last": "2026-10-16T18:24:07Z",
+    "total": 97
+   },
+   "0xf845a0a05cbd91ac15c3e59d126de5dfbc2aabb7": {
+    "first": "2025-05-01T15:34:13Z",
+    "last": "2026-10-22T18:58:29Z",
+    "total": 2091
+   },
+   "0xfd1c4a797e69b604ed1dc346630dce2742b9ca91": {
+    "first": "2026-08-07T19:20:58Z",
+    "last": "2026-09-17T16:00:44Z",
+    "total": 4
+   }
+  }
+ },
+ "eth_holder_history": {
+  "2025-06-01": {
+   "block": 22613285,
+   "holders": 0,
+   "supply": 0.0,
+   "top1": 0.0
+  },
+  "2025-07-01": {
+   "block": 22827823,
+   "holders": 2,
+   "supply": 1.970272,
+   "top1": 0.5000355280895227
+  },
+  "2025-08-01": {
+   "block": 23049661,
+   "holders": 2,
+   "supply": 6.875477,
+   "top1": 0.8567276132259624
+  },
+  "2025-09-01": {
+   "block": 23271730,
+   "holders": 2,
+   "supply": 1.075292,
+   "top1": 0.9070020050367714
+  },
+  "2025-10-01": {
+   "block": 23486383,
+   "holders": 3,
+   "supply": 11.075292,
+   "top1": 0.902910731382974
+  },
+  "2025-11-01": {
+   "block": 23707919,
+   "holders": 3,
+   "supply": 11.075292,
+   "top1": 0.902910731382974
+  },
+  "2025-12-01": {
+   "block": 23922066,
+   "holders": 3,
+   "supply": 11.075292,
+   "top1": 0.902910731382974
+  },
+  "2026-01-01": {
+   "block": 24143222,
+   "holders": 3,
+   "supply": 11.075292,
+   "top1": 0.902910731382974
+  },
+  "2026-02-01": {
+   "block": 24365453,
+   "holders": 3,
+   "supply": 11.075292,
+   "top1": 0.902910731382974
+  },
+  "2026-03-01": {
+   "block": 24566043,
+   "holders": 3,
+   "supply": 11.075292,
+   "top1": 0.902910731382974
+  },
+  "2026-04-01": {
+   "block": 24788192,
+   "holders": 5,
+   "supply": 78.294105,
+   "top1": 0.6805484780750735
+  },
+  "2026-05-01": {
+   "block": 25003545,
+   "holders": 5,
+   "supply": 78.294105,
+   "top1": 0.6805484780750735
+  },
+  "2026-06-01": {
+   "block": 25225970,
+   "holders": 8,
+   "supply": 538.780712,
+   "top1": 0.8528267563520351
+  },
+  "2026-07-01": {
+   "block": 25441105,
+   "holders": 23,
+   "supply": 35543644.010048,
+   "top1": 0.9699883447599361
+  },
+  "2026-08-01": {
+   "block": 25663469,
+   "holders": 37,
+   "supply": 69687268.809425,
+   "top1": 0.9639449465752239
+  },
+  "2026-09-01": {
+   "block": 25885878,
+   "holders": 63,
+   "supply": 76912136.094386,
+   "top1": 0.9998972847973384
+  },
+  "2026-10-01": {
+   "block": 26100913,
+   "holders": 102,
+   "supply": 89269832.213082,
+   "top1": 0.8121327549725454
+  }
+ },
+ "events_decoded": 55868,
+ "gpu": {
+  "h100_first": [
+   "2025-09-29",
+   2.9533
+  ],
+  "h100_last": [
+   "2026-09-28",
+   3.3575
+  ],
+  "spearman_change": 0.014363929973715762,
+  "spearman_level": -0.40770645095650276,
+  "weeks_overlap": 53
+ },
+ "h100_central_last": 3.3575,
+ "holders": {
+  "concentration": {
+   "arbitrum-mainnet:USDai": {
+    "gini": 0.9995215859720168,
+    "hhi": 0.8720202925445522,
+    "holders": 3032,
+    "top1": 0.9330614752909545,
+    "top10": 0.9968776756228549,
+    "top5": 0.989115878661412,
+    "total": 259658550.99948364
+   },
+   "arbitrum-mainnet:sUSDai": {
+    "gini": 0.9937064284586077,
+    "hhi": 0.20865172164233767,
+    "holders": 3778,
+    "top1": 0.3328984676298803,
+    "top10": 0.8668622367208931,
+    "top5": 0.8003801665306807,
+    "total": 270822176.5060642
+   },
+   "base-mainnet:USDai": {
+    "gini": 0.9771959530383945,
+    "hhi": 0.1190520458751834,
+    "holders": 1347,
+    "top1": 0.23775873805911785,
+    "top10": 0.7187997635267755,
+    "top5": 0.6761862860318049,
+    "total": 126159.344556
+   },
+   "base-mainnet:sUSDai": {
+    "gini": 0.9969402187444163,
+    "hhi": 0.9047720047164101,
+    "holders": 468,
+    "top1": 0.950793766208094,
+    "top10": 0.9961198466511382,
+    "top5": 0.9910049493064135,
+    "total": 3644631.566848
+   },
+   "eth-mainnet:USDai": {
+    "gini": 0.9698262359953655,
+    "hhi": 0.9701126678841905,
+    "holders": 37,
+    "top1": 0.9849258815214554,
+    "top10": 0.9989226333329763,
+    "top5": 0.9954711224128546,
+    "total": 5577.767557
+   },
+   "eth-mainnet:sUSDai": {
+    "gini": 0.9898034620115073,
+    "hhi": 0.6987056697623032,
+    "holders": 135,
+    "top1": 0.8161640250154266,
+    "top10": 0.9999749834074267,
+    "top5": 0.9998534719257248,
+    "total": 101525674.879924
+   },
+   "plasma-mainnet:USDai": {
+    "gini": 0.9965877791917319,
+    "hhi": 0.2706135064830452,
+    "holders": 1533,
+    "top1": 0.4407909924175001,
+    "top10": 0.9699507276409587,
+    "top5": 0.9340584328744795,
+    "total": 869138.500371354
+   },
+   "plasma-mainnet:sUSDai": {
+    "gini": 0.9991742267993369,
+    "hhi": 0.9532442401696208,
+    "holders": 1424,
+    "top1": 0.9762488452423503,
+    "top10": 0.9986593253835414,
+    "top5": 0.996690211013517,
+    "total": 26110423.491338
+   }
+  },
+  "cross_chain": {
+   "0x52aa899454998be5b000ad077a46bbe360f4e497": [
+    "arbitrum-mainnet",
+    "base-mainnet",
+    "eth-mainnet",
+    "plasma-mainnet"
+   ]
+  },
+  "susdai_supply_by_chain": {
+   "arbitrum-mainnet": 270822176.5060642,
+   "base-mainnet": 3644631.566848,
+   "eth-mainnet": 101525674.879924,
+   "plasma-mainnet": 26110423.491338
+  },
+  "top": {
+   "arbitrum-mainnet:USDai": [
+    {
+     "address": "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
+     "balance": 242277390.66748974,
+     "first_seen": "2025-05-12T18:05:26Z",
+     "label": "sUSDai vault",
+     "names": [
+      "Staked USDai",
+      "sUSDai"
+     ],
+     "share": 0.9330614752909545,
+     "txs": 228095
+    },
+    {
+     "address": "0xac20cd734c65baf48a1476447af7d3e3165dc739",
+     "balance": 9131493.533233,
+     "first_seen": "2024-08-06T00:52:27Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.035167312988861124,
+     "txs": 271
+    },
+    {
+     "address": "0x5f0bc72fb5952b2f3f2e11404398ed507b25841f",
+     "balance": 2291565.1810079515,
+     "first_seen": "2025-05-13T06:37:41Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.008825302198549618,
+     "txs": 252
+    },
+    {
+     "address": "0x5edcbc20cac67adc2e724d4348ff85132b085b82",
+     "balance": 2016648.749839491,
+     "first_seen": "2025-08-18T12:40:04Z",
+     "label": "Pendle",
+     "names": [
+      "SY USDai",
+      "SY-USDai"
+     ],
+     "share": 0.007766540874841057,
+     "txs": 60103
+    },
+    {
+     "address": "0x85483aee461914342c6838eae61a23d7d995e5e3",
+     "balance": 1115297.692233135,
+     "first_seen": "2026-06-26T21:52:21Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00429524730820574,
+     "txs": 21
+    },
+    {
+     "address": "0x8cfde17b2919d6c571cca1763a1cfd2677df9b3a",
+     "balance": 1094832.964974396,
+     "first_seen": "2026-06-26T16:04:07Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.004216433315059873,
+     "txs": 25
+    },
+    {
+     "address": "0x6034ae654911e23baa2c10a414bafb7a187923ef",
+     "balance": 532407.48,
+     "first_seen": "2026-08-21T16:51:03Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0020504138144137557,
+     "txs": 12
+    },
+    {
+     "address": "0x980220ab08b33cab03e7c895fa05ec2b42de0b17",
+     "balance": 155775.20983304636,
+     "first_seen": "2024-11-28T08:39:45Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0005999232809142348,
+     "txs": 924
+    },
+    {
+     "address": "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d",
+     "balance": 136958.1,
+     "first_seen": "2026-08-04T01:32:13Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0005274546109605008,
+     "txs": 5
+    },
+    {
+     "address": "0x0e9e603da3e325d981db64f80d803469d046d5f2",
+     "balance": 95443.19735300001,
+     "first_seen": "2025-08-14T20:07:32Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00036757194009447353,
+     "txs": 4093
+    }
+   ],
+   "arbitrum-mainnet:sUSDai": [
+    {
+     "address": "0x7ced676fd52ccba493333be1556de7c65bfb20af",
+     "balance": 90156287.55905774,
+     "first_seen": "2026-08-27T22:18:51Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.3328984676298803,
+     "txs": 4
+    },
+    {
+     "address": "0x52aa899454998be5b000ad077a46bbe360f4e497",
+     "balance": 75433592.31492692,
+     "first_seen": "2024-05-23T14:20:25Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.2785355072768121,
+     "txs": 8353458
+    },
+    {
+     "address": "0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62",
+     "balance": 35679416.54862931,
+     "first_seen": "2025-08-18T12:42:28Z",
+     "label": "Pendle",
+     "names": [
+      "SY Staked USDai",
+      "SY-sUSDai"
+     ],
+     "share": 0.13174481133316787,
+     "txs": 96662
+    },
+    {
+     "address": "0xed41a12ea862f31df054e9bd3af1dd59486c6029",
+     "balance": 8890396.359894117,
+     "first_seen": "2025-12-09T21:12:10Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.032827431174917265,
+     "txs": 1257
+    },
+    {
+     "address": "0xe7f56834b879de54589712f35de40501d362e8e2",
+     "balance": 6601005.949616953,
+     "first_seen": "2026-09-01T15:57:58Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.02437394911590316,
+     "txs": 4
+    },
+    {
+     "address": "0x91676b847597c0cde3a31f5cb882cfb77c4e6700",
+     "balance": 5375329.73996445,
+     "first_seen": "2026-10-02T20:45:04Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.01984818898257428,
+     "txs": 11
+    },
+    {
+     "address": "0xbeedea7a42b4bc0d3dd6c74b5693bbfc8a196dba",
+     "balance": 4561042.914060291,
+     "first_seen": "2026-01-26T19:35:08Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.01684146761134298,
+     "txs": 128
+    },
+    {
+     "address": "0xa52090c48e88afeac9af137f6fb50c62f1a5a575",
+     "balance": 2820921.586387702,
+     "first_seen": "2025-08-24T20:32:31Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.010416139559843383,
+     "txs": 121
+    },
+    {
+     "address": "0xd43b9795729d4720457e7250f7a459aa48ab7fad",
+     "balance": 2688667.759901638,
+     "first_seen": "2026-09-29T02:36:27Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00992779762199952,
+     "txs": 13
+    },
+    {
+     "address": "0xa122687285dc5012141055a801045f069112e7c6",
+     "balance": 2558856.947228195,
+     "first_seen": "2026-09-11T15:11:10Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.009448476414452338,
+     "txs": 56
+    }
+   ],
+   "base-mainnet:USDai": [
+    {
+     "address": "0x4bb21783233043f382776208d37eccb1355ceebb",
+     "balance": 29995.486556000003,
+     "first_seen": "2025-09-13T22:23:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.23775873805911785,
+     "txs": 232
+    },
+    {
+     "address": "0x28b6182569e04234ef77ba48869dea352933d168",
+     "balance": 19996.991037,
+     "first_seen": "2023-08-20T23:24:31Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.15850582537010308,
+     "txs": 5054
+    },
+    {
+     "address": "0x2595b1bd2944d213360e73c928c5d1636ccc2d99",
+     "balance": 19340.024972117637,
+     "first_seen": "2025-11-20T20:13:07Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.15329839450404664,
+     "txs": 7143
+    },
+    {
+     "address": "0x112c5750367e4e82300e2420f356a85d085a0f05",
+     "balance": 13983.655721,
+     "first_seen": "2025-05-03T17:02:31Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.11084122044398298,
+     "txs": 28
+    },
+    {
+     "address": "0x7a994bfdd4d18ff95597b5e0c741249fd4479ca9",
+     "balance": 1991.0603574108,
+     "first_seen": "2025-12-11T21:49:39Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.015782107654554293,
+     "txs": 10
+    },
+    {
+     "address": "0xc174ec23b7a9765871839cfa9c872123c9b794f2",
+     "balance": 1163.783307017366,
+     "first_seen": "2023-10-11T20:41:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.009224709522018659,
+     "txs": 5021
+    },
+    {
+     "address": "0x5a484f96ee51ec56c273513502942a72fc26e37e",
+     "balance": 1113.1346800000001,
+     "first_seen": "2023-08-04T08:58:57Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0088232440008112,
+     "txs": 1021
+    },
+    {
+     "address": "0x02d57837308005decab3822ea4a2394e77d0aa4b",
+     "balance": 1098.4347169999999,
+     "first_seen": "2025-09-19T04:20:47Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00870672498232918,
+     "txs": 30
+    },
+    {
+     "address": "0x08d4c631940a224181e70b6c81a1fee6dbf3251e",
+     "balance": 1000.849401,
+     "first_seen": "2024-06-16T15:31:05Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.007933216556588402,
+     "txs": 143
+    },
+    {
+     "address": "0xb70ff3986f28514a7e17646bee8592ab6a50a98c",
+     "balance": 999.886285,
+     "first_seen": "2025-01-15T03:36:39Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.007925582433223307,
+     "txs": 165
+    }
+   ],
+   "base-mainnet:sUSDai": [
+    {
+     "address": "0x52aa899454998be5b000ad077a46bbe360f4e497",
+     "balance": 3465292.9738843166,
+     "first_seen": "2024-04-05T05:20:11Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.950793766208094,
+     "txs": 858651
+    },
+    {
+     "address": "0xbe50943188b9a486b24d01d7a7a4e832f1c2d2a6",
+     "balance": 95092.59651500001,
+     "first_seen": "2024-07-31T02:47:57Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.026091141112855827,
+     "txs": 32
+    },
+    {
+     "address": "0x818d1b45a6e6bfe6cd5bb662b76361c3c7db72a8",
+     "balance": 22423.050196440185,
+     "first_seen": "2023-09-18T23:21:53Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.006152350322705565,
+     "txs": 432
+    },
+    {
+     "address": "0xeaa315d60e6d5617bae9a3ac9c87d88a7d3430d8",
+     "balance": 18609.741177,
+     "first_seen": "2024-11-01T06:00:05Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.005106069251629275,
+     "txs": 668
+    },
+    {
+     "address": "0x0a367b2e9261983b10e19601cacda05a04f65dc8",
+     "balance": 10429.559372,
+     "first_seen": "2025-07-11T11:12:15Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0028616224111288795,
+     "txs": 108
+    },
+    {
+     "address": "0x923e7d892e6f5c3f993b8ebd27e5535c770afc61",
+     "balance": 9506.862100999999,
+     "first_seen": "2024-12-23T03:05:25Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0026084562805951477,
+     "txs": 38
+    },
+    {
+     "address": "0xd791a05c936aa86739dfa4304e686b914232eba9",
+     "balance": 6170.713878770337,
+     "first_seen": "2025-09-15T20:39:15Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0016930967549367351,
+     "txs": 449
+    },
+    {
+     "address": "0x0c6465740bd78e3e520fa1b1ad916e876872349c",
+     "balance": 1015.446404,
+     "first_seen": "2026-09-27T19:12:51Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0002786142811351964,
+     "txs": 3
+    },
+    {
+     "address": "0xb8fde7428ef83116246016223f6a4d764bcd84ee",
+     "balance": 997.986666,
+     "first_seen": "2023-07-19T06:04:59Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0002738237453348659,
+     "txs": 3230
+    },
+    {
+     "address": "0x7614d17c01c94943025cf53856e069ec00729e75",
+     "balance": 950.9072739999999,
+     "first_seen": "2023-07-24T17:04:13Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0002609062827226667,
+     "txs": 1997
+    }
+   ],
+   "eth-mainnet:USDai": [
+    {
+     "address": "0x9c839aca36e5a020744ac52c66d74ab93fc84a7f",
+     "balance": 5493.687628,
+     "first_seen": "2025-09-29T18:07:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.9849258815214554,
+     "txs": 53
+    },
+    {
+     "address": "0x6ec33cecea8b5e0423699a2866504ff3af3cf53f",
+     "balance": 20.0,
+     "first_seen": "2022-07-28T15:36:34Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.003585663940925676,
+     "txs": 140
+    },
+    {
+     "address": "0xe3bed316190097ab08ed57d3b1c9ef23ae5b2cfa",
+     "balance": 16.184113972618,
+     "first_seen": "2025-07-07T15:58:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0029015396943723876,
+     "txs": 96
+    },
+    {
+     "address": "0x52aa899454998be5b000ad077a46bbe360f4e497",
+     "balance": 15.887233151519089,
+     "first_seen": "2024-02-16T07:53:59Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.002848313951624049,
+     "txs": 2382990
+    },
+    {
+     "address": "0x287d2dd50114c9dec32d2ecaa3c480524ea64819",
+     "balance": 6.747555400659,
+     "first_seen": "2025-07-31T03:38:23Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.001209723304477064,
+     "txs": 33
+    },
+    {
+     "address": "0x9c3cedb4737275d31ae4ce35e198267d0017a286",
+     "balance": 5.046792,
+     "first_seen": "2026-06-23T03:40:11Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0009048050045876087,
+     "txs": 16
+    },
+    {
+     "address": "0x85001cc4867c5e1c22da4b79bb8852b9e2a06da0",
+     "balance": 4.7930258518,
+     "first_seen": "2026-04-30T16:52:11Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0008593089982361917,
+     "txs": 8703
+    },
+    {
+     "address": "0x28bf6006d87de7f44445905aa4f5cb8c0d8cba02",
+     "balance": 4.175859058680279,
+     "first_seen": "2026-05-21T16:42:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0007486613624548857,
+     "txs": 330899
+    },
+    {
+     "address": "0x87bd50128084c23aea2142ccd9127e55c6fc991d",
+     "balance": 2.8360487224054998,
+     "first_seen": "2024-03-12T19:20:11Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0005084558819318867,
+     "txs": 259
+    },
+    {
+     "address": "0x008ed95bb008a02837e4f88efeb4453c0612a8eb",
+     "balance": 2.4,
+     "first_seen": "2026-08-11T09:55:23Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0004302796729110811,
+     "txs": 5
+    }
+   ],
+   "eth-mainnet:sUSDai": [
+    {
+     "address": "0x52aa899454998be5b000ad077a46bbe360f4e497",
+     "balance": 82861603.45240636,
+     "first_seen": "2024-02-16T07:53:59Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.8161640250154266,
+     "txs": 2382990
+    },
+    {
+     "address": "0xbbbbbbbbbb9cc5e90e3b3af64bdaf62c37eeffcb",
+     "balance": 18323268.995111518,
+     "first_seen": "2023-12-28T09:09:23Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.18047916467221453,
+     "txs": 2912842
+    },
+    {
+     "address": "0x1fce0b50c48a7bf67022a82dec9c26e02683bf52",
+     "balance": 308046.60199328826,
+     "first_seen": "2026-08-05T10:07:59Z",
+     "label": "Fluid",
+     "names": [
+      "frxUSD/sUSDai",
+      "frxsUSDai"
+     ],
+     "share": 0.003034174383549972,
+     "txs": 431
+    },
+    {
+     "address": "0x5c60bba8f711d5d0805e4ac6dda6921460e30b93",
+     "balance": 8950.607170103016,
+     "first_seen": "2026-04-15T02:24:47Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 8.816102114749829e-05,
+     "txs": 231
+    },
+    {
+     "address": "0x3f63f5f318bfdf13abb53bc26ac4c080801b39d7",
+     "balance": 8928.86161308918,
+     "first_seen": "2025-06-10T09:44:59Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 8.79468333862295e-05,
+     "txs": 116
+    },
+    {
+     "address": "0x7d4112588b5d9a1a50b4253a6b0386bd39d95723",
+     "balance": 3779.391902504843,
+     "first_seen": "2025-10-20T15:28:47Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 3.722597172562299e-05,
+     "txs": 11
+    },
+    {
+     "address": "0x705ea374556e303e20f4344675660f57521f930d",
+     "balance": 2259.7495748131405,
+     "first_seen": "2026-08-19T19:33:11Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 2.225791237030221e-05,
+     "txs": 1
+    },
+    {
+     "address": "0x9c9431b1b2856af594587e9d53406f5b98192b20",
+     "balance": 2251.212862279038,
+     "first_seen": "2026-09-04T15:46:47Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 2.217382809758795e-05,
+     "txs": 1
+    },
+    {
+     "address": "0x2a69ce08a2a5591aa6c87a9505b47840c3c12e25",
+     "balance": 2239.793061845966,
+     "first_seen": "2026-09-30T17:19:11Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 2.2061346201293457e-05,
+     "txs": 1
+    },
+    {
+     "address": "0x7501cfd76d200dd84078d36313f5a10762790f4e",
+     "balance": 1806.387784,
+     "first_seen": "2025-07-07T17:03:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 1.7792423307074226e-05,
+     "txs": 28
+    }
+   ],
+   "plasma-mainnet:USDai": [
+    {
+     "address": "0xe090d9d417e54116c50e5d5dde1509af91102ec3",
+     "balance": 383108.4221269469,
+     "first_seen": "2025-09-29T09:15:37Z",
+     "label": "Pendle",
+     "names": [
+      "SY USDai",
+      "SY-USDai"
+     ],
+     "share": 0.4407909924175001,
+     "txs": 28205
+    },
+    {
+     "address": "0xaadea03f6d6f198bdc9229bd8113aced19031773",
+     "balance": 173758.2103527598,
+     "first_seen": "2025-09-21T21:27:39Z",
+     "label": "Vault/strategy",
+     "names": [
+      "EVK Vault eUSDai-1",
+      "eUSDai-1"
+     ],
+     "share": 0.19992004758564794,
+     "txs": 7773
+    },
+    {
+     "address": "0x6a2f60fc617ce66c4f868b9d7fbf07f300ddb50b",
+     "balance": 137720.2475990355,
+     "first_seen": "2025-09-25T13:20:00Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.15845604301292854,
+     "txs": 374
+    },
+    {
+     "address": "0x299b3082b260d445ee32c3511102d0e3fb41cef0",
+     "balance": 84244.17689,
+     "first_seen": "2025-09-25T17:07:39Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.09692836855576557,
+     "txs": 19
+    },
+    {
+     "address": "0x87366451db8ac4c83c3d65077a80fa6067757688",
+     "balance": 32995.088639,
+     "first_seen": "2025-09-25T17:31:18Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.03796298130263737,
+     "txs": 8
+    },
+    {
+     "address": "0xaec4b88923d257d46d600cc70be86aa080658540",
+     "balance": 12357.30551275773,
+     "first_seen": "2025-09-26T03:35:01Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.014217878401978351,
+     "txs": 73
+    },
+    {
+     "address": "0xd30468b95350367be14d539554d4289edefdf13a",
+     "balance": 10357.273365545947,
+     "first_seen": "2025-09-25T16:26:01Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.011916712193880064,
+     "txs": 83
+    },
+    {
+     "address": "0x0f2595e256d679518f77cf8432b21a1cdb01dcb6",
+     "balance": 2999.255854,
+     "first_seen": "2025-09-25T17:14:39Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0034508376429286214,
+     "txs": 97
+    },
+    {
+     "address": "0x089fa338a1bfb0971c645303ed00f5d76cc7782e",
+     "balance": 2970.737617154857,
+     "first_seen": "2025-10-09T14:26:43Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.003418025568865675,
+     "txs": 64
+    },
+    {
+     "address": "0xa9f589f74103d33ef9dc1d7a0266fecb84cc1139",
+     "balance": 2510.802898765817,
+     "first_seen": "2026-01-26T02:02:21Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0028888409588265092,
+     "txs": 152
+    }
+   ],
+   "plasma-mainnet:sUSDai": [
+    {
+     "address": "0x52aa899454998be5b000ad077a46bbe360f4e497",
+     "balance": 25490270.78220746,
+     "first_seen": "2025-09-11T06:16:40Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.9762488452423503,
+     "txs": 187974
+    },
+    {
+     "address": "0x767d33217e7d2670695ffe2a104548b780f4f5d8",
+     "balance": 330346.6474769862,
+     "first_seen": "2025-09-21T21:27:37Z",
+     "label": "Euler",
+     "names": [
+      "EVK Vault esUSDai-1",
+      "esUSDai-1"
+     ],
+     "share": 0.012651906913213301,
+     "txs": 1889
+    },
+    {
+     "address": "0x4a73789dc444b2c6bf207fbdd257effc008c4f58",
+     "balance": 78173.49210847681,
+     "first_seen": "2025-11-09T10:15:08Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0029939572651669355,
+     "txs": 18
+    },
+    {
+     "address": "0x601afacd8fbdbf44e71201b13d449441621332b9",
+     "balance": 73202.57744103695,
+     "first_seen": "2025-09-29T07:17:31Z",
+     "label": "Pendle",
+     "names": [
+      "SY Staked USDai",
+      "SY-sUSDai"
+     ],
+     "share": 0.002803576796267649,
+     "txs": 42704
+    },
+    {
+     "address": "0x7a608ae1d67a085f8d93b01fc32a29677639c9b1",
+     "balance": 52010.0,
+     "first_seen": "2026-09-12T02:34:46Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0019919247965186795,
+     "txs": 95
+    },
+    {
+     "address": "0x2450d9d75a8e341fd4eecac70ed9c84aca820320",
+     "balance": 29769.115145956846,
+     "first_seen": "2025-09-25T16:58:35Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.0011401237959940635,
+     "txs": 39
+    },
+    {
+     "address": "0x4ba161ba1ed0edb68e9a544a0ebeaa768a176d96",
+     "balance": 8694.609384,
+     "first_seen": "2025-09-25T16:43:33Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00033299380942191124,
+     "txs": 31
+    },
+    {
+     "address": "0xa151339e0ab512dfb97c5c1828ef6b77aa8320b7",
+     "balance": 4721.779066206602,
+     "first_seen": "2026-01-26T02:56:21Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00018083885417534602,
+     "txs": 115
+    },
+    {
+     "address": "0x1ca091c7926caef9ab7fb6604c328a4b676347b9",
+     "balance": 4201.906441865595,
+     "first_seen": "2025-11-21T10:33:30Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00016092831444344653,
+     "txs": 115
+    },
+    {
+     "address": "0x33bac50dfa950f79c59d85f9a4f07ca48f6e0b4c",
+     "balance": 4027.000066190717,
+     "first_seen": "2025-09-25T17:25:32Z",
+     "label": "unlabeled",
+     "names": [],
+     "share": 0.00015422959598976454,
+     "txs": 192
+    }
+   ]
+  },
+  "venues": {
+   "arbitrum-mainnet:USDai": {
+    "Pendle": 0.007766540874841057
+   },
+   "arbitrum-mainnet:sUSDai": {
+    "Pendle": 0.13174481133316787
+   },
+   "base-mainnet:USDai": {},
+   "base-mainnet:sUSDai": {},
+   "eth-mainnet:USDai": {},
+   "eth-mainnet:sUSDai": {
+    "Fluid": 0.003034174383549972
+   },
+   "plasma-mainnet:USDai": {
+    "Pendle": 0.4407909924175001,
+    "Vault/strategy": 0.19992004758564794
+   },
+   "plasma-mainnet:sUSDai": {
+    "Euler": 0.012651906913213301,
+    "Pendle": 0.002803576796267649
+   }
+  }
+ },
+ "implied_compute": {
+  "annual_amortization": 71159501.95221663,
+  "annual_debt_service": 89859835.2042557,
+  "annual_interest": 18700333.25203908,
+  "curve": [
+   {
+    "gpu_hours_per_year": 59906556.80283713,
+    "gpus": 9769,
+    "mw": 14.654245793257614,
+    "price": 1.5
+   },
+   {
+    "gpu_hours_per_year": 44929917.60212785,
+    "gpus": 7327,
+    "mw": 10.990684344943213,
+    "price": 2.0
+   },
+   {
+    "gpu_hours_per_year": 35101498.12666238,
+    "gpus": 5724,
+    "mw": 8.586472144486883,
+    "price": 2.56
+   },
+   {
+    "gpu_hours_per_year": 29953278.401418567,
+    "gpus": 4885,
+    "mw": 7.327122896628807,
+    "price": 3.0
+   },
+   {
+    "gpu_hours_per_year": 26743998.57269515,
+    "gpus": 4361,
+    "mw": 6.542074014847151,
+    "price": 3.36
+   },
+   {
+    "gpu_hours_per_year": 22464958.801063925,
+    "gpus": 3664,
+    "mw": 5.495342172471607,
+    "price": 4.0
+   },
+   {
+    "gpu_hours_per_year": 17971967.04085114,
+    "gpus": 2931,
+    "mw": 4.3962737379772845,
+    "price": 5.0
+   }
+  ],
+  "kw_per_gpu": 1.5,
+  "utilization": 0.7
+ },
+ "livepeer": {
+  "eth_total": 371.274946828452,
+  "face_value_eth": 372.12568366672025,
+  "failed_windows": 0,
+  "gateways": 21,
+  "hhi_gateways": 0.31790129768498077,
+  "hhi_orchestrators": 0.049535712768926696,
+  "monthly": {
+   "2025-05": {
+    "eth": 11.821980721719166,
+    "tickets": 8315,
+    "usd": 30301.29679628684
+   },
+   "2025-06": {
+    "eth": 18.53963212968416,
+    "tickets": 14542,
+    "usd": 46341.020414102226
+   },
+   "2025-07": {
+    "eth": 19.452053655734453,
+    "tickets": 14426,
+    "usd": 63810.63305648649
+   },
+   "2025-08": {
+    "eth": 16.409989552700875,
+    "tickets": 12068,
+    "usd": 69123.72010580204
+   },
+   "2025-09": {
+    "eth": 16.494864540854294,
+    "tickets": 12501,
+    "usd": 71346.92908533139
+   },
+   "2025-10": {
+    "eth": 15.447973029013637,
+    "tickets": 10391,
+    "usd": 64210.88113385573
+   },
+   "2025-11": {
+    "eth": 21.518819007382156,
+    "tickets": 15010,
+    "usd": 68765.55702503936
+   },
+   "2025-12": {
+    "eth": 19.54833715595222,
+    "tickets": 13697,
+    "usd": 58958.63782601389
+   },
+   "2026-01": {
+    "eth": 33.13366205800928,
+    "tickets": 16581,
+    "usd": 101364.08349774627
+   },
+   "2026-02": {
+    "eth": 37.08155412252698,
+    "tickets": 15959,
+    "usd": 75277.15686724773
+   },
+   "2026-03": {
+    "eth": 38.84555901927716,
+    "tickets": 17043,
+    "usd": 80907.74654695504
+   },
+   "2026-04": {
+    "eth": 25.35627630716518,
+    "tickets": 11175,
+    "usd": 56143.74303246965
+   },
+   "2026-05": {
+    "eth": 16.269996840000502,
+    "tickets": 7121,
+    "usd": 36108.90033324039
+   },
+   "2026-06": {
+    "eth": 14.614462243508289,
+    "tickets": 6313,
+    "usd": 28679.017752175278
+   },
+   "2026-07": {
+    "eth": 12.428144773848704,
+    "tickets": 5292,
+    "usd": 22692.693849639985
+   },
+   "2026-08": {
+    "eth": 23.019507578424353,
+    "tickets": 4905,
+    "usd": 52797.15617694946
+   },
+   "2026-09": {
+    "eth": 24.00760199514564,
+    "tickets": 5692,
+    "usd": 60199.665991462054
+   },
+   "2026-10": {
+    "eth": 7.284532097504974,
+    "tickets": 3346,
+    "usd": 18379.095460488395
+   }
+  },
+  "orchestrators": 104,
+  "tickets": 194377,
+  "top3_gateway_share": 0.8312902552615461,
+  "top_gateway_share": 0.49356212828335727,
+  "usd_total": 1005407.9349512922
+ },
+ "loans": {
+  "borrowers": 13,
+  "breached": 0,
+  "fees_by_kind": {
+   "0": 447373.8018836599,
+   "1": 515433.17876941146,
+   "4": 8085.009990734126
+  },
+  "fees_paid": 515433.1787694114,
+  "hhi_originated": 0.2734915269286549,
+  "hhi_outstanding": 0.19679370512559638,
+  "interest_paid": 6941404.562745131,
+  "lender_interest": {
+   "0x0b2b2b2076d95dda7817e785989fe353fe955ef9": 6647226.371356126,
+   "0x2244ba7fc96b1dfcaaac57521139c7487402b94e": 0.000136,
+   "0xd791a05c936aa86739dfa4304e686b914232eba9": 104996.55587393662,
+   "0xe8dce5fd992d5caca33613b86bcabc38301013f9": 189181.63548406947
+  },
+  "migrated": 18,
+  "n": 39,
+  "n_all": 41,
+  "n_test": 2,
+  "originated": 290117597.289981,
+  "outstanding": 182235691.57460025,
+  "principal_repaid": 108147722.52023174,
+  "rate_max": 0.14999999997768684,
+  "rate_min": 0.069999999972768,
+  "rate_wavg_outstanding": 0.10261619494216305,
+  "repaid": 18,
+  "reserve_accounts": 25,
+  "susdai_funded_share": 0.999503634183684,
+  "top1_share": 0.4563827301990843,
+  "top3_share": 0.7680295135656663
+ },
+ "prices": {
+  "PYUSD": {
+   "last": {
+    "date": "2026-10-21",
+    "price": 0.9735531
+   },
+   "max": 1.1642733,
+   "min": 0.88968414
+  },
+  "USDai": {
+   "last": {
+    "date": "2026-10-20",
+    "price": 0.97766215
+   },
+   "max": 1.1629907,
+   "min": 0.88906974
+  },
+  "sUSDai": {
+   "last": {
+    "date": "2026-10-20",
+    "price": 1.091832
+   },
+   "max": 1.2378483,
+   "min": 0.9435919
+  }
+ },
+ "principal_destinations": {
+  "destinations": {
+   "0x0000000000000000000000000000000000000000": 46383416.92631701,
+   "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef": 13291127.15,
+   "0x0c2ed170f2bb1df1a44292ad621b577b3c9597d1": 3006874.7139130053,
+   "0x11687ca5235d669e8d52d7946b1605826cf521b1": 169342411.88,
+   "0x20eb8cf9039510c68e623fdb3fd3444a716f4d1e": 16067722.062241,
+   "0x53a525b4d0db6d5ac7e3f5628a6895b100511574": 0.0,
+   "0x53a5ae6f75ab4eb3460bee369756bfba9c7d1574": 465988.0,
+   "0x778b14d4c87f90d90ea746232cb4567c2ec451c4": 1740300.0,
+   "0xa235fb829119951defc86c9e86802ec54ce9d639": 2232722.1
+  },
+  "loans_followed": 36
+ },
+ "queue": {
+  "completed": 2840,
+  "filled_shares": 330102882.2496503,
+  "paid_usdai": 355633057.4748358,
+  "pending_shares": 19295181.591032583,
+  "requested_shares": 349398063.84068286,
+  "requests": 2986,
+  "unique_redeemers": 2529,
+  "wait_days_max": 127.34684027777777,
+  "wait_days_median": 13.013784722222223,
+  "wait_days_p90": 26.597141203703703
+ },
+ "queue_batches": [
+  {
+   "all": false,
+   "amount": 61572.51311324303,
+   "shares": 59640.15795816171,
+   "t": "2025-09-19T23:11:12Z"
+  },
+  {
+   "all": false,
+   "amount": 342501.21480226866,
+   "shares": 329046.0755082465,
+   "t": "2025-10-18T03:17:43Z"
+  },
+  {
+   "all": false,
+   "amount": 5289802.121635124,
+   "shares": 5031680.548329598,
+   "t": "2025-11-20T14:31:03Z"
+  },
+  {
+   "all": true,
+   "amount": 21247071.006440293,
+   "shares": 20135671.002736636,
+   "t": "2025-12-05T20:51:03Z"
+  },
+  {
+   "all": true,
+   "amount": 1250759.8127935233,
+   "shares": 1177978.334321835,
+   "t": "2026-01-05T18:22:53Z"
+  },
+  {
+   "all": true,
+   "amount": 29014108.309759755,
+   "shares": 27185506.425149813,
+   "t": "2026-02-04T17:42:50Z"
+  },
+  {
+   "all": false,
+   "amount": 26806320.063349754,
+   "shares": 25000000.0,
+   "t": "2026-03-07T03:43:00Z"
+  },
+  {
+   "all": true,
+   "amount": 109156202.2731584,
+   "shares": 101800710.94497731,
+   "t": "2026-03-07T03:51:58Z"
+  },
+  {
+   "all": true,
+   "amount": 80780372.07050541,
+   "shares": 74983966.0122087,
+   "t": "2026-04-06T02:41:09Z"
+  },
+  {
+   "all": true,
+   "amount": 21855379.522195045,
+   "shares": 20201693.354473915,
+   "t": "2026-05-05T16:40:12Z"
+  },
+  {
+   "all": true,
+   "amount": 18234706.77714583,
+   "shares": 16771650.19042687,
+   "t": "2026-06-04T16:54:44Z"
+  },
+  {
+   "all": true,
+   "amount": 3836700.9392569885,
+   "shares": 3507403.886611811,
+   "t": "2026-07-04T14:06:07Z"
+  },
+  {
+   "all": true,
+   "amount": 3230835.920509292,
+   "shares": 2941083.4048508904,
+   "t": "2026-08-03T22:23:43Z"
+  },
+  {
+   "all": true,
+   "amount": 2134932.2593627432,
+   "shares": 1933276.3693307347,
+   "t": "2026-09-03T16:14:03Z"
+  },
+  {
+   "all": true,
+   "amount": 32391792.67080818,
+   "shares": 29043575.54276578,
+   "t": "2026-10-02T19:06:18Z"
+  }
+ ],
+ "reconciliation": {
+  "accrued_loan_interest": 1042886.0836942545,
+  "base_yield_accrued": 983358.5718270645,
+  "block": 517316432,
+  "bridged_supply": 204794386.81418398,
+  "deposit_balance": 242277390.66748974,
+  "deposit_share_price": 1.1202998918676528,
+  "deposit_timelock_balance": 128895244.1,
+  "escrow_interest_accrued": 664684.5930115401,
+  "hub_supply": 270762328.4177512,
+  "loan_book_gap": 393426.5110437274,
+  "pending_loan_balance": 181842265.06355652,
+  "pending_redemption_shares": 20174213.807165474,
+  "redemption_share_price": 1.1171997955875719,
+  "serviced_redemption_balance": 69429.95677034536,
+  "shares_gap": -29948.706240177155,
+  "spoke_plus_solana": 204614884.537625,
+  "total_assets": 555367306.1979555,
+  "total_shares": 495730929.03910065
+ },
+ "repayment_funding": {
+  "by_payer_kind": {
+   "borrower": 43411.662943999996,
+   "third party / operator": 6820889.865042553,
+   "underlying borrower": 77103.03489457727
+  },
+  "payers": {
+   "0x00ae928d24a4450bfbb70bbdd7d3d3f163513c2a": {
+    "interest": 25171.936268,
+    "n": 1
+   },
+   "0x01b27db5a9a57c7bd411676413980f0c5ac2fd4f": {
+    "interest": 93436.181864,
+    "n": 5
+   },
+   "0x0a0256a9166041101c90be87bbebb8242a3ba015": {
+    "interest": 1849393.745923227,
+    "n": 9
+   },
+   "0x1b2d677242ec1b9f2805bf6205d212e6fecda2c3": {
+    "interest": 24385.31326021971,
+    "n": 1
+   },
+   "0x1d53960165188ee0c74a5705ee6307fea517c613": {
+    "interest": 161710.168748,
+    "n": 1
+   },
+   "0x28e4ae4f680e9074bb1d0809e97434677b6e5b01": {
+    "interest": 157218.219616,
+    "n": 1
+   },
+   "0x30188cb65de879667cdfdcc2a26eb5a4ae0c0230": {
+    "interest": 176856.37859592057,
+    "n": 3
+   },
+   "0x3f0fddb9f9c6863a729f49ddc5fa7f6fdcab59a1": {
+    "interest": 67587.36245221831,
+    "n": 1
+   },
+   "0x417b4adc279743fc49f047c323fc668db9e600d8": {
+    "interest": 28318.439579,
+    "n": 1
+   },
+   "0x435b3539f68283dd44f03a4bfe8666c0f6187033": {
+    "interest": 341.774302,
+    "n": 3
+   },
+   "0x463928d45ed7e052b62ee86999c6d75f861e1944": {
+    "interest": 1934.3235018832047,
+    "n": 1
+   },
+   "0x57c5115fe9f1cffdf0607a9b9beefa56a9125870": {
+    "interest": 2775.697909,
+    "n": 2
+   },
+   "0x591dc14b5cd66c104bdeb17d5e2bc844ca3179ca": {
+    "interest": 48867.28158115277,
+    "n": 6
+   },
+   "0x6a6fb757b09178de160a39e1d82c9626ebd2be41": {
+    "interest": 356347.82600840327,
+    "n": 1
+   },
+   "0x6c9d96942e4dc17d558e13ce679d197ea9b579f1": {
+    "interest": 1433.2470739999999,
+    "n": 4
+   },
+   "0x718f3b1099234501875423d780a7a30104503eac": {
+    "interest": 341.774302,
+    "n": 1
+   },
+   "0x7202932b3be70edf0657d5bada261d610e0d7db9": {
+    "interest": 1811.5412608687661,
+    "n": 1
+   },
+   "0x7540c25c054f6cf509862793239630be4e83af8d": {
+    "interest": 130954.57162495688,
+    "n": 2
+   },
+   "0x7621407c82792a888d97c54d49e33195274160f2": {
+    "interest": 415046.7682731488,
+    "n": 5
+   },
+   "0x7c5ed528421ebe86e759fbfc626b6631f9a7854e": {
+    "interest": 22681.882346,
+    "n": 6
+   },
+   "0x817c043f80ced76793959ff7f8ea300f9c61f63f": {
+    "interest": 47957.78274509877,
+    "n": 2
+   },
+   "0x8e86251c88e5b3ef134a37bcab2cd63beb627c4c": {
+    "interest": 284046.48710442206,
+    "n": 6
+   },
+   "0x924370feda384b89404091bebf13a8368d241960": {
+    "interest": 58391.74448471524,
+    "n": 1
+   },
+   "0x9c4bd019cf2f4ce5945afa82b807e412b820acfd": {
+    "interest": 1433.2470739999999,
+    "n": 4
+   },
+   "0x9d4c1c9e1f850f22e5940b8385aa5a580798e5de": {
+    "interest": 1080.44793,
+    "n": 5
+   },
+   "0xa6ef088b806ad009dac53f4b9b65e08cce12e01d": {
+    "interest": 585464.9166063865,
+    "n": 6
+   },
+   "0xac7ca4b036b55399cc8a4826347750bb29b3e9fe": {
+    "interest": 352.79928,
+    "n": 3
+   },
+   "0xb00439e6f77af558c79005ee9d158df547490e88": {
+    "interest": 299.301467,
+    "n": 3
+   },
+   "0xb1bcca2ac714a6eed7742866a2ec772394e9ea1a": {
+    "interest": 265303.9748249999,
+    "n": 7
+   },
+   "0xb2f52cb5a2094a00101d91eeb65b85cb1d86431e": {
+    "interest": 92508.35639100001,
+    "n": 4
+   },
+   "0xb87240dc91dead3cc6918c5c71ad17cc13a20ab3": {
+    "interest": 257723.208893,
+    "n": 16
+   },
+   "0xbb925f5cd2fc2d834f47cb3468476746affda5d4": {
+    "interest": 52703.741561999996,
+    "n": 2
+   },
+   "0xbd0d1168f0a49d5ecd33d214d955b270a3e17da5": {
+    "interest": 39891.226511,
+    "n": 1
+   },
+   "0xce5c72f4b112787d59cd2390dd4548525b1b1d05": {
+    "interest": 376800.57235695526,
+    "n": 2
+   },
+   "0xdb034a1485da0300175b07282f5a84af69c2493e": {
+    "interest": 1444.272051,
+    "n": 4
+   },
+   "0xe19635704ae3b77bc993358ff515d10cceae0ce1": {
+    "interest": 250427.50301627518,
+    "n": 2
+   },
+   "0xe277b53c60c43012394d52b5f21c6d5c08ca0eb9": {
+    "interest": 39441.071007862,
+    "n": 53
+   },
+   "0xe2d4a7ff2b7bb9f92ad5d1edd438224c1646733c": {
+    "interest": 27591.100302,
+    "n": 1
+   },
+   "0xe7538bfa89e46ce0a00b49d6724821e9806c5bf8": {
+    "interest": 103541.35130800001,
+    "n": 5
+   },
+   "0xee9af6f7f0dc04b1c97cd9cc95763836d02f63e4": {
+    "interest": 603333.0010428341,
+    "n": 5
+   },
+   "0xf279dfcdd57e1571c95e2c5b7e2ee453cbcdf77f": {
+    "interest": 0.0,
+    "n": 1
+   },
+   "0xf7932df89827d9cbd13a12571bb4db9da67aaf75": {
+    "interest": 284370.4738285822,
+    "n": 3
+   },
+   "0xfa06168ecc23725511709f46247e6668178a14d8": {
+    "interest": 683.548604,
+    "n": 6
+   }
+  }
+ },
+ "solana": {
+  "USDai": {
+   "mint": "USDai5XCUzNebYzUk6EuRiFCvnyoyEdj7VSyijYcz2A",
+   "slot": 460152992,
+   "ui_amount": 590.514634
+  },
+  "retrieved_at": "2026-10-22T19:24:39+00:00",
+  "rpc": "https://api.mainnet-beta.solana.com",
+  "sUSDai": {
+   "mint": "sUSDai6Y3GxysDEtA9BVcEFTaog6UZpYUVxJiMhAKYE",
+   "slot": 460152995,
+   "ui_amount": 73334154.599515
+  }
+ },
+ "stress": {
+  "idle_over_pending": 10.74942962792797,
+  "rows": [
+   {
+    "loss": 21761789.380000003,
+    "loss_pct_assets": 0.03918449850600895,
+    "nav_after": 1.0764015024284828,
+    "recovery": 0.6,
+    "who": "largest borrower"
+   },
+   {
+    "loss": 51413309.489795744,
+    "loss_pct_assets": 0.09257532612384271,
+    "nav_after": 1.016587764021499,
+    "recovery": 0.6,
+    "who": "three largest borrowers"
+   },
+   {
+    "loss": 72894276.6298401,
+    "loss_pct_assets": 0.13125417325854905,
+    "nav_after": 0.973255855758922,
+    "recovery": 0.6,
+    "who": "every borrower"
+   },
+   {
+    "loss": 32642684.07,
+    "loss_pct_assets": 0.05877674775901342,
+    "nav_after": 1.0544523077088976,
+    "recovery": 0.4,
+    "who": "largest borrower"
+   },
+   {
+    "loss": 77119964.23469362,
+    "loss_pct_assets": 0.13886298918576406,
+    "nav_after": 0.9647317000984221,
+    "recovery": 0.4,
+    "who": "three largest borrowers"
+   },
+   {
+    "loss": 109341414.94476014,
+    "loss_pct_assets": 0.19688125988782354,
+    "nav_after": 0.8997338377045568,
+    "recovery": 0.4,
+    "who": "every borrower"
+   },
+   {
+    "loss": 43523578.760000005,
+    "loss_pct_assets": 0.0783689970120179,
+    "nav_after": 1.0325031129893127,
+    "recovery": 0.2,
+    "who": "largest borrower"
+   },
+   {
+    "loss": 102826618.97959149,
+    "loss_pct_assets": 0.18515065224768543,
+    "nav_after": 0.9128756361753454,
+    "recovery": 0.2,
+    "who": "three largest borrowers"
+   },
+   {
+    "loss": 145788553.2596802,
+    "loss_pct_assets": 0.2625083465170981,
+    "nav_after": 0.8262118196501914,
+    "recovery": 0.2,
+    "who": "every borrower"
+   },
+   {
+    "loss": 238236659.04476014,
+    "loss_pct_assets": 0.4289713427240222,
+    "nav_after": 0.639723342999609,
+    "recovery": 0.4,
+    "who": "every borrower, and the open escrow is not returned"
+   }
+  ],
+  "top1_outstanding_share": 0.2985390676212783,
+  "top3_outstanding_share": 0.70531339176153
+ },
+ "usdai": {
+  "burned": 1399330173.2554185,
+  "by_token": {
+   "0x437cc33344a0b27a429f795ff6b469c72698b291": {
+    "burn_usd": 33952478.971097186,
+    "mint_usd": 542732381.5887805,
+    "n_burn": 1205,
+    "n_mint": 9542
+   },
+   "0x46850ad61c2b7d64d08c9c754f45254596696984": {
+    "burn_usd": 1139384256.1117024,
+    "mint_usd": 757719113.92589,
+    "n_burn": 4817,
+    "n_mint": 4384
+   },
+   "0xaf88d065e77c8cc2239327c5edb3a432268e5831": {
+    "burn_usd": 225993435.17261884,
+    "mint_usd": 353252518.5832598,
+    "n_burn": 2819,
+    "n_mint": 2397
+   },
+   "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9": {
+    "burn_usd": 3.0,
+    "mint_usd": 42198.388539,
+    "n_burn": 1,
+    "n_mint": 25
+   }
+  },
+  "minted": 1653746212.4864693,
+  "supply_by_chain": {
+   "arbitrum-mainnet": 259658550.99948364,
+   "base-mainnet": 126159.344556,
+   "eth-mainnet": 5577.767557,
+   "plasma-mainnet": 869138.500371354
+  }
+ },
+ "usdai_pyusd_ratio_min": {
+  "date": "2025-08-19",
+  "ratio": 0.9745424287995188
+ },
+ "vault": {
+  "accrued_total": 24436206.557756793,
+  "admin_fee": 1675588.3997522,
+  "ann_90d": 0.07647785281989106,
+  "ann_total": 0.08183527096291177,
+  "base_yield_sources": {
+   "pyusd_harvest": 6358812.3914471995,
+   "wm": 8721483.2063226
+  },
+  "cash": {
+   "base_yield": 15080295.597769799,
+   "escrow_interest": 879697.7823109321,
+   "fees": 305458.811874394,
+   "loan_interest": 6647226.371356125
+  },
+  "cash_coverage": 0.9376528435031611,
+  "cash_coverage_borrowers_only": 0.2845239160504447,
+  "claims_usd": 532554793.8582129,
+  "idle_usdai": 242277390.66748974,
+  "loan_book": 182235691.57460025,
+  "nav_end": 1.120137316786238,
+  "nav_start": 1.000311782608703,
+  "shares_from_events": 476405798.7418279,
+  "shares_from_holders": 475437061.0436892,
+  "unexplained_assets": 108041711.61612293
+ },
+ "verification": {
+  "block_range": [
+   335730936,
+   517064905
+  ],
+  "escrow_receipts": [
+   {
+    "block": 508237173,
+    "goldrush_usdai_redeemed": 128895244.1,
+    "rpc_logs": [
+     {
+      "event": "ERC20.Transfer",
+      "from": "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      "to": "0x0000000000000000000000000000000000000000",
+      "token": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      "value": "128895244100000000000000000"
+     },
+     {
+      "event": "ERC20.Transfer",
+      "from": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      "to": "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+      "token": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+      "value": "128895244100000"
+     },
+     {
+      "caller": "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+      "event": "USDai.Withdrawn",
+      "recipient": "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+      "token": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+      "usdai_amount": "128895244100000000000000000",
+      "withdraw_amount": "128895244100000",
+      "withdraw_token": "0x46850ad61c2b7d64d08c9c754f45254596696984"
+     }
+    ],
+    "status": "0x1",
+    "tx": "0x46dc4ae95582c3d92d2ada242fc7445b6f4408284d271f69e2f98668993559d7"
+   }
+  ],
+  "event_checks": [
+   {
+    "check": "Loans originated, router V1",
+    "goldrush_count": 35,
+    "goldrush_sum": 194189297.249981,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 35,
+    "rpc_sum": 194189297.249981
+   },
+   {
+    "check": "Loans originated, router V2",
+    "goldrush_count": 6,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 6
+   },
+   {
+    "check": "Loans migrated V1 to V2",
+    "goldrush_count": 17,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 17
+   },
+   {
+    "check": "Loans refinanced",
+    "goldrush_count": 3,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 3
+   },
+   {
+    "check": "Loans refinanced (3-field)",
+    "goldrush_count": 2,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 2
+   },
+   {
+    "check": "Repayments, router V1",
+    "goldrush_count": 118,
+    "goldrush_sum": 1403855.841146,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 118,
+    "rpc_sum": 1403855.841146
+   },
+   {
+    "check": "Repayments, router V2",
+    "goldrush_count": 79,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 79
+   },
+   {
+    "check": "Lender payouts, router V1",
+    "goldrush_count": 235,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 235
+   },
+   {
+    "check": "Lender payouts, router V2",
+    "goldrush_count": 96,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 96
+   },
+   {
+    "check": "Fees paid, router V2",
+    "goldrush_count": 61,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 61
+   },
+   {
+    "check": "Breaches and liquidations, V2",
+    "goldrush_count": 0,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 0
+   },
+   {
+    "check": "Reserve accounts created",
+    "goldrush_count": 25,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 25
+   },
+   {
+    "check": "USDai mints",
+    "goldrush_count": 16348,
+    "goldrush_sum": 1653746212.486462,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 16348,
+    "rpc_sum": 1653746212.486462
+   },
+   {
+    "check": "USDai redemptions",
+    "goldrush_count": 8842,
+    "goldrush_sum": 1399330173.2554173,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 8842,
+    "rpc_sum": 1399330173.2554173
+   },
+   {
+    "check": "sUSDai deposits",
+    "goldrush_count": 20077,
+    "goldrush_sum": 886254574.9399899,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 20077,
+    "rpc_sum": 886254574.9399899
+   },
+   {
+    "check": "sUSDai redemption requests",
+    "goldrush_count": 2986,
+    "goldrush_sum": 349398063.84068286,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 2986,
+    "rpc_sum": 349398063.84068286
+   },
+   {
+    "check": "sUSDai redemptions processed",
+    "goldrush_count": 2841,
+    "goldrush_sum": 355633057.4748358,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 2841,
+    "rpc_sum": 355633057.4748358
+   },
+   {
+    "check": "Base yield deposited to vault",
+    "goldrush_count": 12,
+    "goldrush_sum": 15080295.5977698,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 12,
+    "rpc_sum": 15080295.5977698
+   },
+   {
+    "check": "Escrow deposits",
+    "goldrush_count": 9,
+    "goldrush_sum": 223094624.73012245,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 9,
+    "rpc_sum": 223094624.73012245
+   },
+   {
+    "check": "Escrow withdrawals",
+    "goldrush_count": 4,
+    "goldrush_sum": 515873.5722483617,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 4,
+    "rpc_sum": 515873.5722483617
+   },
+   {
+    "check": "Escrow cancellations",
+    "goldrush_count": 3,
+    "goldrush_sum": 15332684.59012245,
+    "match": true,
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 3,
+    "rpc_sum": 15332684.59012245
+   },
+   {
+    "check": "Livepeer winning-ticket payments",
+    "goldrush_count": 194377,
+    "goldrush_sum": 371.274946828419,
+    "match": true,
+    "missing_from_goldrush": [],
+    "only_goldrush": 0,
+    "only_rpc": 0,
+    "rpc_count": 194377,
+    "rpc_sum": 371.274946828419
+   }
+  ],
+  "n_escrow_deposits": 9,
+  "retrieved_at": "2026-10-24T15:28:05+00:00",
+  "rpc": {
+   "arbitrum-mainnet": "https://arb1.arbitrum.io/rpc",
+   "base-mainnet": "https://mainnet.base.org",
+   "eth-mainnet": "https://ethereum-rpc.publicnode.com",
+   "plasma-mainnet": "https://rpc.plasma.to"
+  },
+  "rpc_calls": 628,
+  "supply_checks": [
+   {
+    "chain": "arbitrum-mainnet",
+    "diff_pct": 0.3019691072171576,
+    "goldrush_holder_sum": 270822176.5060642,
+    "rpc_block": "latest",
+    "rpc_total_supply": 270006839.26411307,
+    "snapshot_block": 517309360
+   },
+   {
+    "chain": "eth-mainnet",
+    "diff_pct": 0.30933488964423256,
+    "goldrush_holder_sum": 101525674.879924,
+    "rpc_block": "latest",
+    "rpc_total_supply": 101212589.029344,
+    "snapshot_block": 26250085
+   },
+   {
+    "chain": "base-mainnet",
+    "diff_pct": 0.0,
+    "goldrush_holder_sum": 3644631.566848,
+    "rpc_block": 52953001,
+    "rpc_total_supply": 3644631.566848,
+    "snapshot_block": 52953001
+   },
+   {
+    "chain": "plasma-mainnet",
+    "diff_pct": -0.18628973009005678,
+    "goldrush_holder_sum": 26110423.491338,
+    "rpc_block": 35753995,
+    "rpc_total_supply": 26159155.311161,
+    "snapshot_block": 35753995
+   }
+  ],
+  "usdai_backing": {
+   "block": 517877817,
+   "coverage": 1.0000022810076514,
+   "reserves_at_usdai_contract": {
+    "PYUSD": 260380117.055107,
+    "USDC": 0.5,
+    "wM": 0.0
+   },
+   "usdai_hub_supply": 259382152.26481435,
+   "usdai_spoke_supply": {
+    "base-mainnet": 125629.100071,
+    "eth-mainnet": 5577.767557,
+    "plasma-mainnet": 866164.494979
+   }
+  }
+ },
+ "window": {
+  "end": "2026-10-21",
+  "end_block": 517064905,
+  "failed_windows": 0,
+  "nav_start": "2025-05-14",
+  "start": "2025-05-12"
+ }
+}

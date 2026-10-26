@@ -1,0 +1,300 @@
+{
+ "retrieved_at": "2026-10-24T15:28:05+00:00",
+ "usdai_backing": {
+  "block": 517877817,
+  "usdai_hub_supply": 259382152.26481435,
+  "usdai_spoke_supply": {
+   "eth-mainnet": 5577.767557,
+   "base-mainnet": 125629.100071,
+   "plasma-mainnet": 866164.494979
+  },
+  "reserves_at_usdai_contract": {
+   "PYUSD": 260380117.055107,
+   "USDC": 0.5,
+   "wM": 0.0
+  },
+  "coverage": 1.0000022810076514
+ },
+ "block_range": [
+  335730936,
+  517064905
+ ],
+ "rpc": {
+  "arbitrum-mainnet": "https://arb1.arbitrum.io/rpc",
+  "eth-mainnet": "https://ethereum-rpc.publicnode.com",
+  "base-mainnet": "https://mainnet.base.org",
+  "plasma-mainnet": "https://rpc.plasma.to"
+ },
+ "event_checks": [
+  {
+   "check": "Loans originated, router V1",
+   "rpc_count": 35,
+   "goldrush_count": 35,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 194189297.249981,
+   "goldrush_sum": 194189297.249981,
+   "match": true
+  },
+  {
+   "check": "Loans originated, router V2",
+   "rpc_count": 6,
+   "goldrush_count": 6,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Loans migrated V1 to V2",
+   "rpc_count": 17,
+   "goldrush_count": 17,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Loans refinanced",
+   "rpc_count": 3,
+   "goldrush_count": 3,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Loans refinanced (3-field)",
+   "rpc_count": 2,
+   "goldrush_count": 2,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Repayments, router V1",
+   "rpc_count": 118,
+   "goldrush_count": 118,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 1403855.841146,
+   "goldrush_sum": 1403855.841146,
+   "match": true
+  },
+  {
+   "check": "Repayments, router V2",
+   "rpc_count": 79,
+   "goldrush_count": 79,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Lender payouts, router V1",
+   "rpc_count": 235,
+   "goldrush_count": 235,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Lender payouts, router V2",
+   "rpc_count": 96,
+   "goldrush_count": 96,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Fees paid, router V2",
+   "rpc_count": 61,
+   "goldrush_count": 61,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Breaches and liquidations, V2",
+   "rpc_count": 0,
+   "goldrush_count": 0,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "Reserve accounts created",
+   "rpc_count": 25,
+   "goldrush_count": 25,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "match": true
+  },
+  {
+   "check": "USDai mints",
+   "rpc_count": 16348,
+   "goldrush_count": 16348,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 1653746212.486462,
+   "goldrush_sum": 1653746212.486462,
+   "match": true
+  },
+  {
+   "check": "USDai redemptions",
+   "rpc_count": 8842,
+   "goldrush_count": 8842,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 1399330173.2554173,
+   "goldrush_sum": 1399330173.2554173,
+   "match": true
+  },
+  {
+   "check": "sUSDai deposits",
+   "rpc_count": 20077,
+   "goldrush_count": 20077,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 886254574.9399899,
+   "goldrush_sum": 886254574.9399899,
+   "match": true
+  },
+  {
+   "check": "sUSDai redemption requests",
+   "rpc_count": 2986,
+   "goldrush_count": 2986,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 349398063.84068286,
+   "goldrush_sum": 349398063.84068286,
+   "match": true
+  },
+  {
+   "check": "sUSDai redemptions processed",
+   "rpc_count": 2841,
+   "goldrush_count": 2841,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 355633057.4748358,
+   "goldrush_sum": 355633057.4748358,
+   "match": true
+  },
+  {
+   "check": "Base yield deposited to vault",
+   "rpc_count": 12,
+   "goldrush_count": 12,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 15080295.5977698,
+   "goldrush_sum": 15080295.5977698,
+   "match": true
+  },
+  {
+   "check": "Escrow deposits",
+   "rpc_count": 9,
+   "goldrush_count": 9,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 223094624.73012245,
+   "goldrush_sum": 223094624.73012245,
+   "match": true
+  },
+  {
+   "check": "Escrow withdrawals",
+   "rpc_count": 4,
+   "goldrush_count": 4,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 515873.5722483617,
+   "goldrush_sum": 515873.5722483617,
+   "match": true
+  },
+  {
+   "check": "Escrow cancellations",
+   "rpc_count": 3,
+   "goldrush_count": 3,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 15332684.59012245,
+   "goldrush_sum": 15332684.59012245,
+   "match": true
+  },
+  {
+   "check": "Livepeer winning-ticket payments",
+   "rpc_count": 194377,
+   "goldrush_count": 194377,
+   "only_rpc": 0,
+   "only_goldrush": 0,
+   "rpc_sum": 371.274946828419,
+   "goldrush_sum": 371.274946828419,
+   "match": true,
+   "missing_from_goldrush": []
+  }
+ ],
+ "supply_checks": [
+  {
+   "chain": "arbitrum-mainnet",
+   "snapshot_block": 517309360,
+   "rpc_block": "latest",
+   "rpc_total_supply": 270006839.26411307,
+   "goldrush_holder_sum": 270822176.5060642,
+   "diff_pct": 0.3019691072171576
+  },
+  {
+   "chain": "eth-mainnet",
+   "snapshot_block": 26250085,
+   "rpc_block": "latest",
+   "rpc_total_supply": 101212589.029344,
+   "goldrush_holder_sum": 101525674.879924,
+   "diff_pct": 0.30933488964423256
+  },
+  {
+   "chain": "base-mainnet",
+   "snapshot_block": 52953001,
+   "rpc_block": 52953001,
+   "rpc_total_supply": 3644631.566848,
+   "goldrush_holder_sum": 3644631.566848,
+   "diff_pct": 0.0
+  },
+  {
+   "chain": "plasma-mainnet",
+   "snapshot_block": 35753995,
+   "rpc_block": 35753995,
+   "rpc_total_supply": 26159155.311161,
+   "goldrush_holder_sum": 26110423.491338,
+   "diff_pct": -0.18628973009005678
+  }
+ ],
+ "escrow_receipts": [
+  {
+   "tx": "0x46dc4ae95582c3d92d2ada242fc7445b6f4408284d271f69e2f98668993559d7",
+   "block": 508237173,
+   "status": "0x1",
+   "goldrush_usdai_redeemed": 128895244.1,
+   "rpc_logs": [
+    {
+     "token": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+     "event": "ERC20.Transfer",
+     "from": "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+     "to": "0x0000000000000000000000000000000000000000",
+     "value": "128895244100000000000000000"
+    },
+    {
+     "token": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+     "event": "ERC20.Transfer",
+     "from": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+     "to": "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+     "value": "128895244100000"
+    },
+    {
+     "token": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
+     "event": "USDai.Withdrawn",
+     "caller": "0x844bb7b6223f6af028189bb34d6341a5733d6286",
+     "recipient": "0x11687ca5235d669e8d52d7946b1605826cf521b1",
+     "withdraw_token": "0x46850ad61c2b7d64d08c9c754f45254596696984",
+     "usdai_amount": "128895244100000000000000000",
+     "withdraw_amount": "128895244100000"
+    }
+   ]
+  }
+ ],
+ "n_escrow_deposits": 9,
+ "rpc_calls": 628
+}

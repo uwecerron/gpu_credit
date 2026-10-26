@@ -1,0 +1,34 @@
+\begin{tabular}{@{}lrrc@{}}
+\toprule
+Event (Arbitrum) & RPC logs & GoldRush logs & Same \\
+\midrule
+Loans originated, router V1 & 35 & 35 & yes \\
+Loans originated, router V2 & 6 & 6 & yes \\
+Loans migrated V1 to V2 & 17 & 17 & yes \\
+Loans refinanced & 3 & 3 & yes \\
+Loans refinanced (3-field) & 2 & 2 & yes \\
+Repayments, router V1 & 118 & 118 & yes \\
+Repayments, router V2 & 79 & 79 & yes \\
+Lender payouts, router V1 & 235 & 235 & yes \\
+Lender payouts, router V2 & 96 & 96 & yes \\
+Fees paid, router V2 & 61 & 61 & yes \\
+Breaches and liquidations, V2 & 0 & 0 & yes \\
+Reserve accounts created & 25 & 25 & yes \\
+USDai mints & 16,348 & 16,348 & yes \\
+USDai redemptions & 8,842 & 8,842 & yes \\
+sUSDai deposits & 20,077 & 20,077 & yes \\
+sUSDai redemption requests & 2,986 & 2,986 & yes \\
+sUSDai redemptions processed & 2,841 & 2,841 & yes \\
+Base yield deposited to vault & 12 & 12 & yes \\
+Escrow deposits & 9 & 9 & yes \\
+Escrow withdrawals & 4 & 4 & yes \\
+Escrow cancellations & 3 & 3 & yes \\
+Livepeer winning-ticket payments & 194,377 & 194,377 & yes \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{sUSDai supply: \texttt{totalSupply} vs.\ sum of GoldRush holders}} \\
+Arbitrum (latest block) & 270.01\,M & 270.82\,M & +0.30\% \\
+Ethereum (latest block) & 101.21\,M & 101.53\,M & +0.31\% \\
+Base (same block) & 3.64\,M & 3.64\,M & +0.00\% \\
+Plasma (same block) & 26.16\,M & 26.11\,M & -0.19\% \\
+\bottomrule
+\end{tabular}
