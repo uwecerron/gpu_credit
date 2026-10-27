@@ -1,8 +1,8 @@
 \section{Introduction}\label{sec:intro}
 
-Several synthetic-dollar protocols now take stablecoin deposits on-chain and lend them to companies that operate GPU clusters, paying depositors from the interest. USD.AI is one of the larger ones. It has a \$100\,M credit facility from Bullish~\cite{bullish2025}, and its tokens have been proposed as collateral on Aave~\cite{aavearfc}. Futures on GPU rental prices are also being built so lenders can hedge the same risk~\cite{architect2026}. Lenders, risk curators and auditors are pricing GPU-backed credit, but nobody has published an independent account of what the chain shows about it.
+Several synthetic-dollar protocols now take stablecoin deposits on-chain and lend them to companies that operate GPU clusters, paying depositors from the interest. USD.AI is one of the larger ones. It has a \$100\,M credit facility from Bullish~\cite{bullish2025}, and its tokens have been proposed as collateral on Aave~\cite{aavearfc}. Futures on GPU rental prices are also being built so lenders can hedge the same risk~\cite{architect2026}. Lenders, risk curators and auditors are pricing GPU-backed credit, but we are not aware of a published independent account of what the chain shows about it.
 
-The GPUs, the borrowers' revenues and the loan agreements are off-chain. The liabilities are not. Every deposit, loan disbursement, repayment, fee, redemption request and bridge transfer leaves an event log on a public chain. Those logs cannot prove that a GPU exists. They can show how much was lent, to how many borrowers, at what rates, how much has been repaid, whether the yield credited to holders is backed by cash, who holds the tokens and how quickly holders can exit. A depositor or a risk curator needs those numbers before relying on the off-chain story.
+The GPUs, the borrowers' revenues and the loan agreements are off-chain. The recorded liabilities are not. Deposits, loan disbursements, repayments, fees, redemption requests and bridge transfers leave event logs on a public chain. Those logs cannot prove that a GPU exists. They can reconstruct recorded loan terms and payments, yield transfers, token custody and completed redemption times. They cannot establish beneficial ownership, collateral perfection or ultimate borrower cash flow. A depositor or a risk curator needs both kinds of evidence before relying on the off-chain story.
 
 We rebuild USD.AI from raw logs using the Covalent GoldRush API~\cite{goldrush} and the protocol's source code~\cite{usdaisrc}, and ask seven questions:
 \begin{enumerate}
@@ -12,19 +12,19 @@ We rebuild USD.AI from raw logs using the Covalent GoldRush API~\cite{goldrush} 
 \item[RQ4] How concentrated are the borrowers?
 \item[RQ5] How do redemptions behave, and do they follow GPU rental prices?
 \item[RQ6] Which chains does the protocol live on?
-\item[RQ7] How large is GPU credit compared with the compute actually bought and paid for on-chain, on Akash and Livepeer?
+\item[RQ7] How do loan originations compare, descriptively, with payments on Akash and Livepeer, two distinct on-chain compute venues?
 \end{enumerate}
-We also check every headline number against the vault's own accounting at a single block, and we trace one kind of vault outflow, escrow pre-funding, to where the money ended up.
+We also check every headline number against the vault's own accounting at the same block at which the event study ends, and we trace one kind of vault outflow, escrow pre-funding, through the wallets it passed.
 
 \textbf{Contributions.}
 \begin{enumerate}
 \item An open, tested pipeline that decodes every event from source-code signatures, follows loans through a V1 to V2 migration and through refinancings, and reproduces all results offline from a hash-verified dataset.
-\item A reconstruction of a GPU-backed loan book from chain data: \NLoans{} loans to \NBorrowers{} borrowers, \Originated{} originated and \Outstanding{} outstanding.
-\item A cash-coverage test that separates yield received in cash from yield credited through NAV.
+\item A reconstruction of a GPU-backed loan book from chain data: \NLoans{} loans to \NBorrowers{} borrower addresses, \Originated{} originated and \Outstanding{} outstanding.
+\item A cash-coverage test that separates yield received in cash from yield credited through NAV, and a sensitivity that separates borrower cash from reserve yield, issuer incentives and one-off transfers.
 \item A reconstruction of the collateral from the protocol's hardware-token metadata: model, unit count, stated value and loan-to-value for every active loan.
 \item Measurements of holder concentration, the redemption queue and supply across five chains.
-\item A reconciliation showing that \DTShare{} of reported vault assets is an escrow claim on funds that were redeemed to PYUSD and sent onward before any matching loan existed.
-\item A comparison of GPU credit with spending on two decentralized compute markets over the same period.
+\item A same-block reconciliation showing that \DTShare{} of reported vault assets is an escrow claim on funds that were redeemed to PYUSD and sent onward before any matching loan existed.
+\item A descriptive comparison of GPU credit originations with spending on two decentralized compute venues over the same period; these are different economic quantities, not an estimate of total compute demand.
 \item Monitoring indicators that lenders and curators can run with the same code.
 \end{enumerate}
 

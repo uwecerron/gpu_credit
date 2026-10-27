@@ -15,7 +15,7 @@ Study window: 2025-05-12 (vault deployment) to 2026-10-21. Chain data comes from
 
 ### 1. The loan book
 
-39 loans went to 13 borrowers: $290.1M originated, $182.2M still outstanding, at rates from 7% to 15%. No loan has defaulted or been liquidated. 18 loans were moved from the V1 to the V2 loan router, and we count each of them once.
+39 loans went to 13 borrowers: $290.1M originated, $182.2M still outstanding, at rates from 7% to 15%. No loan has a recorded breach or liquidation so far, which says something about a young loan book, not about full-cycle performance. 17 loans were moved from the V1 to the V2 loan router and 4 were refinanced into new terms; a loan that changed hash is counted once.
 
 The largest borrower received 45.6% of all lending and the top three received 76.8%. The HHI is 0.273, well above the 0.18 line that the 2023 US Merger Guidelines call highly concentrated.
 
@@ -29,7 +29,7 @@ The active book is secured by 630 units, about 4,560 GPUs counting eight per B20
 
 ![Collateral vs outstanding](paper/figures/fig_collateral.png)
 
-One token matters for the escrow finding: 288 B300 servers with a stated value of $140.2M secured the largest borrower's $87.1M loan until that loan was repaid in full on October 1, eight days after the $128.9M escrow deposits. The token now sits unpledged in the borrower's reserve account, and a record for 32 GB200 NVL72 racks ($153M stated) exists without a minted token. The simplest reading is a refinancing in progress: old loan repaid, new one funded through escrow but not yet originated. Holders are still exposed while it's pending, but that's the explanation the protocol will most likely give, and it fits the chain.
+One token matters for the escrow finding: 288 B300 servers with a stated value of $140.2M secured the largest borrower's $87.1M loan until that loan was repaid in full on October 1, eight days after the $128.9M escrow deposits. The token now sits unpledged in the borrower's reserve account. The metadata host also serves two records for token IDs that have not been minted, both GB200 NVL72 racks with $161.1M of stated value between them; they are not in any collateral total. A refinancing in progress is one possible reading of this sequence, but no matching new loan or legal commitment can be verified from the chain, and an unminted record is not proof of pledged collateral.
 
 ### 1b. Maturities and payment status
 
@@ -37,7 +37,21 @@ The 21 active loans run 2.1 to 3 years. Weighted by outstanding principal, 2.6 y
 
 ### 2. Where the yield comes from
 
-sUSDai's NAV grew 8.18% a year, and 93.8% of the yield credited to holders has arrived as cash. Borrower interest was only $6.65M of that cash. Base yield from stablecoin issuers was $15.08M: $6.36M of PYUSD incentives harvested from the reserve and $8.72M minted from M^0's yield-bearing wM. Each source on its own is smaller than borrower interest, but together they are more than twice as large. So far, holders have received more cash from stablecoin issuers than from GPU borrowers. Counting only what borrowers paid, cash coverage of the credited yield is 28.5%.
+sUSDai's NAV grew 8.18% a year, and 93.8% of the yield credited to holders has arrived as cash. Borrower interest was only $6.65M of that cash. Base yield from stablecoin issuers was $15.08M: $6.36M of PYUSD incentives harvested from the reserve and $8.72M minted from M^0's yield-bearing wM. Each source on its own is smaller than borrower interest, but together they are more than twice as large. Over this window, holders received more cash from stablecoin issuers than from GPU borrowers. The one-off $7.82M wM deposit on 2026-02-02 drives much of that, so the mix is a historical fact, not a forecast.
+
+The layers, cumulative, with the share of credited yield each one brings coverage to:
+
+| Cash layer | This layer | Coverage |
+|---|---|---|
+| Borrower interest and fees | $6.95M | 28.4% |
+| Escrow interest on pre-funded loans | $0.54M | 30.6% |
+| Recurring PYUSD issuer incentives | $6.36M | 56.6% |
+| Recurring wM reserve yield | $0.90M | 60.3% |
+| One-off wM deposit (2026-02-02) | $7.82M | 92.3% |
+| Protocol transfer booked as escrow interest (2026-10-02) | $0.34M | 93.7% |
+| Accrued, not yet received | $1.55M | 100% |
+
+The last cash row is a $379k gross transfer the contract recorded as "interest" on a $1,000 escrow deposit that was cancelled the same day. Interest many times the principal is a transfer by another name, so it is kept apart from the $539k of escrow interest on the real pre-funded loans.
 
 ![Cash yield by source](paper/figures/fig_yield.png)
 
@@ -45,7 +59,7 @@ sUSDai's NAV grew 8.18% a year, and 93.8% of the yield credited to holders has a
 
 ### 3. The vault's balance sheet, and $128.9M of escrow with no loan
 
-We read the vault's accounting with `eth_call` at one block. Our rebuilt loan book is within 0.22% of the vault's `pendingLoanBalance`, and our share count is within 0.01% of `totalShares`.
+We read the vault's accounting with `eth_call` at block 517,316,432, and the event scan ends at that same block, so both describe one moment. Our rebuilt loan book is within 0.22% of the vault's `pendingLoanBalance` (the gap is interest accrued since the last monthly payments), and our share count matches `totalShares` to within 0.00%.
 
 The same read shows that $128.9M, or 23% of reported assets, is escrow for two loans that no loan router has created. Both deposits were made on 2026-09-23, and together they equal `depositTimelockBalance` to the cent. The timelock contracts hold no tokens.
 
@@ -108,7 +122,7 @@ Three design features decide how that would play out. Nothing marks a loan down 
 ### 8. Risks the chain shows only in outline
 
 - **Related parties.** The same accounts submit the protocol multisig and the escrow Safe. The largest borrower, the fee recipient and the escrow all route to one off-ramp wallet. Fine on its face, but "13 independent borrowers" needs an entity map the chain doesn't give.
-- **Key compromise.** Admin roles and the escrow Safe sit with a few signer accounts. The [Railway incident](https://github.com/uwecerron/railway_blockchain_incident) this week showed what one leaked key does: 231 wallets, 17 chains, one hour.
+- **Key compromise.** Admin roles and the escrow Safe sit with a few signer accounts. The [Railway incident](https://github.com/uwecerron/railway_blockchain_incident) this week showed what one leaked key does: 231 wallets, 22 chains, about seven hours.
 - **Fixed loans, floating benchmark.** Loans are fixed at 7% to 15% for 2.6 more years while the yield holders compare against moves.
 - **Custody, title and valuation.** The hardware is described on-chain down to model and serial number, but not who holds it, where, under what filing or insurance, or whether the stated values are appraisals. At 67% LTV on a three-year life, there's little room for error.
 - **Bridged exits.** 41% of shares are on other chains and must bridge back before they can queue.
@@ -136,9 +150,13 @@ Three design features decide how that would play out. Nothing marks a loan down 
 
 To be sure the GoldRush data is complete and correct, `python3 -m compute_forensics verify` pulls the same logs again from a public Arbitrum node with `eth_getLogs`, without GoldRush, and compares the two log by log (by transaction hash, topics and data) and by summed amounts. All 22 event sets match exactly: 246,176 logs covering every loan origination, repayment, migration, refinance, lender payout, fee, USDai mint and redemption, vault deposit, redemption request, escrow event and Livepeer ticket payment. It also compares token supply with the sum of holder balances and re-reads the escrow redemption receipt. Results are in `data/verification/onchain_checks.json` and in the verification table of the paper (Section IV).
 
+![GoldRush vs node, every event set](paper/figures/fig_verification.png)
+
+A second, independent pass is in [`data/verification/VALIDATION.md`](data/verification/VALIDATION.md): a validator with its own decoders (scripts in `data/verification/independent/`) recomputed every headline number from the frozen data, matched them within 0.5%, and re-read the escrow balance, collateral metadata and USDai reserves live from the chain.
+
 The check caught one real problem, now fixed. GoldRush's event endpoint treats `ending-block` as exclusive, so the first scan skipped the last block of every 1,000,000-block window. That dropped one Livepeer ticket payment (0.0024 ETH) and nothing from USD.AI. The code now asks for `hi + 1`, and `collect --stage boundaries` patches older data. We also found that GoldRush sometimes numbers logs inside a transaction differently from the node, so the code never matches or deduplicates on log index.
 
-The check also confirms USDai itself is backed: the USDai contract holds slightly more PYUSD than there is USDai in circulation across the hub and the EVM spokes (coverage above 100%). So the vault's idle balance is real PYUSD one redemption away.
+The check also reads USDai's reserves: at the block of the check the USDai contract held about as much PYUSD as there was USDai in circulation across the hub and the EVM spokes (coverage 100.0%, Solana's few hundred tokens left out). That is one block and one scope, not a reserve audit, and it says nothing about redemption capacity under stress.
 
 Prices, Akash figures and GetDeploying data are not on Arbitrum, so this check does not cover them.
 
@@ -216,7 +234,7 @@ Never paste your key into an issue, a notebook you plan to share, or a commit.
 ## Scope and limits
 
 - The chain can verify liabilities and cash. It cannot verify that a GPU exists, that it is rented, or that a borrower can pay.
-- We reconcile against vault state at one block, not continuously.
+- We reconcile against vault state at one block (the same block the event scan ends at), not continuously. Holder snapshots are at a nearby block and the USDai reserve read at a later one.
 - Two topic hashes on the V1 loan router do not match any signature in the source history. We count them and leave them out.
 - Holder snapshots are current. Historical holder snapshots are only available on GoldRush Foundational chains, so we have them for Ethereum, not Arbitrum.
 - GoldRush has no `eth_call` and does not index Akash, so vault state comes from the public Arbitrum RPC, Solana supply from the public Solana RPC, and Akash numbers from the Akash Console API. Each is labeled where used.
@@ -225,7 +243,7 @@ Never paste your key into an issue, a notebook you plan to share, or a commit.
 
 ## Right of reply
 
-USD.AI should get to answer the escrow finding before it circulates. The plan is to send it to them and add any response to a revised version.
+USD.AI should get to answer the escrow finding before it circulates. As of this version it has not been sent to them. The plan is to send it and add any response to a revised version; until then the reading of that finding is ours alone.
 
 ## AI disclosure
 
