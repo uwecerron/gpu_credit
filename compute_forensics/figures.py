@@ -30,9 +30,11 @@ INK, INK2, MUTED = "#0b0b0b", "#52514e", "#898781"
 GRID, BASE, SURFACE, EMPTY = "#e1e0d9", "#c3c2b7", "#ffffff", "#f0efec"
 
 plt.rcParams.update({
-    "font.family": "sans-serif", "font.sans-serif": ["Helvetica", "Arial", "Liberation Sans", "DejaVu Sans"],
-    "font.size": 7.5, "axes.labelsize": 7.5, "axes.titlesize": 8, "legend.fontsize": 7,
-    "xtick.labelsize": 7, "ytick.labelsize": 7,
+    # Match the IEEE body font (Times) so figures read as part of the paper.
+    "font.family": "serif", "font.serif": ["TeX Gyre Termes", "Nimbus Roman", "Times New Roman", "Liberation Serif"],
+    "mathtext.fontset": "stix",
+    "font.size": 8, "axes.labelsize": 8, "axes.titlesize": 8.5, "legend.fontsize": 7.5,
+    "xtick.labelsize": 7.5, "ytick.labelsize": 7.5,
     "text.color": INK, "axes.labelcolor": INK2, "xtick.color": MUTED, "ytick.color": MUTED,
     "axes.edgecolor": BASE, "axes.linewidth": 0.6, "axes.spines.top": False, "axes.spines.right": False,
     "axes.spines.left": False, "axes.grid": True, "axes.grid.axis": "y", "grid.color": GRID,
@@ -122,7 +124,7 @@ def originations(loans, out: Path) -> None:
     totals = _stack(ax, months, layers)
     for x, v in enumerate(totals):
         if v >= 20:
-            ax.text(x, v + 1.5, f"{v:,.0f}", ha="center", va="bottom", fontsize=6.3, color=INK2)
+            ax.text(x, v + 1.5, f"{v:,.0f}", ha="center", va="bottom", fontsize=6.9, color=INK2)
     ax.set_ylabel("Originated principal, USD m")
     ax.set_ylim(0, max(totals) * 1.15)
     _legend_top(ax, ncol=3)
@@ -154,7 +156,7 @@ def nav_and_peg(nav: dict, prices: dict, out: Path) -> None:
     ax.plot(xs, list(nav.values()), color=BLUE, lw=1.8, label="sUSDai NAV per share (vault)")
     last_x, last_v = xs[-1], list(nav.values())[-1]
     ax.annotate(f"{last_v:.4f}", (last_x, last_v), xytext=(3, 0), textcoords="offset points",
-                va="center", fontsize=6.5, color=INK)
+                va="center", fontsize=7.1, color=INK)
     ax.set_ylabel("USD")
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
     _legend_top(ax, ncol=1)
@@ -167,8 +169,20 @@ def yield_sources(accrued: dict, cash: dict, out: Path) -> None:
             ("fees", "fees"), ("escrow_interest", "escrow interest")]
     layers = [(lab, [cash.get(m, {}).get(k, 0.0) / 1e6 for m in months], SERIES[i]) for i, (k, lab) in enumerate(keys)]
     fig, ax = plt.subplots(figsize=(COL, 2.3))
-    _stack(ax, months, layers)
+    totals = [sum(cash.get(m, {}).get(k, 0.0) for k, _ in keys) / 1e6 for m in months]
     acc = [accrued.get(m, 0.0) / 1e6 for m in months]
+    # Clamp a single outlier month so the rest of the series stays readable, and say so.
+    rest = sorted(totals + acc)[:-1]
+    cap = max(rest) * 1.6 if rest else None
+    if cap and max(totals) > cap:
+        i = totals.index(max(totals))
+        scale = cap / totals[i]
+        layers = [(lab, [v * scale if j == i else v for j, v in enumerate(vals)], c) for lab, vals, c in layers]
+        _stack(ax, months, layers)
+        ax.text(i, cap * 1.02, f"${totals[i]:.1f}M\n(axis cut)", ha="center", va="bottom", fontsize=6.4, color=INK2)
+        ax.set_ylim(0, cap * 1.3)
+    else:
+        _stack(ax, months, layers)
     ax.plot(range(len(months)), acc, color=INK, lw=1.1, marker="o", ms=3, mfc=SURFACE, mew=1.0,
             label="yield credited to holders")
     ax.set_ylabel("USD m per month")
@@ -201,7 +215,7 @@ def balance_sheet(parts: list[tuple[str, float]], liabilities: list[tuple[str, f
             left += w
         for k, (xr, txt) in enumerate(small):
             ax.annotate(txt, (xr - 1, yy + 0.31), xytext=(xr, yy + 0.47 + 0.17 * k), ha="right", va="bottom",
-                        fontsize=7.2, color=INK2, arrowprops=dict(arrowstyle="-", lw=0.6, color=MUTED))
+                        fontsize=7.8, color=INK2, arrowprops=dict(arrowstyle="-", lw=0.6, color=MUTED))
         ax.text(-6, yy, f"{title}\n${tot:,.0f}M", ha="right", va="center", fontsize=8, color=INK, linespacing=1.25)
     ax.set_yticks([])
     ax.set_xticks([])
@@ -220,7 +234,7 @@ def flow_graph(nodes: dict[str, tuple[float, float]], edges: list[tuple[str, str
     ax.set_ylim(0.0, 1.1)
     boxes = {}
     for n, (x, y) in nodes.items():
-        boxes[n] = ax.text(x, y, n, ha="center", va="center", fontsize=7.6, color=INK, linespacing=1.15, zorder=3,
+        boxes[n] = ax.text(x, y, n, ha="center", va="center", fontsize=8.2, color=INK, linespacing=1.15, zorder=3,
                            bbox=dict(boxstyle="round,pad=0.45,rounding_size=0.4", fc="#f3f6fb", ec=BLUE, lw=0.7))
     fig.canvas.draw()
     inv = ax.transData.inverted()
@@ -250,7 +264,7 @@ def flow_graph(nodes: dict[str, tuple[float, float]], edges: list[tuple[str, str
         horizontal = abs(p1[1] - p0[1]) < 0.05
         txt = f"${v / 1e6:,.1f}M\n{lab}" if horizontal else f"${v / 1e6:,.1f}M {lab}"
         ax.text(mxp, myp + (0.06 if horizontal else 0), txt, ha="center", linespacing=1.1,
-                va="bottom" if horizontal else "center", fontsize=7, color=INK, zorder=4,
+                va="bottom" if horizontal else "center", fontsize=7.6, color=INK, zorder=4,
                 bbox=None if horizontal else dict(boxstyle="round,pad=0.2", fc=SURFACE, ec="none"))
     _save(fig, out, name)
 
@@ -262,7 +276,7 @@ def lorenz(snapshots: dict, out: Path, name: str = "fig_lorenz",
     fig, ax = plt.subplots(figsize=(COL, 2.3))
     ax.grid(True, axis="both")
     ax.plot([0, 1], [0, 1], color=BASE, lw=0.7, zorder=1)
-    ax.text(0.52, 0.56, "perfect equality", rotation=33, fontsize=6, color=MUTED, ha="center")
+    ax.text(0.52, 0.56, "perfect equality", rotation=33, fontsize=6.6, color=MUTED, ha="center")
     for i, (label, bals) in enumerate(snapshots.items()):
         b = sorted(x for x in bals if x > 0)
         tot = sum(b)
@@ -298,8 +312,8 @@ def holder_concentration(conc: dict[str, dict], out: Path) -> None:
     ax.barh([y + h / 2 for y in ys], [100 * v["top10"] for _, v in rows], height=h, color=ORANGE,
             label="ten largest holders")
     for y, (_, v) in zip(ys, rows):
-        ax.text(100 * v["top1"] + 1.5, y - h / 2, f"{100 * v['top1']:.0f}%", va="center", fontsize=6.2, color=INK)
-        ax.text(100 * v["top10"] + 1.5, y + h / 2, f"{100 * v['top10']:.0f}%", va="center", fontsize=6.2, color=INK)
+        ax.text(100 * v["top1"] + 1.5, y - h / 2, f"{100 * v['top1']:.0f}%", va="center", fontsize=6.8, color=INK)
+        ax.text(100 * v["top10"] + 1.5, y + h / 2, f"{100 * v['top10']:.0f}%", va="center", fontsize=6.8, color=INK)
     ax.set_yticks(ys, [f"{k}  ({v['holders']:,} holders)" for k, v in rows], color=INK)
     ax.set_xlim(0, 112)
     ax.set_xlabel("Share of the chain's sUSDai supply, %")
@@ -318,7 +332,7 @@ def supply_chains(supply: dict, out: Path) -> None:
     vals = [v / 1e6 for _, v in items]
     ax.barh(names, vals, color=BLUE, height=0.62)
     for y, v in enumerate(vals):
-        ax.text(v + max(vals) * 0.015, y, f"{v:,.1f}M", va="center", fontsize=6.6, color=INK)
+        ax.text(v + max(vals) * 0.015, y, f"{v:,.1f}M", va="center", fontsize=7.2, color=INK)
     ax.set_xlabel("sUSDai shares, millions")
     ax.set_xlim(0, max(vals) * 1.15)
     ax.invert_yaxis()
@@ -333,9 +347,9 @@ def eth_holders(snaps: dict[str, dict], out: Path) -> None:
     fig, (a1, a2) = plt.subplots(2, 1, figsize=(COL, 2.4), sharex=True, gridspec_kw={"hspace": 0.35})
     xs = [_d(k) for k in ks]
     a1.bar(xs, [snaps[k]["supply"] / 1e6 for k in ks], width=20, color=BLUE)
-    a1.set_title("sUSDai on Ethereum, millions of shares", loc="left", fontsize=7, color=INK)
+    a1.set_title("sUSDai on Ethereum, millions of shares", loc="left", fontsize=7.6, color=INK)
     a2.plot(xs, [snaps[k]["holders"] for k in ks], color=ORANGE, marker="o", ms=3, mfc=SURFACE, mew=1)
-    a2.set_title("Holders", loc="left", fontsize=7, color=INK)
+    a2.set_title("Holders", loc="left", fontsize=7.6, color=INK)
     a2.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
     _save(fig, out, "fig_eth_holders")
 
@@ -354,8 +368,8 @@ def activity_heatmap(activity: dict[str, list[str]], roles: dict[str, str], out:
     ax.grid(False)
     ax.spines["bottom"].set_visible(False)
     ax.imshow(m, cmap=ListedColormap([EMPTY, BLUE]), aspect="auto", vmin=0, vmax=1)
-    ax.set_yticks(range(len(chains)), [c.replace("-mainnet", "") for c in chains], fontsize=6, color=INK2)
-    ax.set_xticks(range(len(addrs)), [a[:6] for a in addrs], rotation=90, fontsize=5.6, color=INK2)
+    ax.set_yticks(range(len(chains)), [c.replace("-mainnet", "") for c in chains], fontsize=6.6, color=INK2)
+    ax.set_xticks(range(len(addrs)), [a[:6] for a in addrs], rotation=90, fontsize=6.2, color=INK2)
     ax.set_xticks([x - 0.5 for x in range(1, len(addrs))], minor=True)
     ax.set_yticks([y - 0.5 for y in range(1, len(chains))], minor=True)
     ax.grid(which="minor", color=SURFACE, lw=1.2)
@@ -365,7 +379,7 @@ def activity_heatmap(activity: dict[str, list[str]], roles: dict[str, str], out:
         ax.axvline(nb - 0.5, color=INK, lw=1.0)
     for lab, x0, x1 in (("borrowers", 0, nb), ("top holders", nb, len(addrs))):
         if x1 > x0:
-            ax.text((x0 + x1 - 1) / 2, -0.9, lab, ha="center", va="bottom", fontsize=7, color=INK)
+            ax.text((x0 + x1 - 1) / 2, -0.9, lab, ha="center", va="bottom", fontsize=7.6, color=INK)
     _save(fig, out, "fig_activity")
 
 
@@ -385,7 +399,7 @@ def queue_timeline(batches: list[dict], weekly_req: dict, nav_daily: dict, out: 
     big = max(batches, key=lambda b: b["amount"]) if batches else None
     if big:
         ax.annotate(f"${big['amount'] / 1e6:,.0f}M", (_d(big["t"]), big["amount"] / 1e6), xytext=(5, 0),
-                    textcoords="offset points", va="center", fontsize=6.3, color=INK2)
+                    textcoords="offset points", va="center", fontsize=6.9, color=INK2)
     ax.set_ylabel("USD m")
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
     _legend_top(ax, ncol=2)
@@ -397,12 +411,12 @@ def redemptions_vs_gpu(weekly_req: dict, nav_daily: dict, gpu: list[tuple[str, f
     fig, (a1, a2) = plt.subplots(2, 1, figsize=(COL, 2.6), sharex=True, gridspec_kw={"hspace": 0.4})
     xs, ys = _weekly_usd(weekly_req, nav_daily)
     a1.bar(xs, ys, width=5, color=BLUE)
-    a1.set_title("Redemption requests, USD m per week", loc="left", fontsize=7, color=INK)
+    a1.set_title("Redemption requests, USD m per week", loc="left", fontsize=7.6, color=INK)
     if gpu:
         lo = min(xs)
         g = [(_d(d), p) for d, p in gpu if _d(d) >= lo]
         a2.plot([x for x, _ in g], [p for _, p in g], color=ORANGE)
-        a2.set_title("H100 on-demand rental, median USD per GPU-hour (GetDeploying)", loc="left", fontsize=7, color=INK)
+        a2.set_title("H100 on-demand rental, median USD per GPU-hour (GetDeploying)", loc="left", fontsize=7.6, color=INK)
     a2.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
     _save(fig, out, "fig_redemptions")
 
@@ -433,10 +447,10 @@ def akash_gpu(gpu_series: dict, monthly_usd: dict, out: Path) -> None:
     fig, (a1, a2) = plt.subplots(2, 1, figsize=(COL, 2.5), sharex=True, gridspec_kw={"hspace": 0.4})
     ks = [k for k in gpu_series if k >= "2025-05-01"]
     a1.plot([_d(k) for k in ks], [gpu_series[k] for k in ks], color=BLUE, lw=1.1)
-    a1.set_title("Akash active leased GPUs", loc="left", fontsize=7, color=INK)
+    a1.set_title("Akash active leased GPUs", loc="left", fontsize=7.6, color=INK)
     ms = [m for m in monthly_usd if "2025-05" <= m <= "2026-10"]
     a2.bar([_d(m + "-15") for m in ms], [monthly_usd[m] / 1e3 for m in ms], width=22, color=AQUA)
-    a2.set_title("Akash spend, USD k per month", loc="left", fontsize=7, color=INK)
+    a2.set_title("Akash spend, USD k per month", loc="left", fontsize=7.6, color=INK)
     a2.xaxis.set_major_formatter(mdates.DateFormatter("%b %y"))
     _save(fig, out, "fig_akash")
 
@@ -450,7 +464,7 @@ def gpu_prices(rows: list[tuple[str, float]], out: Path) -> None:
     colors = [OTHER if "centralized" in r[0].lower() else BLUE for r in rows]
     ax.barh(names, vals, color=colors, height=0.6)
     for y, v in enumerate(vals):
-        ax.text(v + 0.05, y, f"${v:.2f}", va="center", fontsize=6.6, color=INK)
+        ax.text(v + 0.05, y, f"${v:.2f}", va="center", fontsize=7.2, color=INK)
     ax.set_xlabel("USD per GPU-hour")
     ax.set_xlim(0, max(vals) * 1.18)
     ax.invert_yaxis()
@@ -473,7 +487,7 @@ def at_a_glance(tiles: list[tuple[str, str]], out: Path) -> None:
                                     transform=ax.transAxes, fc="#f7f7f5", ec=GRID, lw=0.7))
         ax.text(0.09, 0.64, value, ha="left", va="center", fontsize=13, color=INK, weight="bold",
                 transform=ax.transAxes)
-        ax.text(0.09, 0.27, textwrap.fill(label, 24), ha="left", va="center", fontsize=6.4, color=INK2,
+        ax.text(0.09, 0.27, textwrap.fill(label, 24), ha="left", va="center", fontsize=7, color=INK2,
                 transform=ax.transAxes, linespacing=1.15)
     _save(fig, out, "fig_glance")
 
@@ -488,11 +502,11 @@ def implied_gpus(curve: list[tuple[float, int]], akash_total: int | None, out: P
     for p, g in curve:
         if abs(p - 2.56) < 0.01 or abs(p - 3.36) < 0.01:
             ax.scatter([p], [g], color=ORANGE, s=18, zorder=3, edgecolor=SURFACE, linewidth=1)
-            ax.annotate(f"${p:.2f}/h: {g:,} GPUs", (p, g), xytext=(6, 6), textcoords="offset points", fontsize=6.3,
+            ax.annotate(f"${p:.2f}/h: {g:,} GPUs", (p, g), xytext=(6, 6), textcoords="offset points", fontsize=6.9,
                         color=INK)
     if akash_total:
         ax.axhline(akash_total, color=OTHER, lw=1, ls="-")
-        ax.text(xs[-1], akash_total, f" all GPUs on Akash: {akash_total:,}", ha="right", va="bottom", fontsize=6.3,
+        ax.text(xs[-1], akash_total, f" all GPUs on Akash: {akash_total:,}", ha="right", va="bottom", fontsize=6.9,
                 color=INK2)
     ax.set_xlabel("H100 rental price, USD per GPU-hour")
     ax.set_ylabel("H100s needed at 70% use")
@@ -515,13 +529,39 @@ def collateral_ltv(rows: list[dict], out: Path) -> None:
             label="outstanding principal")
     mx = max(r["collateral_value"] for r in rows) / 1e6
     for y, r in zip(ys, rows):
-        ax.text(r["collateral_value"] / 1e6 + mx * 0.015, y, f"LTV {100 * r['ltv']:.0f}%", va="center", fontsize=6.2,
+        ax.text(r["collateral_value"] / 1e6 + mx * 0.015, y, f"LTV {100 * r['ltv']:.0f}%", va="center", fontsize=6.8,
                 color=INK)
     labels = [f"{_short(r['borrower'])}  {'/'.join(m for m in r['models'] if m != 'other')[:14]} x{r['units']}"
               for r in rows]
-    ax.set_yticks(ys, labels, fontsize=5.8, color=INK)
+    ax.set_yticks(ys, labels, fontsize=6.4, color=INK)
     ax.set_xlim(0, mx * 1.3)
     ax.set_xlabel("USD m")
     ax.invert_yaxis()
     _legend_top(ax, ncol=2)
     _save(fig, out, "fig_collateral")
+
+
+def verification(checks: list[dict], out: Path) -> None:
+    """Log counts per event set from a public node and from GoldRush, on one log axis.
+    Matching sets are blue; any mismatch would show in orange."""
+    rows = sorted(checks, key=lambda r: -r["rpc_count"])
+    fig, ax = plt.subplots(figsize=(COL * 2, 0.2 * len(rows) + 0.9))
+    ax.grid(True, axis="x")
+    ax.grid(False, axis="y")
+    ys = list(range(len(rows)))
+    h = 0.38
+    vals_n = [max(r["rpc_count"], 0.8) for r in rows]
+    vals_g = [max(r["goldrush_count"], 0.8) for r in rows]
+    ax.barh([y - h / 2 for y in ys], vals_n, height=h, color=BLUE_RAMP[0], label="public Arbitrum node (eth_getLogs)")
+    ax.barh([y + h / 2 for y in ys], vals_g, height=h, color=[BLUE if r["match"] else ORANGE for r in rows],
+            label="GoldRush")
+    for y, r in zip(ys, rows):
+        ax.text(max(vals_n[y], vals_g[y]) * 1.15, y, f"{r['rpc_count']:,}  " + ("identical" if r["match"] else "MISMATCH"),
+                va="center", fontsize=6.8, color=INK if r["match"] else ORANGE)
+    ax.set_xscale("log")
+    ax.set_xlim(0.7, max(vals_n) * 40)
+    ax.set_yticks(ys, [r["check"] for r in rows], fontsize=6.9, color=INK)
+    ax.set_xlabel("Logs in the study window (log scale; zero shown at the left edge)")
+    ax.invert_yaxis()
+    _legend_top(ax, ncol=2)
+    _save(fig, out, "fig_verification")

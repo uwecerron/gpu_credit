@@ -188,6 +188,18 @@ def macros(res: dict) -> dict[str, str]:
               "MWPledged": num(be.get("mw_pledged"), 1),
               "UnpledgedValue": usd_m(co.get("unpledged_value")), "UnpledgedName": (big.get("name") or "n/a").replace("[", "(").replace("]", ")"),
               "UnpledgedUnits": num(big.get("units")), "UnpledgedPrior": usd_m((big.get("previously_secured") or {}).get("principal"))})
+    cl = res.get("cash_layers", {})
+    rws = cl.get("rows") or []
+    def _k(i): return pct(rws[i]["kappa"]) if len(rws) > i else "n/a"
+    m.update({"KappaBorrowerEscrow": _k(1), "KappaRecurring": _k(3), "KappaBeforeTransfer": _k(4),
+              "OneOffWM": usd_m(rws[4]["usd"] if len(rws) > 4 else None, 2),
+              "EscrowAnomalous": usd_k(res.get("escrow", {}).get("anomalous_interest_net")),
+              "EscrowRegular": usd_k(res.get("escrow", {}).get("regular_interest_net")),
+              "GPUKnownShare": pct((res.get("collateral") or {}).get("gpu_known_value_share")),
+              "UnmintedValue": usd_m((res.get("collateral") or {}).get("unminted_value")),
+              "NUnminted": num(len((res.get("collateral") or {}).get("unminted", []))),
+              "Unreceived": usd_m(cl.get("unreceived"), 2), "UnreceivedShare": pct(cl.get("unreceived_share")),
+              "NRefinanced": num(ln.get("refinanced")), "NMultiHash": num(ln.get("multi_hash"))})
     li = ln["lender_interest"]
     m["InterestToVault"] = usd_m(li.get(R.SUSDAI, 0.0), 2)
     other = {k: val for k, val in li.items() if k != R.SUSDAI}
@@ -236,6 +248,7 @@ def write_generated(res: dict, loans: dict, btab: list[dict], out: Path) -> None
     write_usdai_table(res, out)
     write_stress_table(res, out)
     write_collateral_table(res, out)
+    write_kappa_table(res, out)
 
 
 ROLE = {
@@ -309,6 +322,18 @@ def write_collateral_table(res: dict, out: Path) -> None:
     (out / "tab_collateral.tex").write_text("\n".join(rows) + "\n")
 
 
+def write_kappa_table(res: dict, out: Path) -> None:
+    cl = res.get("cash_layers") or {}
+    rows = ["\\begin{tabular}{@{}lrrr@{}}", "\\toprule", "Cash layer (cumulative) & This layer & Cumulative & $\\kappa$ \\\\",
+            "\\midrule"]
+    for r in cl.get("rows", []):
+        rows.append(f"{r['layer']} & {usd_m(r['usd'], 2)} & {usd_m(r['cumulative'], 2)} & {pct(r['kappa'])} \\\\")
+    rows += ["\\midrule", f"Credited to holders through NAV & & {usd_m(cl.get('accrued'), 2)} & 100\\% \\\\",
+             f"Accrued, not yet received & {usd_m(cl.get('unreceived'), 2)} & & {pct(cl.get('unreceived_share'))} \\\\",
+             "\\bottomrule", "\\end{tabular}"]
+    (out / "tab_kappa.tex").write_text("\n".join(rows) + "\n")
+
+
 def write_stress_table(res: dict, out: Path) -> None:
     rows = ["\\begin{tabular}{@{}llrrr@{}}", "\\toprule",
             "Defaults & Recovery & Loss & Share of assets & NAV after \\\\", "\\midrule"]
@@ -357,9 +382,13 @@ def write_verification(ver: dict | None, out: Path) -> dict[str, str]:
     ev = ver["event_checks"]
     lp = next((r for r in ev if r["check"].startswith("Livepeer")), {})
     bk = ver.get("usdai_backing") or {}
+    gaps = {s["chain"].split("-")[0]: s for s in ver.get("supply_checks", []) if s.get("diff_pct") is not None}
+    extra = {f"SupplyGap{c.capitalize()}": f"{abs(s['diff_pct']):.2f}\\%" for c, s in gaps.items()}
+    extra.update({f"SupplyGapAt{c.capitalize()}": ("same block" if s.get("rpc_block") not in (None, "latest") else "latest block")
+                  for c, s in gaps.items()})
     sup = (bk.get("usdai_hub_supply") or 0) + sum((bk.get("usdai_spoke_supply") or {}).values())
     resv = sum((bk.get("reserves_at_usdai_contract") or {}).values())
-    return {"NVerify": str(len(ev)), "NVerifyMatch": str(sum(r["match"] for r in ev)),
+    return {**extra, "NVerify": str(len(ev)), "NVerifyMatch": str(sum(r["match"] for r in ev)),
             "BackingBlock": num(bk.get("block")), "USDaiSupplyNow": usd_m(sup), "USDaiReserves": usd_m(resv),
             "USDaiPYUSD": usd_m((bk.get("reserves_at_usdai_contract") or {}).get("PYUSD")),
             "USDaiCoverage": pct(bk.get("coverage"), 2),

@@ -184,6 +184,29 @@ def breakeven(ic: dict, pledged_gpus: int, utilization: float = 0.7) -> dict:
             "mw_pledged": pledged_gpus * ic["kw_per_gpu"] / 1000}
 
 
+def cash_layers(tot_cash: dict, base_events: list[dict], accrued: float, escrow_regular: float,
+                escrow_anomalous: float, one_off_floor: float = 5e6) -> dict:
+    """Cash coverage built up layer by layer, from the cash the chain shows borrowers paid
+    to everything the vault booked. A base-yield deposit above `one_off_floor` is
+    treated as a one-off (in practice the single wM deposit on 2026-02-02)."""
+    one_off = sum(b["usd"] for b in base_events if b["usd"] >= one_off_floor)
+    pyusd = sum(b["usd"] for b in base_events if b["source"] == "pyusd_harvest" and b["usd"] < one_off_floor)
+    wm_rec = sum(b["usd"] for b in base_events if b["source"] == "wm" and b["usd"] < one_off_floor)
+    other = sum(b["usd"] for b in base_events if b["source"] == "other" and b["usd"] < one_off_floor)
+    layers = [("Borrower interest and fees", tot_cash["loan_interest"] + tot_cash["fees"]),
+              ("Escrow interest on pre-funded loans", escrow_regular),
+              ("Recurring PYUSD issuer incentives (monthly harvests)", pyusd),
+              ("Recurring wM reserve yield", wm_rec + other),
+              ("One-off wM deposit (2026-02-02)", one_off),
+              ("Protocol transfer booked as escrow interest (2026-10-02)", escrow_anomalous)]
+    rows, cum = [], 0.0
+    for name, v in layers:
+        cum += v
+        rows.append({"layer": name, "usd": v, "cumulative": cum, "kappa": (cum / accrued) if accrued else None})
+    return {"rows": rows, "accrued": accrued, "unreceived": accrued - cum,
+            "unreceived_share": ((accrued - cum) / accrued) if accrued else None}
+
+
 def _verification(p: Path) -> dict | None:
     """Result of `compute_forensics verify` (GoldRush checked against public RPC), if it was run."""
     return json.loads(p.read_text()) if p.exists() else None
@@ -226,9 +249,16 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
     trace = _load(frozen / "escrow_trace.json.gz")
     col_raw = _load(frozen / "collateral.json.gz") if (frozen / "collateral.json.gz").exists() else {}
     events = merge(from_protocol_txs(proto), from_scans(scans))
+    # Same-block reconciliation: keep only events at or before the block at which the
+    # vault state was read, so event totals and eth_call views describe one moment.
+    ref_block = int(state.get("block") or scans.get("end_block") or 0)
+    if ref_block:
+        events = [e for e in events if e.block <= ref_block]
 
     # RQ1/RQ4: loan book
     loans, meta = L.build_loans(events)
+    mig_hashes = {e.f["new_loan_terms_hash"] for e in events if e.name == "LR2.LoanMigrated"}
+    ref_hashes = {e.f["new_loan_terms_hash"] for e in events if e.name in ("LR2.LoanRefinanced", "LR2.LoanRefinanced3")}
     real = {k: v for k, v in loans.items() if not L.is_test_loan(v)}
     btab = L.borrower_table(loans)
     orig = sum(x.principal for x in real.values())
@@ -251,6 +281,7 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
     queue = V.redemption_queue(events)
     admin_fee = V.base_yield_admin_fees(events)
     base_src = V.base_yield_by_source(events)
+    base_ev = V.base_yield_events(events)
 
     # RQ3/RQ6: holders
     conc, tops, venues = {}, {}, {}
@@ -319,7 +350,19 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
                    for e in esc if e.f["loan_terms_hash"] not in loan_hashes | closed]
     from . import market_analysis as MA0
     flows = MA0.stable_flows(trace)
+    dep_by_hash = {e.f["loan_terms_hash"]: e.f["usdai_amount"] / 1e18 for e in esc}
+    esc_int = []
+    for e in events:
+        if e.name in ("sUSDai.LoanEscrowTimelockWithdrawn", "sUSDai.LoanEscrowTimelockCancelled"):
+            gross = e.f["interest_amount"] / 1e18
+            pr = dep_by_hash.get(e.f["loan_terms_hash"], 0.0)
+            esc_int.append({"time": e.time, "hash": e.f["loan_terms_hash"], "tx": e.tx, "principal": pr,
+                            "interest_gross": gross, "interest_net": gross * (1 - V.LOAN_ROUTER_ADMIN_FEE),
+                            "anomalous": gross > pr})      # interest above principal is not interest
     escrow = {"deposits_total": sum(e.f["usdai_amount"] for e in esc) / 1e18, "n_deposits": len(esc),
+              "interest_events": esc_int,
+              "anomalous_interest_net": sum(x["interest_net"] for x in esc_int if x["anomalous"]),
+              "regular_interest_net": sum(x["interest_net"] for x in esc_int if not x["anomalous"]),
               "n_closed": len(closed), "n_cancelled": sum(1 for e in events if e.name == "sUSDai.LoanEscrowTimelockCancelled"),
               "open": open_escrow, "flows": flows, "summaries": trace.get("summaries", {}),
               "balances": trace.get("balances", {}), "activity": trace.get("activity", {})}
@@ -333,7 +376,8 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
 
     res = {
         # window starts at the vault deployment block date; nav_start is the first deposit
-        "window": {"start": "2025-05-12", "nav_start": start, "end": end, "end_block": scans.get("end_block"),
+        "window": {"start": "2025-05-12", "nav_start": start, "end": end, "end_block": ref_block or scans.get("end_block"),
+                   "same_block": bool(ref_block) and ref_block <= int(scans.get("end_block") or 0),
                    "failed_windows": len(scans.get("failed_windows") or [])},
         "events_decoded": len(events),
         "loans": {"n_all": len(loans), "n": len(real), "n_test": len(loans) - len(real),
@@ -343,7 +387,9 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
                   "fees_paid": sum(x.fees_paid for x in real.values()),
                   "repaid": sum(1 for x in real.values() if x.status == "repaid"),
                   "breached": sum(1 for x in real.values() if x.status in ("breached", "liquidated")),
-                  "migrated": sum(1 for x in real.values() if len(x.hashes) > 1),
+                  "migrated": sum(1 for x in real.values() if any(h in mig_hashes for h in x.hashes)),
+                  "refinanced": sum(1 for x in real.values() if any(h in ref_hashes for h in x.hashes)),
+                  "multi_hash": sum(1 for x in real.values() if len(x.hashes) > 1),
                   "borrowers": len(btab), "hhi_originated": L.hhi([r["originated"] for r in btab]),
                   "hhi_outstanding": L.hhi([r["outstanding"] for r in btab if r["outstanding"] > 0]),
                   "top1_share": btab[0]["originated"] / orig if btab else None,
@@ -378,6 +424,8 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
                     "cross_chain": multi},
         "repayment_funding": funding, "principal_destinations": dests,
         "book_health": loan_book_health(real, events, end),
+        "cash_layers": cash_layers(tot_cash, base_ev, tot_accrued, escrow["regular_interest_net"],
+                                   escrow["anomalous_interest_net"]),
         "stress": stress_scenarios(btab, outstanding, recon, sum(x["usd"] for x in open_escrow)),
         "implied_compute": implied_compute(loan_book_health(real, events, end), real, end),
         "collateral": COL.analyze(col_raw, loans, L.is_test_loan) if col_raw else {},
@@ -445,6 +493,8 @@ def run(frozen: Path, results: Path, paper: Path) -> dict:
     if res["collateral"]:
         figures.collateral_ltv([r for r in res["collateral"]["per_loan"] if r["status"] == "active" and r["collateral_value"]],
                                figdir)
+    if res.get("verification"):
+        figures.verification(res["verification"]["event_checks"], figdir)
     ic = res["implied_compute"]
     figures.implied_gpus([(c["price"], c["gpus"]) for c in ic["curve"]], ak.get("gpu_total_now"), figdir)
     figures.lorenz_named({"Livepeer gateways": lp["gateway_values"], "Livepeer orchestrators": lp["orchestrator_values"],

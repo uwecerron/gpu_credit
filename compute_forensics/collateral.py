@@ -76,14 +76,20 @@ def fetch(protocol_txs: dict, events, raw: Path, ca: str | bool = True, probe: r
         uri = decode(["string"], bytes.fromhex(uri_raw[2:]))[0] if uri_raw and len(uri_raw) > 2 else None
         own = call("0x6352211e" + word)
         owner = ("0x" + own[-40:]) if own and len(own) > 2 else None
-        rec = {"token_id": tid, "token_uri": uri, "owner": owner, "metadata": None}
+        rec = {"token_id": tid, "token_uri": uri, "owner": owner, "metadata": None, "minted": bool(owner)}
+        if not uri and tid in probe and recs:
+            # unminted token: the host may already serve a record at the same URL pattern
+            tmpl = next((r["token_uri"] for r in recs.values() if r.get("token_uri")), None)
+            if tmpl:
+                uri = tmpl.rsplit("/", 1)[0] + f"/{tid}"
+                rec["token_uri"] = uri + " (inferred; token not minted)"
         if uri:
             try:
                 m = sess.get(uri, timeout=60, verify=ca)
                 rec["metadata"] = m.json() if m.ok else {"http_status": m.status_code}
             except (requests.RequestException, ValueError) as e:
                 rec["metadata"] = {"error": str(e)[:200]}
-        if uri or owner or tid in {t["token_id"] for t in toks}:
+        if (rec["metadata"] and "name" in rec["metadata"]) or owner or tid in {t["token_id"] for t in toks}:
             recs[tid] = rec
     log.info("collateral: %d token ids, %d with metadata, %d minted", len(recs),
              sum(1 for x in recs.values() if x["metadata"] and "name" in x["metadata"]),
@@ -165,7 +171,9 @@ def analyze(col: dict, loans: dict, is_test) -> dict:
     active = [r for r in per_loan if r["status"] == "active" and r["collateral_value"]]
     act_val = sum(r["collateral_value"] for r in active)
     act_out = sum(r["outstanding"] for r in active)
-    unpledged = [r for tid, r in rows.items() if tid not in pledged and r["value_usd"] >= 1e6]
+    minted = {tid for tid, rec in recs.items() if rec.get("owner")}
+    unminted = [r for tid, r in rows.items() if tid not in minted]
+    unpledged = [r for tid, r in rows.items() if tid not in pledged and tid in minted and r["value_usd"] >= 1e6]
     for u in unpledged:          # which loan, if any, it secured before
         prior = [r for r in per_loan if r["status"] != "active" and u["token_id"] in
                  {i for h in loans[r["root"]].hashes for i in by_hash.get(h, [])}]
@@ -179,4 +187,8 @@ def analyze(col: dict, loans: dict, is_test) -> dict:
             "useful_life_days": sorted({r["useful_life_days"] for r in rows.values() if r["useful_life_days"]}),
             "unpledged": sorted(unpledged, key=lambda r: -r["value_usd"]),
             "unpledged_value": sum(r["value_usd"] for r in unpledged),
+            "unminted": sorted(unminted, key=lambda r: -r["value_usd"]),
+            "unminted_value": sum(r["value_usd"] for r in unminted),
+            "gpu_known_value_share": (sum(r["value_usd"] for r in rows.values() if r["gpus"]) /
+                                      sum(r["value_usd"] for r in rows.values())) if rows else None,
             "n_records": len(rows), "retrieved_at": col.get("retrieved_at")}

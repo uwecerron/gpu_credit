@@ -1113,174 +1113,174 @@
   "providers_now": 58,
   "retrieved_at": "2026-10-22T19:22:46+00:00",
   "usd_all_time": 6459046.995126261,
-  "usd_window": 3463100.749790294
+  "usd_window": 3468019.196012891
  },
  "book_health": {
   "active": 21,
   "late_over_45d": [],
   "loans": [
    {
-    "age_days": 266,
-    "days_since_payment": 24,
+    "age_days": 267,
+    "days_since_payment": 25,
     "last_payment": "2026-09-27",
     "maturity": "2028-08-15",
     "outstanding": 1786508.2552073703,
     "root": "0xaab64e2d4a4e6c39c0216fd540935093607093c2ea81393bc22c861bff326232"
    },
    {
-    "age_days": 256,
-    "days_since_payment": 16,
+    "age_days": 257,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-09-24",
     "outstanding": 60345.8333292637,
     "root": "0x8e0a968ed1854e1f2b62c70c53b10c4efbd9fd893b5fddd918166eb2abc5f95a"
    },
    {
-    "age_days": 256,
-    "days_since_payment": 16,
+    "age_days": 257,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-09-24",
     "outstanding": 60345.83333016815,
     "root": "0x196e8b5bd231a782bb023324df2b695092b54d140980e0ebcfbfc3f55260ce76"
    },
    {
-    "age_days": 256,
-    "days_since_payment": 16,
+    "age_days": 257,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-09-24",
     "outstanding": 60345.83333016815,
     "root": "0x3dd21d776db9cbdac1c5f1077a0046be2baed6b08b30f46aea3c5f81133757b7"
    },
    {
-    "age_days": 256,
-    "days_since_payment": 16,
+    "age_days": 257,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-09-24",
     "outstanding": 60345.83333016815,
     "root": "0x3047c57b06074d55a3fe804ec5e8b9325d445462e9946dd89f755cfb5741b338"
    },
    {
-    "age_days": 246,
-    "days_since_payment": 20,
+    "age_days": 247,
+    "days_since_payment": 21,
     "last_payment": "2026-10-01",
     "maturity": "2028-10-04",
     "outstanding": 3438231.7947245995,
     "root": "0xe4ed597cd290ff2c855659ff0bc8206146c1a9bd48ba2e90253bd81c60bfd919"
    },
    {
-    "age_days": 230,
-    "days_since_payment": 22,
+    "age_days": 231,
+    "days_since_payment": 23,
     "last_payment": "2026-09-29",
     "maturity": "2028-11-19",
     "outstanding": 7132467.820392558,
     "root": "0xe321e6759b10299f6a403ad72a46fc699d7d466779f277b6955aa8acd7b08daf"
    },
    {
-    "age_days": 226,
-    "days_since_payment": 16,
+    "age_days": 227,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-11-23",
     "outstanding": 62470.833331422466,
     "root": "0x58255b96f0dae4c8e8e21e8c43d238f095aa5ac3be7afce2456a0e552f932a6c"
    },
    {
-    "age_days": 226,
-    "days_since_payment": 16,
+    "age_days": 227,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-11-23",
     "outstanding": 62470.833331422466,
     "root": "0xfe3478d859184793e97b82f394dad7facd63e1ab8521c6cc939983c075365491"
    },
    {
-    "age_days": 226,
-    "days_since_payment": 16,
+    "age_days": 227,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2028-11-23",
     "outstanding": 62470.833331422466,
     "root": "0xacbc25f966d804b6ac755f544519a7397a37947db4907cb13c4fb2b35b558fde"
    },
    {
-    "age_days": 224,
-    "days_since_payment": 12,
+    "age_days": 225,
+    "days_since_payment": 13,
     "last_payment": "2026-10-09",
     "maturity": "2028-04-29",
     "outstanding": 398940.35577966325,
     "root": "0x661ea7f0453ff837236074224f691134b2fb835ecfe0e94c4f101e104ecf86bb"
    },
    {
-    "age_days": 215,
-    "days_since_payment": 3,
+    "age_days": 216,
+    "days_since_payment": 4,
     "last_payment": "2026-10-18",
     "maturity": "2028-12-04",
     "outstanding": 157820.28189231406,
     "root": "0x207fc4ca86f44ef43c6d95ed42aafb1a178289f33a2230ea865d15a8130eb47d"
    },
    {
-    "age_days": 198,
-    "days_since_payment": 16,
+    "age_days": 199,
+    "days_since_payment": 17,
     "last_payment": "2026-10-05",
     "maturity": "2029-01-20",
     "outstanding": 22351369.84415326,
     "root": "0xe4b5c38fb3a137d055f0031e7d8534ca89963dbcb938425fdb6aa3d4b6bb40e4"
    },
    {
-    "age_days": 187,
-    "days_since_payment": 20,
+    "age_days": 188,
+    "days_since_payment": 21,
     "last_payment": "2026-10-01",
     "maturity": "2029-01-31",
     "outstanding": 14077042.611715946,
     "root": "0x6e7f7518fd25857ac22bc72224e3441094cdc356abaf331c82caf4daa44f7504"
    },
    {
-    "age_days": 175,
-    "days_since_payment": 22,
+    "age_days": 176,
+    "days_since_payment": 23,
     "last_payment": "2026-09-29",
     "maturity": "2029-04-28",
     "outstanding": 10490171.21046715,
     "root": "0xd02b09c87297425e7eb87f2c4ddb1870eda855f7645458b0399521b319dced16"
    },
    {
-    "age_days": 175,
-    "days_since_payment": 22,
+    "age_days": 176,
+    "days_since_payment": 23,
     "last_payment": "2026-09-29",
     "maturity": "2029-04-28",
     "outstanding": 31217550.19508167,
     "root": "0x0357ad958e40e8db67e33de2114c7fc83aff9a7ed91b70704adadd7e76943e75"
    },
    {
-    "age_days": 78,
-    "days_since_payment": 21,
+    "age_days": 79,
+    "days_since_payment": 22,
     "last_payment": "2026-09-30",
     "maturity": "2029-08-03",
     "outstanding": 7319637.459371689,
     "root": "0x7b8200dce30fca734b539b07999a86a824dd3c34470b3402cb3fa14ff86a69a6"
    },
    {
-    "age_days": 75,
-    "days_since_payment": 20,
+    "age_days": 76,
+    "days_since_payment": 21,
     "last_payment": "2026-10-01",
     "maturity": "2029-08-06",
     "outstanding": 14905804.4625,
     "root": "0x3e42df0c8d79889e891cf5454e7f4fe65290e322feb691bb4127ea4a80f16f95"
    },
    {
-    "age_days": 48,
-    "days_since_payment": 20,
+    "age_days": 49,
+    "days_since_payment": 21,
     "last_payment": "2026-10-01",
     "maturity": "2029-09-02",
     "outstanding": 54404473.45,
     "root": "0x45e3c30bc37ab233011a200f3ed38992ac8079b5ee3a4cceba045d0ee7dc6e2b"
    },
    {
-    "age_days": 37,
-    "days_since_payment": 20,
+    "age_days": 38,
+    "days_since_payment": 21,
     "last_payment": "2026-10-01",
     "maturity": "2029-09-13",
     "outstanding": 9561608.0,
     "root": "0x50b0d9c015c4f33ea5b9346eebab6b09f1ec4c08ddefdff3b122d2b6bbac50cb"
    },
    {
-    "age_days": 5,
+    "age_days": 6,
     "days_since_payment": null,
     "last_payment": "",
     "maturity": "2029-10-15",
@@ -1288,7 +1288,7 @@
     "root": "0xd97450479ee673d551e07943fb003ffa576a21d01be42f52c4d4ce68118197fa"
    }
   ],
-  "max_days_since_payment": 24,
+  "max_days_since_payment": 25,
   "never_paid_older_than_45d": [],
   "outstanding_by_maturity_year": {
    "2028": 13342764.341310542,
@@ -1296,13 +1296,56 @@
   },
   "term_days_max": 1095,
   "term_days_min": 780,
-  "weighted_years_to_maturity": 2.5974585327793394
+  "weighted_years_to_maturity": 2.5947206819922064
  },
  "breakeven": {
-  "breakeven_price": 3.213650393258249,
+  "breakeven_price": 3.216417033005989,
   "mw_pledged": 6.84,
   "pledged_gpus": 4560,
-  "price_full_utilization": 2.249555275280774
+  "price_full_utilization": 2.2514919231041923
+ },
+ "cash_layers": {
+  "accrued": 24463370.978683926,
+  "rows": [
+   {
+    "cumulative": 6952685.183230519,
+    "kappa": 0.28420797727707753,
+    "layer": "Borrower interest and fees",
+    "usd": 6952685.183230519
+   },
+   {
+    "cumulative": 7491464.758910876,
+    "kappa": 0.3062319075093346,
+    "layer": "Escrow interest on pre-funded loans",
+    "usd": 538779.575680356
+   },
+   {
+    "cumulative": 13850277.150358075,
+    "kappa": 0.5661638848720589,
+    "layer": "Recurring PYUSD issuer incentives (monthly harvests)",
+    "usd": 6358812.3914471995
+   },
+   {
+    "cumulative": 14750126.634725275,
+    "kappa": 0.6029474289368275,
+    "layer": "Recurring wM reserve yield",
+    "usd": 899849.4843672
+   },
+   {
+    "cumulative": 22571760.356680676,
+    "kappa": 0.9226757987011889,
+    "layer": "One-off wM deposit (2026-02-02)",
+    "usd": 7821633.7219554
+   },
+   {
+    "cumulative": 22912678.563311253,
+    "kappa": 0.9366116625250108,
+    "layer": "Protocol transfer booked as escrow interest (2026-10-02)",
+    "usd": 340918.206630576
+   }
+  ],
+  "unreceived": 1550692.4153726734,
+  "unreceived_share": 0.06338833747498919
  },
  "collateral": {
   "active_collateral_value": 272837420.278552,
@@ -1310,6 +1353,7 @@
   "active_outstanding_with_collateral": 182235691.57460025,
   "active_units": 630,
   "book_ltv": 0.6679277768736694,
+  "gpu_known_value_share": 0.9933111061193679,
   "ltv_max": 0.8,
   "ltv_min": 0.4298926247625682,
   "models_active": [
@@ -1319,7 +1363,7 @@
    "RTX 6000",
    "other"
   ],
-  "n_records": 85,
+  "n_records": 87,
   "per_loan": [
    {
     "borrower": "0x7c5ed528421ebe86e759fbfc626b6631f9a7854e",
@@ -1917,7 +1961,36 @@
     "units": 16
    }
   ],
-  "retrieved_at": "2026-10-24T15:15:55+00:00",
+  "retrieved_at": "2026-10-27T00:09:38+00:00",
+  "unminted": [
+   {
+    "depreciation_start": "On Borrow",
+    "gpus": 2304,
+    "manufacturer": "Hypertec",
+    "model": "GB200",
+    "name": "NVIDIA GB200 NVL72 [32]",
+    "owner": null,
+    "serial": null,
+    "token_id": 1012,
+    "units": 32,
+    "useful_life_days": 1095,
+    "value_usd": 153063102.36
+   },
+   {
+    "depreciation_start": "On Borrow",
+    "gpus": 2304,
+    "manufacturer": "Hypertec",
+    "model": "GB200",
+    "name": "NVIDIA GB200 NVL72 [32]",
+    "owner": null,
+    "serial": null,
+    "token_id": 1013,
+    "units": 32,
+    "useful_life_days": 1095,
+    "value_usd": 8055952.76
+   }
+  ],
+  "unminted_value": 161119055.12,
   "unpledged": [
    {
     "depreciation_start": "On Borrow",
@@ -2056,6 +2129,7 @@
     "plasma-mainnet"
    ]
   },
+  "anomalous_interest_net": 340918.206630576,
   "balances": {
    "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d": {
     "USDai": 136550.36
@@ -2447,6 +2521,71 @@
     ]
    }
   },
+  "interest_events": [
+   {
+    "anomalous": false,
+    "hash": "0xf0850800f852556a4c59b2a9be710c93996b9388c89429ce1f631922a7397794",
+    "interest_gross": 82770.40072979576,
+    "interest_net": 74493.36065681618,
+    "principal": 15331684.590000002,
+    "time": "2026-08-07T22:18:24Z",
+    "tx": "0xf1e421bc72ca9bd261d32db4f07aa49ae6cc0f3c1ebed10ee117e68abe58266f"
+   },
+   {
+    "anomalous": false,
+    "hash": "0x3e42df0c8d79889e891cf5454e7f4fe65290e322feb691bb4127ea4a80f16f95",
+    "interest_gross": 0.0,
+    "interest_net": 0.0,
+    "principal": 15331684.590000002,
+    "time": "2026-08-07T22:21:34Z",
+    "tx": "0xf7105631cd92b98e64a1b34dc128866f9a765052779dee2caf27d117a9ba2530"
+   },
+   {
+    "anomalous": false,
+    "hash": "0xcc3b0f364f07a9a0db653359c9bc258446af58bd76e3767dbbb56e06441c4774",
+    "interest_gross": 10.913737626081488,
+    "interest_net": 9.82236386347334,
+    "principal": 4565269.0,
+    "time": "2026-08-21T17:19:11Z",
+    "tx": "0x40dbbbfc07150634476513bab16d0fd33dc301d626506e29000bbc87a81a4c9d"
+   },
+   {
+    "anomalous": false,
+    "hash": "0x45e3c30bc37ab233011a200f3ed38992ac8079b5ee3a4cceba045d0ee7dc6e2b",
+    "interest_gross": 469470.5993571707,
+    "interest_net": 422523.5394214536,
+    "principal": 54404473.45,
+    "time": "2026-09-03T20:58:03Z",
+    "tx": "0xa8c56012a96eddf2a780997d4b952d451f2e333be9329740b97b702b71771bfa"
+   },
+   {
+    "anomalous": false,
+    "hash": "0xbf6ab4fa9c85ff056cf692f3a6a1be19890f33fd8df639ccc4a8d1b174ac4bd6",
+    "interest_gross": 1.5920834125e-08,
+    "interest_net": 1.4328750712500001e-08,
+    "principal": 0.0001224504819,
+    "time": "2026-09-24T13:37:58Z",
+    "tx": "0xbf39c301945813930c7246a6eed4cd4ece9bfbfa4452b5c19cf4d4a490674c68"
+   },
+   {
+    "anomalous": true,
+    "hash": "0xfdd957cba68a5620e086bddf7bc7a5a4c5cca47950b37755b88892f43077e817",
+    "interest_gross": 378798.0073673066,
+    "interest_net": 340918.206630576,
+    "principal": 1000.000000000006,
+    "time": "2026-10-02T18:34:25Z",
+    "tx": "0xeb613f152cf130350b0fc0b8e1de55f2e0948e5dce83d6038ee975673da3bbae"
+   },
+   {
+    "anomalous": false,
+    "hash": "0xd97450479ee673d551e07943fb003ffa576a21d01be42f52c4d4ce68118197fa",
+    "interest_gross": 46392.05915356493,
+    "interest_net": 41752.85323820844,
+    "principal": 4565269.0,
+    "time": "2026-10-16T18:24:07Z",
+    "tx": "0x1eae562c20f131ea3a9165a37dd285622154fe1ea1f0b509d4d73dc9005b87ca"
+   }
+  ],
   "n_cancelled": 3,
   "n_closed": 7,
   "n_deposits": 9,
@@ -2466,6 +2605,7 @@
     "usd": 122450481.89999999
    }
   ],
+  "regular_interest_net": 538779.575680356,
   "summaries": {
    "0x0f38d69bca4b0256cc7d1dd9f4d8104bfc0d623d": {
     "first": "2026-08-04T01:32:13Z",
@@ -2623,7 +2763,7 @@
    "top1": 0.8121327549725454
   }
  },
- "events_decoded": 55868,
+ "events_decoded": 55954,
  "gpu": {
   "h100_first": [
    "2025-09-29",
@@ -3513,50 +3653,50 @@
   }
  },
  "implied_compute": {
-  "annual_amortization": 71159501.95221663,
-  "annual_debt_service": 89859835.2042557,
+  "annual_amortization": 71236862.51151174,
+  "annual_debt_service": 89937195.76355082,
   "annual_interest": 18700333.25203908,
   "curve": [
    {
-    "gpu_hours_per_year": 59906556.80283713,
-    "gpus": 9769,
-    "mw": 14.654245793257614,
+    "gpu_hours_per_year": 59958130.50903388,
+    "gpus": 9778,
+    "mw": 14.66686167050731,
     "price": 1.5
    },
    {
-    "gpu_hours_per_year": 44929917.60212785,
-    "gpus": 7327,
-    "mw": 10.990684344943213,
+    "gpu_hours_per_year": 44968597.88177541,
+    "gpus": 7333,
+    "mw": 11.000146252880482,
     "price": 2.0
    },
    {
-    "gpu_hours_per_year": 35101498.12666238,
-    "gpus": 5724,
-    "mw": 8.586472144486883,
+    "gpu_hours_per_year": 35131717.09513704,
+    "gpus": 5729,
+    "mw": 8.593864260062878,
     "price": 2.56
    },
    {
-    "gpu_hours_per_year": 29953278.401418567,
-    "gpus": 4885,
-    "mw": 7.327122896628807,
+    "gpu_hours_per_year": 29979065.25451694,
+    "gpus": 4889,
+    "mw": 7.333430835253655,
     "price": 3.0
    },
    {
-    "gpu_hours_per_year": 26743998.57269515,
-    "gpus": 4361,
-    "mw": 6.542074014847151,
+    "gpu_hours_per_year": 26767022.54867584,
+    "gpus": 4365,
+    "mw": 6.54770610290505,
     "price": 3.36
    },
    {
-    "gpu_hours_per_year": 22464958.801063925,
-    "gpus": 3664,
-    "mw": 5.495342172471607,
+    "gpu_hours_per_year": 22484298.940887704,
+    "gpus": 3667,
+    "mw": 5.500073126440241,
     "price": 4.0
    },
    {
-    "gpu_hours_per_year": 17971967.04085114,
-    "gpus": 2931,
-    "mw": 4.3962737379772845,
+    "gpu_hours_per_year": 17987439.152710162,
+    "gpus": 2933,
+    "mw": 4.400058501152192,
     "price": 5.0
    }
   ],
@@ -3686,7 +3826,8 @@
    "0xd791a05c936aa86739dfa4304e686b914232eba9": 104996.55587393662,
    "0xe8dce5fd992d5caca33613b86bcabc38301013f9": 189181.63548406947
   },
-  "migrated": 18,
+  "migrated": 17,
+  "multi_hash": 18,
   "n": 39,
   "n_all": 41,
   "n_test": 2,
@@ -3696,6 +3837,7 @@
   "rate_max": 0.14999999997768684,
   "rate_min": 0.069999999972768,
   "rate_wavg_outstanding": 0.10261619494216305,
+  "refinanced": 4,
   "repaid": 18,
   "reserve_accounts": 25,
   "susdai_funded_share": 0.999503634183684,
@@ -3746,10 +3888,10 @@
   "completed": 2840,
   "filled_shares": 330102882.2496503,
   "paid_usdai": 355633057.4748358,
-  "pending_shares": 19295181.591032583,
-  "requested_shares": 349398063.84068286,
-  "requests": 2986,
-  "unique_redeemers": 2529,
+  "pending_shares": 20174213.807165463,
+  "requested_shares": 350277096.05681574,
+  "requests": 3002,
+  "unique_redeemers": 2545,
   "wait_days_max": 127.34684027777777,
   "wait_days_median": 13.013784722222223,
   "wait_days_p90": 26.597141203703703
@@ -3861,7 +4003,7 @@
   "pending_redemption_shares": 20174213.807165474,
   "redemption_share_price": 1.1171997955875719,
   "serviced_redemption_balance": 69429.95677034536,
-  "shares_gap": -29948.706240177155,
+  "shares_gap": 5.960464477539063e-08,
   "spoke_plus_solana": 204614884.537625,
   "total_assets": 555367306.1979555,
   "total_shares": 495730929.03910065
@@ -4139,7 +4281,7 @@
   "top3_outstanding_share": 0.70531339176153
  },
  "usdai": {
-  "burned": 1399330173.2554185,
+  "burned": 1400233784.8541715,
   "by_token": {
    "0x437cc33344a0b27a429f795ff6b469c72698b291": {
     "burn_usd": 33952478.971097186,
@@ -4148,10 +4290,10 @@
     "n_mint": 9542
    },
    "0x46850ad61c2b7d64d08c9c754f45254596696984": {
-    "burn_usd": 1139384256.1117024,
-    "mint_usd": 757719113.92589,
-    "n_burn": 4817,
-    "n_mint": 4384
+    "burn_usd": 1140287867.7104554,
+    "mint_usd": 757798883.9687148,
+    "n_burn": 4842,
+    "n_mint": 4413
    },
    "0xaf88d065e77c8cc2239327c5edb3a432268e5831": {
     "burn_usd": 225993435.17261884,
@@ -4166,7 +4308,7 @@
     "n_mint": 25
    }
   },
-  "minted": 1653746212.4864693,
+  "minted": 1653825982.5292943,
   "supply_by_chain": {
    "arbitrum-mainnet": 259658550.99948364,
    "base-mainnet": 126159.344556,
@@ -4179,10 +4321,10 @@
   "ratio": 0.9745424287995188
  },
  "vault": {
-  "accrued_total": 24436206.557756793,
+  "accrued_total": 24463370.978683926,
   "admin_fee": 1675588.3997522,
-  "ann_90d": 0.07647785281989106,
-  "ann_total": 0.08183527096291177,
+  "ann_90d": 0.07601176180483793,
+  "ann_total": 0.08171171139819244,
   "base_yield_sources": {
    "pyusd_harvest": 6358812.3914471995,
    "wm": 8721483.2063226
@@ -4193,21 +4335,21 @@
    "fees": 305458.811874394,
    "loan_interest": 6647226.371356125
   },
-  "cash_coverage": 0.9376528435031611,
-  "cash_coverage_borrowers_only": 0.2845239160504447,
-  "claims_usd": 532554793.8582129,
+  "cash_coverage": 0.9366116625250106,
+  "cash_coverage_borrowers_only": 0.28420797727707753,
+  "claims_usd": 532581903.04219985,
   "idle_usdai": 242277390.66748974,
   "loan_book": 182235691.57460025,
-  "nav_end": 1.120137316786238,
+  "nav_end": 1.1201943362872577,
   "nav_start": 1.000311782608703,
-  "shares_from_events": 476405798.7418279,
+  "shares_from_events": 475556715.23193526,
   "shares_from_holders": 475437061.0436892,
-  "unexplained_assets": 108041711.61612293
+  "unexplained_assets": 108068820.80010983
  },
  "verification": {
   "block_range": [
    335730936,
-   517064905
+   517316432
   ],
   "escrow_receipts": [
    {
@@ -4345,43 +4487,43 @@
    },
    {
     "check": "USDai mints",
-    "goldrush_count": 16348,
-    "goldrush_sum": 1653746212.486462,
+    "goldrush_count": 16377,
+    "goldrush_sum": 1653825982.529287,
     "match": true,
     "only_goldrush": 0,
     "only_rpc": 0,
-    "rpc_count": 16348,
-    "rpc_sum": 1653746212.486462
+    "rpc_count": 16377,
+    "rpc_sum": 1653825982.529287
    },
    {
     "check": "USDai redemptions",
-    "goldrush_count": 8842,
-    "goldrush_sum": 1399330173.2554173,
+    "goldrush_count": 8867,
+    "goldrush_sum": 1400233784.8541703,
     "match": true,
     "only_goldrush": 0,
     "only_rpc": 0,
-    "rpc_count": 8842,
-    "rpc_sum": 1399330173.2554173
+    "rpc_count": 8867,
+    "rpc_sum": 1400233784.8541703
    },
    {
     "check": "sUSDai deposits",
-    "goldrush_count": 20077,
-    "goldrush_sum": 886254574.9399899,
+    "goldrush_count": 20093,
+    "goldrush_sum": 886288122.7684039,
     "match": true,
     "only_goldrush": 0,
     "only_rpc": 0,
-    "rpc_count": 20077,
-    "rpc_sum": 886254574.9399899
+    "rpc_count": 20093,
+    "rpc_sum": 886288122.7684039
    },
    {
     "check": "sUSDai redemption requests",
-    "goldrush_count": 2986,
-    "goldrush_sum": 349398063.84068286,
+    "goldrush_count": 3002,
+    "goldrush_sum": 350277096.05681574,
     "match": true,
     "only_goldrush": 0,
     "only_rpc": 0,
-    "rpc_count": 2986,
-    "rpc_sum": 349398063.84068286
+    "rpc_count": 3002,
+    "rpc_sum": 350277096.05681574
    },
    {
     "check": "sUSDai redemptions processed",
@@ -4446,29 +4588,29 @@
    }
   ],
   "n_escrow_deposits": 9,
-  "retrieved_at": "2026-10-24T15:28:05+00:00",
+  "retrieved_at": "2026-10-27T00:20:42+00:00",
   "rpc": {
    "arbitrum-mainnet": "https://arb1.arbitrum.io/rpc",
    "base-mainnet": "https://mainnet.base.org",
    "eth-mainnet": "https://ethereum-rpc.publicnode.com",
    "plasma-mainnet": "https://rpc.plasma.to"
   },
-  "rpc_calls": 628,
+  "rpc_calls": 690,
   "supply_checks": [
    {
     "chain": "arbitrum-mainnet",
-    "diff_pct": 0.3019691072171576,
+    "diff_pct": 0.6847354150430542,
     "goldrush_holder_sum": 270822176.5060642,
     "rpc_block": "latest",
-    "rpc_total_supply": 270006839.26411307,
+    "rpc_total_supply": 268980372.63511676,
     "snapshot_block": 517309360
    },
    {
     "chain": "eth-mainnet",
-    "diff_pct": 0.30933488964423256,
+    "diff_pct": -0.6012392318906458,
     "goldrush_holder_sum": 101525674.879924,
     "rpc_block": "latest",
-    "rpc_total_supply": 101212589.029344,
+    "rpc_total_supply": 102139779.30446899,
     "snapshot_block": 26250085
    },
    {
@@ -4489,14 +4631,14 @@
    }
   ],
   "usdai_backing": {
-   "block": 517877817,
-   "coverage": 1.0000022810076514,
+   "block": 518591558,
+   "coverage": 1.0000022306665823,
    "reserves_at_usdai_contract": {
-    "PYUSD": 260380117.055107,
+    "PYUSD": 266256291.602091,
     "USDC": 0.5,
     "wM": 0.0
    },
-   "usdai_hub_supply": 259382152.26481435,
+   "usdai_hub_supply": 265258326.8117957,
    "usdai_spoke_supply": {
     "base-mainnet": 125629.100071,
     "eth-mainnet": 5577.767557,
@@ -4505,10 +4647,11 @@
   }
  },
  "window": {
-  "end": "2026-10-21",
-  "end_block": 517064905,
+  "end": "2026-10-22",
+  "end_block": 517316432,
   "failed_windows": 0,
   "nav_start": "2025-05-14",
+  "same_block": true,
   "start": "2025-05-12"
  }
 }

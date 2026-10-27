@@ -1,0 +1,1114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+
+
+
+
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="apple-mobile-web-app-title" content="GetDeploying" />
+<meta name="application-name" content="GetDeploying" />
+<meta name="theme-color" content="#fff" />
+
+<title>GPU Cloud Rental Price History Dataset (Free, CC BY 4.0)</title>
+<meta name="description" content="Weekly median GPU rental prices across cloud providers: 103 models, 88 providers, since July 2024. Free under CC BY 4.0, as CSV and JSON." />
+<meta name="keywords" content="cloud providers, hosting, managed services, datacenter locations, deployment, containers, gpu, price comparison" />
+
+<meta property="og:url" content="https://getdeploying.com/dataset/gpu-prices" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="GPU Cloud Rental Price History Dataset (Free, CC BY 4.0)" />
+<meta property="og:description" content="Weekly median GPU rental prices across cloud providers: 103 models, 88 providers, since July 2024. Free under CC BY 4.0, as CSV and JSON." />
+<meta property="og:image" content="https://getdeploying.com/static/img/og.png?v=2060be7c836c" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:creator" content="@anthonynsimon" />
+
+<link rel="icon" type="image/x-icon" href="/static/img/favicon.858254afb18a.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.9758c7099d03.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.e830a1013409.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.5236e280a57b.png" />
+
+<link rel="manifest" href="/static/site.77565553ac99.webmanifest">
+
+<link rel="canonical" href="https://getdeploying.com/dataset/gpu-prices" />
+<link rel="alternate" type="text/csv" href="https://getdeploying.com/dataset/gpu-prices/weekly.csv" />
+<link rel="alternate" type="application/json" href="https://getdeploying.com/dataset/gpu-prices/weekly.json" />
+<script type="application/ld+json">{"@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://getdeploying.com/"}, {"@type": "ListItem", "position": 2, "name": "Open datasets", "item": "https://getdeploying.com/dataset"}, {"@type": "ListItem", "position": 3, "name": "GPU rental price history", "item": "https://getdeploying.com/dataset/gpu-prices"}]}, {"@type": "Dataset", "@id": "https://getdeploying.com/dataset/gpu-prices", "name": "GPU rental price history", "description": "Weekly median rental prices per GPU model, aggregated across cloud providers: 103 models, 88 providers, weekly since July 2024. Free under CC BY 4.0, as CSV and JSON.", "url": "https://getdeploying.com/dataset/gpu-prices", "license": "https://creativecommons.org/licenses/by/4.0/", "isAccessibleForFree": true, "creator": {"@type": "Organization", "name": "GetDeploying", "url": "https://getdeploying.com"}, "includedInDataCatalog": {"@type": "DataCatalog", "@id": "https://getdeploying.com/dataset"}, "keywords": ["GPU", "cloud", "Nvidia", "AMD", "H100", "A100", "B200", "rental prices", "price history"], "variableMeasured": [{"@type": "PropertyValue", "name": "date"}, {"@type": "PropertyValue", "name": "billing_type"}, {"@type": "PropertyValue", "name": "reservation_months", "unitText": "months"}, {"@type": "PropertyValue", "name": "min_price", "unitText": "USD per GPU per hour"}, {"@type": "PropertyValue", "name": "max_price", "unitText": "USD per GPU per hour"}, {"@type": "PropertyValue", "name": "median_price", "unitText": "USD per GPU per hour"}, {"@type": "PropertyValue", "name": "provider_median_price", "unitText": "USD per GPU per hour"}, {"@type": "PropertyValue", "name": "provider_count", "unitText": "providers"}, {"@type": "PropertyValue", "name": "offering_count", "unitText": "listings"}], "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://getdeploying.com/dataset/gpu-prices/weekly.csv"}, {"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://getdeploying.com/dataset/gpu-prices/weekly.json"}], "temporalCoverage": "2024-07-08/..", "dateModified": "2026-10-26"}], "@context": "https://schema.org"}</script>
+
+
+
+    
+        <script defer data-domain="getdeploying.com" src="https://stats.junglestack.com/js/script.outbound-links.js"></script>
+        <script>
+            window.plausible = window.plausible || function () {
+                (window.plausible.q = window.plausible.q || []).push(arguments);
+            };
+        </script>
+    
+
+    
+    
+        <link rel="preload" href="/static/fonts/Instrument_Sans/InstrumentSans-Variable.88efd97b18bf.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/Bricolage_Grotesque/BricolageGrotesque-Variable.e4fcd6365cf0.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/static/fonts/JetBrainsMono/JetBrainsMono-Variable.a0ac8a42394c.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <link href="/static/css/styles.ed7f997544c2.css" rel="stylesheet">
+    
+    <script type="module" crossorigin="anonymous" src="/static/js/app-Dl86TYN2.js"></script>
+<link href="/static/js/rolldown-runtime-XKyaHtl9.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+</head>
+<body class="h-full" hx-headers='{"X-CSRFToken": "fmZb0adazIenQ0IKFCQjo0LFe6qLm1vka6R9QqLsfBbWIz8Dp10GchJBga4v1J6K"}'>
+
+
+
+
+
+
+
+
+
+
+<section x-data="{ messages: [] }"
+         @message.window="$event.detail && messages.push($event.detail)"
+         class="fixed top-2 left-1/2 transform -translate-x-1/2 px-2 w-full max-w-md z-50">
+  <template x-cloak x-for="(message, index) in messages" :key="index">
+    <div
+      x-data="{ show: false }"
+      x-show="show"
+      x-init="setTimeout(() => show = true, 100); setTimeout(() => show = false, 5000)"
+      x-transition:enter="transition ease-out duration-300"
+      x-transition:enter-start="opacity-0 transform translate-y-8"
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      x-transition:leave="transition ease-in duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="relative flex items-center w-full p-4 mb-2 border rounded space-x-4"
+      :class="message.tags === 'error' ? 'danger' : message.tags === 'success' ? 'success' : message.tags === 'warning' ? 'warn' : 'info'"
+      role="alert">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+               stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+          </svg>
+        </span>
+      <span class="flex-1 interface-1" x-text="message.message"></span>
+      <button @click="show = false">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+             class="size-4 cursor-pointer">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </template>
+</section>
+
+
+
+
+
+<div class="overflow-x-clip ">
+    
+
+
+
+
+
+
+<nav x-data="{ showMobileMenu: false, scrolled: false }"
+     x-init="scrolled = window.scrollY > 4"
+     @scroll.window="scrolled = window.scrollY > 4"
+     :style="scrolled ? 'border-bottom-color: var(--color-border)' : ''"
+     class="z-40 fixed top-0 w-full bg-card border-b border-transparent transition-colors duration-200">
+    <div class="container-center-md px-4 lg:px-6 py-2.5 mx-auto flex flex-row justify-between items-center gap-4">
+        
+
+
+
+<a class="flex flex-row justify-start items-center gap-2 no-underline"
+   href="/">
+  
+    <img src="/static/img/icon.d9fd67324a2c.png" alt="" aria-hidden="true" class="size-[22px] rounded-xs shrink-0 dark:hidden">
+    <img src="/static/img/icon-dark.bfdedf78303d.png" alt="" aria-hidden="true" class="size-[22px] rounded-xs shrink-0 hidden dark:block">
+  
+  
+    <span class="heading-4 text-foreground whitespace-nowrap">GetDeploying</span>
+  
+</a>
+
+
+        
+        <div class="hidden md:flex flex-1 justify-center">
+            <div class="switch switch-plain">
+                <a href="/providers" class="switch-option" >Cloud Providers</a>
+                <a href="/gpus" class="switch-option" >GPUs</a>
+                <a href="/reference/compute-prices" class="switch-option" >VPS</a>
+                <a href="/reference/object-storage" class="hidden xl:inline-flex switch-option" >Object Storage</a>
+                <a href="/reference/data-egress" class="switch-option" >Egress</a>
+                <a href="/llms" class="hidden xl:inline-flex switch-option" >LLMs</a>
+                <a href="/compare" class="switch-option" >Compare</a>
+            </div>
+        </div>
+
+        
+        <div class="hidden md:flex flex-row justify-end items-center gap-1.5">
+            <div id="SearchModal_37e9d495746d4439a105d9f4a4366a76" class="inline-flex h-[30px] min-w-[85px] lg:min-w-[118px]"></div>
+            <div id="FeedbackWidget_1c403faecaa64c489c9a1d1ce90b60f7" class="inline-flex h-[30px] min-w-[82px]"></div>
+        </div>
+
+        
+        <div @click="showMobileMenu = !showMobileMenu" class="flex md:hidden">
+            <button type="button" class="relative inline-flex items-center justify-center button">
+                <svg x-show="!showMobileMenu" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                </svg>
+                <svg x-show="showMobileMenu" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" style="display: none;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    
+    
+    <div x-cloak x-show="showMobileMenu" aria-hidden="true" :aria-hidden="!showMobileMenu"
+         class="md:hidden container-full content-padding py-4 min-h-screen">
+        <div class="flex flex-col space-y-1 w-full">
+            <a href="/providers" class="button button-lg justify-start">Cloud Providers</a>
+            <a href="/gpus" class="button button-lg justify-start">GPUs</a>
+            <a href="/reference/compute-prices" class="button button-lg justify-start">VPS</a>
+            <a href="/reference/object-storage" class="button button-lg justify-start">Object Storage</a>
+            <a href="/reference/data-egress" class="button button-lg justify-start">Egress</a>
+            <a href="/llms" class="button button-lg justify-start">LLMs</a>
+            <a href="/compare" class="button button-lg justify-start">Compare</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="h-[70px] md:h-[56px]"></div>
+
+    <main class="container-center-md content-padding min-h-[80vh] pb-10">
+        
+
+
+<div id="sticky-sponsor-header" class="hidden md:block fixed top-0 inset-x-0 z-30 bg-background border-b border-border transform -translate-y-full transition-transform duration-300" data-sponsor="thunder compute" data-banner="sticky">
+    
+    <a class="container-center-md content-padding py-1.5 flex justify-between items-center no-underline"
+       href="https://www.thundercompute.com/?utm_source=getdeploying.com&amp;utm_medium=paid&amp;utm_content=banner-top" target="_blank" rel="noopener nofollow sponsored">
+        <span class="flex flex-row justify-start items-center space-x-0 flex-1 min-w-0">
+            <img class="size-[22px] rounded-xs flex-none" src="https://getdeploying.com/static/img/logos/thunder-compute.6b444d6e03f3.png" alt="Thunder Compute logo">
+            <span class="ml-2 heading-4 text-foreground flex-none">Thunder Compute</span>
+            <span class="ml-4 hidden lg:block action-link text-ink-3 truncate flex-1">A6000 from $0.35<span class="middot">·</span>A100 from $1.09<span class="middot">·</span>Per GPU per hour, billed per minute</span>
+            <div class="ml-2 badge info flex-none">Our sponsor</div>
+        </span>
+        <span class="button button-secondary button-compact flex-none ml-4">
+            <span>See live pricing →</span>
+        </span>
+    </a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('sticky-sponsor-header');
+        const nav = document.querySelector('nav');
+        const scrollThreshold = 100;
+
+        const updateTop = () => {
+            if (nav) header.style.top = nav.getBoundingClientRect().height + 'px';
+        };
+        updateTop();
+        window.addEventListener('resize', updateTop, { passive: true });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.remove('-translate-y-full');
+            } else {
+                header.classList.add('-translate-y-full');
+            }
+        }, { passive: true });
+    });
+</script>
+
+<div class="hidden" data-sponsor="thunder compute" data-banner="small" data-variant="banner"></div>
+
+        
+    <header class="pt-6 lg:pt-8 pb-10 mx-auto max-w-7xl text-center">
+        
+
+    
+        <nav aria-label="Breadcrumb" class="mb-3">
+            <ol class="m-0 p-0 list-none flex flex-wrap items-center justify-center gap-x-1.5 label">
+                
+                    <li class="m-0 p-0 list-none inline-flex items-center gap-1.5">
+                        
+                        <a href="https://getdeploying.com/" class="no-underline text-inherit">Home</a>
+                    </li>
+                
+                    <li class="m-0 p-0 list-none inline-flex items-center gap-1.5">
+                        <span aria-hidden="true">/</span>
+                        <a href="https://getdeploying.com/dataset" class="no-underline text-inherit">Open datasets</a>
+                    </li>
+                
+            </ol>
+        </nav>
+    
+
+
+        <h1 class="heading-1 m-0 mb-2">GPU Rental Price History</h1>
+        <p class="subtitle mx-auto my-0">Weekly price history for 103 GPU models across 88 cloud providers.</p>
+        <p class="m-0 mt-4 inline-flex flex-wrap items-center justify-center gap-1.5 rounded-sm border border-border px-2.5 py-1.5 label">
+            <span class="size-1.5 rounded-full bg-emerald-500" aria-hidden="true"></span>
+            <span>Free with attribution ·</span>
+            <span class="text-foreground">CC BY 4.0</span>
+            <span>· updated daily</span>
+        </p>
+    </header>
+
+    <div class="max-w-7xl mx-auto">
+        
+<dl class="glance m-0 grid-cols-2 lg:grid-cols-4">
+    
+        <div>
+            <dt class="k">
+                GPU models
+            </dt>
+            <dd class="m-0 flex items-baseline gap-1.5">
+                <span class="v">103</span>
+                
+            </dd>
+            <dd class="s">with price history</dd>
+        </div>
+    
+        <div>
+            <dt class="k">
+                Providers
+            </dt>
+            <dd class="m-0 flex items-baseline gap-1.5">
+                <span class="v">88</span>
+                
+            </dd>
+            <dd class="s">in the price history</dd>
+        </div>
+    
+        <div>
+            <dt class="k">
+                Weeks
+            </dt>
+            <dd class="m-0 flex items-baseline gap-1.5">
+                <span class="v">53</span>
+                
+            </dd>
+            <dd class="s">trailing, per model</dd>
+        </div>
+    
+        <div>
+            <dt class="k">
+                Updated
+            </dt>
+            <dd class="m-0 flex items-baseline gap-1.5">
+                <span class="v">26 Oct</span>
+                <span class="unit">2026</span>
+            </dd>
+            <dd class="s">once a day</dd>
+        </div>
+    
+</dl>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto flex flex-row gap-12 mt-14 pb-12">
+        
+
+
+
+<nav class="rail w-[180px] shrink-0 max-lg:hidden  mt-0!"
+     aria-label="On this page"
+     x-data="sectionRail()"
+     x-init="observe()">
+    
+        
+            <a href="#download" :class="active === 'download' && 'is-active'">Download</a>
+        
+            <a href="#preview" :class="active === 'preview' && 'is-active'">Preview</a>
+        
+            <a href="#fields" :class="active === 'fields' && 'is-active'">Fields</a>
+        
+            <a href="#license" :class="active === 'license' && 'is-active'">License</a>
+        
+            <a href="#faq" :class="active === 'faq' && 'is-active'">Common questions</a>
+        
+    
+</nav>
+
+<script>
+    function sectionRail() {
+        return {
+            active: "",
+            observe(attempt = 0) {
+                const ids = [...this.$el.querySelectorAll("a")]
+                    .map((a) => a.getAttribute("href").slice(1));
+                const sections = ids
+                    .map((id) => document.getElementById(id))
+                    .filter(Boolean);
+                // A section a React root draws (the price index's charts) is not in the
+                // document when Alpine starts. Wait for it, a few seconds at most, rather
+                // than observing a rail with half its sections missing for good.
+                if (sections.length < ids.length && attempt < 40) {
+                    setTimeout(() => this.observe(attempt + 1), 150);
+                    return;
+                }
+                if (!sections.length) return;
+
+                // The first section is marked before anything has been scrolled past,
+                // so the rail is never blank at the top of the page.
+                this.active = ids[0];
+
+                const seen = new Map();
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        for (const entry of entries) seen.set(entry.target.id, entry.isIntersecting);
+                        // The first section still inside the band, in document order:
+                        // scrolling down that is the one you have just reached, and
+                        // scrolling up it is the one you have come back to.
+                        const current = ids.find((id) => seen.get(id));
+                        if (current) this.active = current;
+                    },
+                    { rootMargin: "-80px 0px -70% 0px" },
+                );
+                sections.forEach((section) => observer.observe(section));
+                // The page is long-lived but the component is not: an observer left
+                // running after an htmx swap replaced the rail would hold its sections.
+                this.$el._railObserver = observer;
+            },
+        };
+    }
+</script>
+
+
+        <div class="min-w-0 flex-1 space-y-16">
+
+            <section id="download">
+                
+<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+    <h2 class="heading-2 m-0">Download</h2>
+    
+    
+</div>
+
+                <p class="lead m-0 mb-5 max-w-4xl">One row per GPU model, billing type and week. Prices are per GPU per hour. The latest week may be partial and can change.</p>
+                <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_22rem] gap-4 items-start">
+                    <div class="min-w-0">
+                        <div class="prose dark:prose-invert max-w-none code-block-tight flex flex-col gap-4 [&_pre]:my-0">
+
+<pre><code class="language-python"># Every GPU model: the latest week's on-demand medians, cheapest first
+import pandas as pd
+
+prices = pd.read_csv("https://getdeploying.com/dataset/gpu-prices/weekly.csv")
+on_demand = prices[prices.billing_type == "ON_DEMAND"]
+latest = on_demand[on_demand.date == on_demand.date.max()]
+latest.sort_values("median_price")[["gpu_slug", "median_price", "provider_count"]]</code></pre>
+<pre><code class="language-python"># One GPU model per file: chart two against each other
+import pandas as pd
+
+h100 = pd.read_csv("https://getdeploying.com/dataset/gpu-prices/nvidia-h100.csv")
+rtx = pd.read_csv("https://getdeploying.com/dataset/gpu-prices/nvidia-rtx-pro-6000.csv")
+both = pd.concat([h100, rtx])
+both = both[both.billing_type == "ON_DEMAND"]
+both.pivot(index="date", columns="gpu_slug", values="median_price").plot()</code></pre>
+
+                        </div>
+                        <p class="caption m-0 mt-3">
+                            Per-provider rows, daily data and longer history are in the <a href="/api">API</a>.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        
+    <div class="card rounded-lg">
+        <h3 class="entity-name m-0">Every GPU model</h3>
+        <p class="label m-0 mt-2">One file, keyed by <code class="font-mono text-foreground">gpu_slug</code>. 16,480 rows.</p>
+        <div class="flex flex-row flex-wrap gap-2 mt-4">
+            <a href="/dataset/gpu-prices/weekly.csv" class="button button-primary">
+                <span>Download CSV <span class="opacity-60">· 1.1 MB</span></span>
+            </a>
+            <a href="/dataset/gpu-prices/weekly.json" class="button button-secondary">JSON</a>
+        </div>
+    </div>
+    <div class="card rounded-lg">
+        <h3 class="entity-name m-0">One GPU model</h3>
+        <p class="label m-0 mt-2 whitespace-normal">
+            One file per GPU model. Swap in the slug.
+        </p>
+        <div class="caption font-mono text-foreground bg-muted rounded-sm px-3 py-2.5 mt-4 space-y-1 break-all">
+            <div>/dataset/gpu-prices/<span class="text-primary">&lt;slug&gt;</span>.csv</div>
+            <div>/dataset/gpu-prices/<span class="text-primary">&lt;slug&gt;</span>.json</div>
+        </div>
+    </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+                <section id="preview">
+                    <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 mb-3.5">
+                        <h2 class="heading-2 m-0">Preview</h2>
+                        <p class="caption font-mono m-0">weekly.csv · 6 of 16,480 rows</p>
+                    </div>
+                    <div class="overflow-x-auto -m-px p-px">
+                        <table class="not-prose table-styles data-table bg-background table! w-max min-w-full">
+                            <thead>
+                                <tr>
+                                    
+                                        <th>gpu_slug</th>
+                                    
+                                        <th>date</th>
+                                    
+                                        <th>billing_type</th>
+                                    
+                                        <th>reservation_months</th>
+                                    
+                                        <th class="text-right!">min_price</th>
+                                    
+                                        <th class="text-right!">max_price</th>
+                                    
+                                        <th class="text-right!">median_price</th>
+                                    
+                                        <th class="text-right!">provider_median_price</th>
+                                    
+                                        <th class="text-right!">provider_count</th>
+                                    
+                                        <th class="text-right!">offering_count</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                    <tr>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap font-mono">nvidia-b300</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">2026-10-26</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">ON_DEMAND</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap"></td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">6.5</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">17.802</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">9.15</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">9.15</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">15</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">23</td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap font-mono">nvidia-h100</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">2026-10-26</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">ON_DEMAND</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap"></td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">1.6</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">12.29</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">3.85</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">3.5438</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">39</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">119</td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap font-mono">nvidia-b200</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">2026-10-26</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">ON_DEMAND</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap"></td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">3.75</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">14.2416</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">6.62</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">7.99</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">19</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">32</td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap font-mono">nvidia-rtx-pro-6000</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">2026-10-26</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">ON_DEMAND</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap"></td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">0.65</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">8.294</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">2.5</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">2.3156</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">40</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">103</td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap font-mono">nvidia-rtx-5090</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">2026-10-26</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">ON_DEMAND</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap"></td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">0.35</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">2.52</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">0.8817</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">0.78</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">13</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">34</td>
+                                        
+                                    </tr>
+                                
+                                    <tr>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap font-mono">nvidia-h200</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">2026-10-26</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap">ON_DEMAND</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap"></td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">2.09</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">13.78</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">4.8725</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">4.875</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">31</td>
+                                        
+                                            <td class="cell tabular-nums whitespace-nowrap text-right">74</td>
+                                        
+                                    </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            
+
+            <section id="fields">
+                
+<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+    <h2 class="heading-2 m-0">Fields</h2>
+    
+    
+</div>
+
+                <p class="lead m-0 mb-5 max-w-4xl">10 columns, the same names in the CSV and the JSON.</p>
+                <div class="overflow-x-auto -m-px p-px">
+                    <table class="not-prose table-styles data-table bg-background w-full table! min-w-[max(40rem,100%)]">
+                        <thead>
+                            <tr>
+                                <th class="w-[26%]">Field</th>
+                                <th class="w-[18%]">Type</th>
+                                <th>Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                                
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>gpu_slug</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">text</td>
+                                        <td class="cell whitespace-normal align-top!">The GPU model&#x27;s slug, as in its page URL (<a href="/help/api#supported-gpu-models">supported slugs</a>)</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>date</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">date, ISO 8601</td>
+                                        <td class="cell whitespace-normal align-top!">Monday of the week the row describes</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>billing_type</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">text</td>
+                                        <td class="cell whitespace-normal align-top!">How the listing is billed</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>reservation_months</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">integer, or empty</td>
+                                        <td class="cell whitespace-normal align-top!">Term of a reservation, in months</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>min_price</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">USD / GPU / hr</td>
+                                        <td class="cell whitespace-normal align-top!">Cheapest listing</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>max_price</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">USD / GPU / hr</td>
+                                        <td class="cell whitespace-normal align-top!">Most expensive listing</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>median_price</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">USD / GPU / hr</td>
+                                        <td class="cell whitespace-normal align-top!">Median over all listings</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>provider_median_price</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">USD / GPU / hr</td>
+                                        <td class="cell whitespace-normal align-top!">Median of each provider&#x27;s own median, so every provider counts once</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>provider_count</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">integer</td>
+                                        <td class="cell whitespace-normal align-top!">Providers with a priced listing not marked sold out</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td class="cell font-mono align-top!">
+                                            <code>offering_count</code>
+                                            
+                                        </td>
+                                        <td class="caption font-mono align-top! whitespace-nowrap">integer</td>
+                                        <td class="cell whitespace-normal align-top!">Priced listings not marked sold out</td>
+                                    </tr>
+                                
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="license">
+                
+<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+    <h2 class="heading-2 m-0">License and attribution</h2>
+    
+    
+</div>
+
+                <p class="lead m-0 mb-5 max-w-4xl">
+                    <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>: Credit GetDeploying and link to the license.
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start prose dark:prose-invert max-w-none code-block-tight [&_pre]:my-0 [&_pre]:whitespace-pre-wrap [&_pre]:break-words">
+<pre><code class="language-text" data-label="Attribution">GetDeploying, GPU rental price history, https://getdeploying.com/gpus, CC BY 4.0</code></pre>
+<pre><code class="language-text" data-label="Cite as">GetDeploying (2026). GPU rental price history [dataset]. https://getdeploying.com/dataset/gpu-prices. Accessed October 26, 2026.</code></pre>
+                </div>
+                <p class="caption m-0 mt-3">
+                    The license covers the published dataset files only and implies no endorsement. The site and the
+                    API stay under the <a href="/terms">terms</a>.
+                </p>
+            </section>
+
+            <section id="faq">
+                
+<div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-3.5">
+    <h2 class="heading-2 m-0">Common questions</h2>
+    
+    
+</div>
+
+                
+
+
+<div class="border border-border rounded-sm bg-card overflow-hidden divide-y divide-border">
+    
+        <details class="group" open>
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none bg-fill dark:bg-muted hover:bg-muted transition-colors duration-75 [&::-webkit-details-marker]:hidden">
+                <h3 class="entity-name m-0">How is a weekly row calculated?</h3>
+                <span class="shrink-0 cell text-faint" aria-hidden="true">
+                    <span class="group-open:hidden">+</span>
+                    <span class="hidden group-open:inline">&minus;</span>
+                </span>
+            </summary>
+            <div class="px-5 py-4 max-w-3xl">
+                <div class="faq-answer prose dark:prose-invert max-w-none"><p>Prices are captured once a day; a weekly row is the median of that week&#x27;s daily values, column by column, so one bad capture is outvoted. No smoothing, no interpolation: a week with no capture is absent, and the latest week can change until it ends.</p></div>
+                
+                
+            </div>
+        </details>
+    
+        <details class="group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none bg-fill dark:bg-muted hover:bg-muted transition-colors duration-75 [&::-webkit-details-marker]:hidden">
+                <h3 class="entity-name m-0">Which listings are counted?</h3>
+                <span class="shrink-0 cell text-faint" aria-hidden="true">
+                    <span class="group-open:hidden">+</span>
+                    <span class="hidden group-open:inline">&minus;</span>
+                </span>
+            </summary>
+            <div class="px-5 py-4 max-w-3xl">
+                <div class="faq-answer prose dark:prose-invert max-w-none"><p>Every listing a provider prices and does not mark sold out, including unknown and waitlisted availability, which is most of them. These are advertised prices, not checked as rentable. A median moves when providers join or leave as well as when anyone reprices; provider_count is how to tell.</p></div>
+                
+                
+            </div>
+        </details>
+    
+        <details class="group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none bg-fill dark:bg-muted hover:bg-muted transition-colors duration-75 [&::-webkit-details-marker]:hidden">
+                <h3 class="entity-name m-0">How often does it update?</h3>
+                <span class="shrink-0 cell text-faint" aria-hidden="true">
+                    <span class="group-open:hidden">+</span>
+                    <span class="hidden group-open:inline">&minus;</span>
+                </span>
+            </summary>
+            <div class="px-5 py-4 max-w-3xl">
+                <div class="faq-answer prose dark:prose-invert max-w-none"><p>Once a day, within about an hour of the capture. The newest week can change until its Sunday has been captured.</p></div>
+                
+                
+            </div>
+        </details>
+    
+        <details class="group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none bg-fill dark:bg-muted hover:bg-muted transition-colors duration-75 [&::-webkit-details-marker]:hidden">
+                <h3 class="entity-name m-0">Where does the data come from?</h3>
+                <span class="shrink-0 cell text-faint" aria-hidden="true">
+                    <span class="group-open:hidden">+</span>
+                    <span class="hidden group-open:inline">&minus;</span>
+                </span>
+            </summary>
+            <div class="px-5 py-4 max-w-3xl">
+                <div class="faq-answer prose dark:prose-invert max-w-none"><p>Each provider&#x27;s own published pricing: pricing pages, documentation and pricing APIs, collected by GetDeploying and converted to US dollars at the European Central Bank&#x27;s daily reference rate.</p></div>
+                
+                
+            </div>
+        </details>
+    
+        <details class="group">
+            <summary class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none select-none bg-fill dark:bg-muted hover:bg-muted transition-colors duration-75 [&::-webkit-details-marker]:hidden">
+                <h3 class="entity-name m-0">How is this different from the API?</h3>
+                <span class="shrink-0 cell text-faint" aria-hidden="true">
+                    <span class="group-open:hidden">+</span>
+                    <span class="hidden group-open:inline">&minus;</span>
+                </span>
+            </summary>
+            <div class="px-5 py-4 max-w-3xl">
+                <div class="faq-answer prose dark:prose-invert max-w-none"><p>The dataset is the weekly market aggregate for the trailing year, with no stability promise: its shape can change at any time. The API has per-provider prices, the daily interval, the full history and a documented contract.</p></div>
+                
+                
+            </div>
+        </details>
+    
+</div>
+
+                <div class="mt-4 space-y-2">
+                    
+    <p class="caption m-0">
+        See also the <a href="/gpu-price-trends">GPU price trends</a>, our
+        <a href="/methodology">methodology</a> and the
+        <a href="/dataset/gpu-models">GPU models dataset</a>.
+        Prices are estimates for information only, not an offer to sell compute.
+    </p>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    </main>
+    
+
+
+
+<footer class="bg-white border-t border-border">
+    <div class="container-center-md px-4 lg:px-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8 pt-8 pb-9">
+            
+
+
+
+<a class="flex flex-row justify-start items-center gap-2 no-underline"
+   href="/">
+  
+    <img src="/static/img/icon.d9fd67324a2c.png" alt="" aria-hidden="true" class="size-[22px] rounded-xs shrink-0 dark:hidden">
+    <img src="/static/img/icon-dark.bfdedf78303d.png" alt="" aria-hidden="true" class="size-[22px] rounded-xs shrink-0 hidden dark:block">
+  
+  
+    <span class="heading-4 text-foreground whitespace-nowrap">GetDeploying</span>
+  
+</a>
+
+            <p class="m-0 p-0 flex flex-row flex-wrap gap-1.5">
+                <a href="/add" class="button button-primary">Add your company</a>
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-8 pb-10">
+            <div class="flex flex-col min-w-0">
+                <p class="footer-heading">Compare clouds</p>
+                <ul role="list" class="footer-links">
+                    <li><a href="/fal-ai-vs-replicate">Fal vs Replicate</a></li>
+                    <li><a href="/flyio-vs-railway">Fly.io vs Railway</a></li>
+                    <li><a href="/aws-vs-google-cloud">AWS vs Google Cloud</a></li>
+                    <li><a href="/aws-vs-hetzner">AWS vs Hetzner</a></li>
+                    <li><a href="/digitalocean-vs-hetzner">DigitalOcean vs Hetzner</a></li>
+                    <li><a href="/hostinger-vs-vercel">Hostinger vs Vercel</a></li>
+                    <li><a href="/railway-vs-render">Railway vs Render</a></li>
+                    <li><a href="/hetzner-vs-hostinger">Hetzner vs Hostinger</a></li>
+                    <li class="mt-[3px]"><a href="/compare">Compare Providers</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col min-w-0">
+                <p class="footer-heading">Compare GPUs</p>
+                <ul role="list" class="footer-links">
+                    <li><a href="/gpus/nvidia-b300-vs-nvidia-h200">Nvidia B300 vs H200</a></li>
+                    <li><a href="/gpus/nvidia-l4-vs-nvidia-t4">Nvidia L4 vs T4</a></li>
+                    <li><a href="/gpus/nvidia-a100-vs-nvidia-rtx-pro-6000">Nvidia A100 vs RTX PRO 6000</a></li>
+                    <li><a href="/gpus/nvidia-b200-vs-nvidia-b300">Nvidia B200 vs B300</a></li>
+                    <li><a href="/gpus/nvidia-a10-vs-nvidia-l4">Nvidia A10 vs L4</a></li>
+                    <li><a href="/gpus/nvidia-h100-vs-nvidia-rtx-pro-6000">Nvidia H100 vs RTX PRO 6000</a></li>
+                    <li><a href="/gpus/nvidia-b300-vs-nvidia-h100">Nvidia B300 vs H100</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col min-w-0">
+                <p class="footer-heading">Compare LLMs</p>
+                
+                <ul role="list" class="footer-links">
+                    <li><a href="/llms/qwen3.8-27b">Qwen3.8-27B</a></li>
+                    <li><a href="/llms/gemini-3.8-flash">Gemini 3.8 Flash</a></li>
+                    <li><a href="/llms/glm-5.3-flash">GLM-5.3-Flash</a></li>
+                    <li><a href="/llms/claude-opus-5">Claude Opus 5</a></li>
+                    <li><a href="/llms/gpt-6-astra">GPT-6 Astra</a></li>
+                    <li><a href="/llms/kimi-k3">Kimi K3</a></li>
+                    <li><a href="/llms/grok-4.5">Grok 4.5</a></li>
+                    <li><a href="/llm-cost-calculator">LLM Cost Calculator</a></li>
+                    <li class="mt-[3px]"><a href="/llms">All LLM Prices</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col min-w-0">
+                <p class="footer-heading">Resources</p>
+                <ul role="list" class="footer-links">
+                    <li><a href="/gpu-price-trends">GPU Price Trends</a></li>
+                    <li><a href="/gpus">GPU Price Comparison</a></li>
+                    <li><a href="/reference/data-egress">Cloud Egress Costs</a></li>
+                    <li><a href="/reference/object-storage">Object Storage Costs</a></li>
+                    <li><a href="/reference/compute-prices">VPS Price Comparison</a></li>
+                    <li><a href="/datacenters-in">Datacenters in country</a></li>
+                    <li><a href="/cloud-providers-from">Cloud providers HQs</a></li>
+                    <li><a href="/compliance">Cloud Compliance</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col min-w-0">
+                <p class="footer-heading">Guides</p>
+                <ul role="list" class="footer-links">
+                    <li><a href="/guides/local-gemma4">How to run Gemma 4 locally</a></li>
+                    <li><a href="/guides/lm-studio-opencode">LM Studio with OpenCode</a></li>
+                    <li><a href="/guides/local-llm-mac-lm-studio">Local LLMs with LM Studio</a></li>
+                    <li><a href="/guides/local-mistral">How to run Mistral locally</a></li>
+                    <li><a href="/guides/gemma4-openclaw">Gemma 4 with OpenClaw</a></li>
+                    <li><a href="/guides/secure-ubuntu-server">Secure an Ubuntu Server</a></li>
+                    <li><a href="/guides/cheapest-gpu-cloud">Cheapest Cloud GPUs</a></li>
+                    <li><a href="/guides/best-value-cloud-gpus">GPU Value Map</a></li>
+                    <li class="mt-[3px]"><a href="/guides">All Guides</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col min-w-0">
+                <p class="footer-heading">Company</p>
+                <ul role="list" class="footer-links">
+                    <li><a href="/methodology">Methodology</a></li>
+                    <li><a href="/dataset">Open Datasets</a></li>
+                    <li><a href="/api">GPU Prices API</a></li>
+                    <li><a href="/terms">Terms and Conditions</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/legal">Legal Notice</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#6714121717081513270002130302170b081e0e09004904080a">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="border-t border-border pt-4 pb-8 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-3 md:gap-10 text-faint">
+            <p class="m-0 p-0 hint max-w-[760px]">
+                All third-party names, logos and trademarks belong to their respective owners. They are used for
+                identification purposes only, not to suggest a partnership or endorsement. *Redis is a registered
+                trademark of Redis Ltd. Any rights therein are reserved to Redis Ltd.
+            </p>
+            <p class="m-0 p-0 hint whitespace-nowrap">© 2026 GetDeploying.com</p>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+
+
+
+
+    
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script id="SearchModal_37e9d495746d4439a105d9f4a4366a76_data" type="application/json">{"endpoint": "/search-index.json"}</script>
+        <script type="module">
+            mountReact("SearchModal", "SearchModal_37e9d495746d4439a105d9f4a4366a76", "SearchModal_37e9d495746d4439a105d9f4a4366a76_data");
+        </script>
+    
+        <script id="FeedbackWidget_1c403faecaa64c489c9a1d1ce90b60f7_data" type="application/json">{}</script>
+        <script type="module">
+            mountReact("FeedbackWidget", "FeedbackWidget_1c403faecaa64c489c9a1d1ce90b60f7", "FeedbackWidget_1c403faecaa64c489c9a1d1ce90b60f7_data");
+        </script>
+    
+
+
+
+
+<div id="site-tooltip" role="tooltip" aria-hidden="true"
+     class="tooltip-panel pointer-events-none fixed z-50 hidden w-max max-w-[240px] sm:max-w-xs p-2.5 text-center
+            rounded-sm shadow-md bg-foreground text-background
+            dark:bg-background dark:text-foreground dark:border dark:border-border whitespace-normal break-words">
+    <span id="site-tooltip-text"></span>
+    <span id="site-tooltip-arrow"
+          class="absolute top-full border-4 border-transparent border-t-foreground dark:border-t-background"></span>
+</div>
+<script>
+    (function () {
+        const GAP = 10;
+        const panel = document.getElementById('site-tooltip');
+        const text = document.getElementById('site-tooltip-text');
+        const arrow = document.getElementById('site-tooltip-arrow');
+        if (!panel) return;
+        let current = null;
+
+        function hide() {
+            current = null;
+            panel.classList.add('hidden');
+            panel.setAttribute('aria-hidden', 'true');
+        }
+
+        function show(trigger) {
+            const message = trigger.getAttribute('data-tooltip');
+            if (!message) return;
+            current = trigger;
+            text.textContent = message;
+            panel.classList.remove('hidden');
+            panel.setAttribute('aria-hidden', 'false');
+            position();
+        }
+
+        function position() {
+            if (!current) return;
+            const icon = current.getBoundingClientRect();
+            const width = panel.offsetWidth;
+            const centre = icon.left + icon.width / 2;
+            let left = centre - width / 2;
+            // Back inside the viewport, right edge first: a panel wider than the window
+            // would otherwise be pushed off the left by the clamp meant to save it.
+            if (left + width > window.innerWidth - GAP) left = window.innerWidth - GAP - width;
+            if (left < GAP) left = GAP;
+            panel.style.left = `${left}px`;
+            panel.style.top = `${icon.top - panel.offsetHeight - 8}px`;
+            // The arrow points at the icon wherever the panel ended up.
+            arrow.style.left = `${Math.min(Math.max(centre - left, 8), width - 8) - 4}px`;
+        }
+
+        document.addEventListener('pointerover', (event) => {
+            const trigger = event.target.closest('[data-tooltip]');
+            if (trigger && trigger !== current) show(trigger);
+            else if (!trigger && current) hide();
+        });
+        document.addEventListener('focusin', (event) => {
+            const trigger = event.target.closest('[data-tooltip]');
+            if (trigger) show(trigger);
+            else if (current) hide();
+        });
+        document.addEventListener('click', (event) => {
+            const trigger = event.target.closest('[data-tooltip]');
+            if (!trigger) return hide();
+            // A tap on the open one closes it; the pointerover above has already opened
+            // it on a device that has a pointer at all.
+            if (trigger === current) hide();
+            else show(trigger);
+        });
+        // The panel is fixed to the viewport, so anything that moves the trigger under
+        // it has to move it too. Cheaper to re-measure than to close, and closing on
+        // scroll makes it unreadable on a touch device, where scrolling is how you look.
+        window.addEventListener('scroll', position, { passive: true, capture: true });
+        window.addEventListener('resize', position, { passive: true });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') hide();
+        });
+    })();
+</script>
+
+
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a50d5ed3af4d8aac',t:'MTc5MzA1ODcwMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

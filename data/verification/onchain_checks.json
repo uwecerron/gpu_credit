@@ -1,23 +1,23 @@
 {
- "retrieved_at": "2026-10-24T15:28:05+00:00",
+ "retrieved_at": "2026-10-27T00:20:42+00:00",
  "usdai_backing": {
-  "block": 517877817,
-  "usdai_hub_supply": 259382152.26481435,
+  "block": 518591558,
+  "usdai_hub_supply": 265258326.8117957,
   "usdai_spoke_supply": {
    "eth-mainnet": 5577.767557,
    "base-mainnet": 125629.100071,
    "plasma-mainnet": 866164.494979
   },
   "reserves_at_usdai_contract": {
-   "PYUSD": 260380117.055107,
+   "PYUSD": 266256291.602091,
    "USDC": 0.5,
    "wM": 0.0
   },
-  "coverage": 1.0000022810076514
+  "coverage": 1.0000022306665823
  },
  "block_range": [
   335730936,
-  517064905
+  517316432
  ],
  "rpc": {
   "arbitrum-mainnet": "https://arb1.arbitrum.io/rpc",
@@ -128,42 +128,42 @@
   },
   {
    "check": "USDai mints",
-   "rpc_count": 16348,
-   "goldrush_count": 16348,
+   "rpc_count": 16377,
+   "goldrush_count": 16377,
    "only_rpc": 0,
    "only_goldrush": 0,
-   "rpc_sum": 1653746212.486462,
-   "goldrush_sum": 1653746212.486462,
+   "rpc_sum": 1653825982.529287,
+   "goldrush_sum": 1653825982.529287,
    "match": true
   },
   {
    "check": "USDai redemptions",
-   "rpc_count": 8842,
-   "goldrush_count": 8842,
+   "rpc_count": 8867,
+   "goldrush_count": 8867,
    "only_rpc": 0,
    "only_goldrush": 0,
-   "rpc_sum": 1399330173.2554173,
-   "goldrush_sum": 1399330173.2554173,
+   "rpc_sum": 1400233784.8541703,
+   "goldrush_sum": 1400233784.8541703,
    "match": true
   },
   {
    "check": "sUSDai deposits",
-   "rpc_count": 20077,
-   "goldrush_count": 20077,
+   "rpc_count": 20093,
+   "goldrush_count": 20093,
    "only_rpc": 0,
    "only_goldrush": 0,
-   "rpc_sum": 886254574.9399899,
-   "goldrush_sum": 886254574.9399899,
+   "rpc_sum": 886288122.7684039,
+   "goldrush_sum": 886288122.7684039,
    "match": true
   },
   {
    "check": "sUSDai redemption requests",
-   "rpc_count": 2986,
-   "goldrush_count": 2986,
+   "rpc_count": 3002,
+   "goldrush_count": 3002,
    "only_rpc": 0,
    "only_goldrush": 0,
-   "rpc_sum": 349398063.84068286,
-   "goldrush_sum": 349398063.84068286,
+   "rpc_sum": 350277096.05681574,
+   "goldrush_sum": 350277096.05681574,
    "match": true
   },
   {
@@ -233,17 +233,17 @@
    "chain": "arbitrum-mainnet",
    "snapshot_block": 517309360,
    "rpc_block": "latest",
-   "rpc_total_supply": 270006839.26411307,
+   "rpc_total_supply": 268980372.63511676,
    "goldrush_holder_sum": 270822176.5060642,
-   "diff_pct": 0.3019691072171576
+   "diff_pct": 0.6847354150430542
   },
   {
    "chain": "eth-mainnet",
    "snapshot_block": 26250085,
    "rpc_block": "latest",
-   "rpc_total_supply": 101212589.029344,
+   "rpc_total_supply": 102139779.30446899,
    "goldrush_holder_sum": 101525674.879924,
-   "diff_pct": 0.30933488964423256
+   "diff_pct": -0.6012392318906458
   },
   {
    "chain": "base-mainnet",
@@ -296,5 +296,5 @@
   }
  ],
  "n_escrow_deposits": 9,
- "rpc_calls": 628
+ "rpc_calls": 690
 }

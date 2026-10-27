@@ -1,0 +1,77 @@
+{
+ "block": 518586254,
+ "block_time": 1793058886,
+ "selector_depositTimelockBalance": "37d0a739",
+ "depositTimelockBalance": 128895244.1,
+ "totalAssets": 555997170.861494,
+ "usdai_totalSupply": 265258326.8117957,
+ "pyusd_balanceOf_usdai": 266256291.602091,
+ "ownerOf_1006": "0xce242ccca55809933928ae9c77e50ef8ef927ff2",
+ "tokenURI_1002": "https://metadata.usd.ai/v1/1002",
+ "tokenURI_1006": "https://metadata.usd.ai/v1/1006",
+ "meta_1002": {
+  "name": "NVIDIA B300 [72]",
+  "description": "Server Portfolio of NVIDIA B300s",
+  "image": "https://zggcmphqypwbbvpexdet.supabase.co/storage/v1/object/public/usdai_assets/collateral/d55fb969f9c1eb09febf7ba65ca6edcd.png",
+  "attributes": [
+   {
+    "trait_type": "Collateral Value USD",
+    "value": 38316634.018552,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Useful Life (days)",
+    "value": 1080,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Depreciation Start",
+    "value": 1775482230,
+    "display_type": "date"
+   },
+   {
+    "trait_type": "Manufacturer",
+    "value": "Supermicro",
+    "display_type": "string"
+   },
+   {
+    "trait_type": "Quantity",
+    "value": 72,
+    "display_type": "number"
+   }
+  ]
+ },
+ "meta_1006": {
+  "name": "NVIDIA B300 [288]",
+  "description": "Server Portfolio of NVIDIA B300s",
+  "image": "https://zggcmphqypwbbvpexdet.supabase.co/storage/v1/object/public/usdai_assets/collateral/26d9795e6b863e586ebd0048094ef77e.png",
+  "attributes": [
+   {
+    "trait_type": "Collateral Value USD",
+    "value": 140192868.97,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Useful Life (days)",
+    "value": 1080,
+    "display_type": "number"
+   },
+   {
+    "trait_type": "Depreciation Start",
+    "value": "On Borrow",
+    "display_type": "string"
+   },
+   {
+    "trait_type": "Manufacturer",
+    "value": "Supermicro",
+    "display_type": "string"
+   },
+   {
+    "trait_type": "Quantity",
+    "value": 288,
+    "display_type": "number"
+   }
+  ]
+ },
+ "retrieved_utc": "2026-10-26T23:54:52Z"
+}

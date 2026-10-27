@@ -1,0 +1,4 @@
+Snapshot note: theblock.co returned HTTP 403 to automated download on retrieval.
+Content read via web fetch on 2026-10-26:
+Title: Former FTX US president Brett Harrison's Architect expands crypto-style perpetual futures into AI compute markets (The Block, 21 January 2026).
+Architect plans to launch perpetual futures on its institutional exchange AX tied to daily GPU rental prices and DRAM pricing, pending regulatory approval, developed with compute index provider Ornn Data. Positions marginable in USD or USD-pegged stablecoins. Quote (Brett Harrison): "an urgent cross-industry need to establish standardized derivatives contracts and centralized order books for compute".

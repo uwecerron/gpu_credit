@@ -53,8 +53,21 @@ def stage_protocol(api, raw: Path) -> None:
     _dump(raw / "protocol_txs.json.gz", out)
 
 
+def _end_block(api, raw: Path) -> int:
+    """Scan to the block of the vault-state snapshot when one exists, so that every
+    event total can be reconciled against the contract at the same block. Otherwise
+    the latest block of today."""
+    import os
+    if os.environ.get("CF_END_BLOCK"):
+        return int(os.environ["CF_END_BLOCK"])
+    st = load(raw / "state.json.gz", {}) or {}
+    if st.get("block"):
+        return int(st["block"])
+    return G.block_at(api, R.HUB, date.today().isoformat())
+
+
 def stage_scan(api, raw: Path, workers: int = 6) -> None:
-    end_block = G.block_at(api, R.HUB, date.today().isoformat())
+    end_block = _end_block(api, raw)
     wins = G.windows(R.GENESIS_BLOCK, end_block)
     jobs = [(ev, sender, lo, hi) for ev, sender in HUB_SCANS for lo, hi in wins]
     log.info("scan: %d events x %d windows = %d calls (end block %d)", len(HUB_SCANS), len(wins), len(jobs), end_block)

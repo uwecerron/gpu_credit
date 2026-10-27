@@ -1,0 +1,137 @@
+[
+ {
+  "key": "bullish2025",
+  "url": "https://www.pymnts.com/?p=4131576",
+  "supports": "USD.AI $100M credit facility from Bullish",
+  "evidence": "\"USD.AI Secures $100 Million Credit Facility From Bullish to Power AI Buildout\", PYMNTS, 28 Aug 2026",
+  "snapshot": "`bullish2025.html`, `bullish2025.txt`",
+  "sha256": "e7bc4408109ab7454ac631324dd670b3cd06e21819a3b485f0a88ee3d20d55f1",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "aavearfc",
+  "url": "https://governance.aave.com/t/arfc-onboard-usdai-susdai-to-aave-v3-arbitrum-instance/23260",
+  "supports": "USDai/sUSDai proposed as collateral on Aave",
+  "evidence": "Thread title: \"[ARFC] Onboard USDai & sUSDai to Aave V3 Arbitrum Instance\"",
+  "snapshot": "`aavearfc.html`, `aavearfc.txt`",
+  "sha256": "548a73eb4071a736ba00a12718dbb1b7729171b9a323a743172fc6bcdc117fc3",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "architect2026",
+  "url": "https://www.theblock.co/post/386487",
+  "supports": "GPU rental futures being built",
+  "evidence": "The Block, 21 Jan 2026: Architect plans perpetual futures on AX tied to daily GPU rental prices, pending regulatory approval (page blocks automated download; content read via fetch)",
+  "snapshot": "architect2026.txt (fetch summary; HTTP 403 on download)",
+  "sha256": null,
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "friedman2025",
+  "url": "https://davefriedman.substack.com/p/neoclouds-hold-more-than-20-billion",
+  "supports": ">$20B GPU-backed debt; lenders; H100 $7-10 to $2-4",
+  "evidence": "\"There are now more than $20 billion in outstanding loans collateralized by NVIDIA GPUs\"; \"BlackRock, Blackstone, PIMCO, Carlyle, JP Morgan, and Macquarie are all lenders\"; \"H100 rental prices have collapsed from $7-10/hour in early 2024 to $2-4/hour by late 2025\" (7 Feb 2026)",
+  "snapshot": "`friedman2025.html`, `friedman2025.txt`",
+  "sha256": "614a7adc5acfee0b5295fbef943b4d1e93151a31344e8dbb800c84dfcc76a654",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "gokhshtein2026",
+  "url": "https://gokhshtein.com/news/2026-10-22-neocloud-pricing-power-tests-debt-concerns",
+  "supports": "CoreWeave CDS at distressed levels",
+  "evidence": "\"CoreWeave's five-year credit default swaps reached distressed levels, and its bond yields climbed\" (22 Oct 2026)",
+  "snapshot": "`gokhshtein2026.html`, `gokhshtein2026.txt`",
+  "sha256": "2eaeb561bf5dd7f650e9b21f522f8ae9c1c3ae8ee18e80ca6bb16141ca79f326",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "blockmedia2026",
+  "url": "https://www.blockmedia.co.kr/archives/1074441",
+  "supports": "$26.82M loan to Crucible Capital, 576 B300 GPUs",
+  "evidence": "Headline: 2,682만 달러 GPU 담보 대출 (body: 2,680만 달러), 엔비디아 B300 GPU 576개 담보, 1MW 클러스터 (7 Apr 2026)",
+  "snapshot": "`blockmedia2026.html`, `blockmedia2026.txt`",
+  "sha256": "5f50625afe976e3aaa2c7b68b0877fe6ecdaff8b9944989c3e9a7ebac4c23674",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "gaib2025",
+  "url": "https://decrypt.co/310897",
+  "supports": "GAIB AID, comparable GPU-backed synthetic dollar",
+  "evidence": "\"AID is backed by a portfolio of GPU financing deals, GPU cash flow, a reserve of treasury bills, and other liquid assets\"",
+  "snapshot": "`gaib2025.html`, `gaib2025.txt`",
+  "sha256": "6f755a10de9227783e2561bcef84212f5f030aa79aa5a13d7a3766f5b5c32f91",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "usdaidocs",
+  "url": "https://docs.usd.ai/technical-overview/technical-protocol-overview",
+  "supports": "Optimistic vs conservative NAV; ERC-4626/7540 design",
+  "evidence": "\"Loan positions are valued conservatively with the remaining balance of the loan, or optimistically with the remaining balance of the loan plus the interest accrued since last repayment\"",
+  "snapshot": "`usdaidocs.html`, `usdaidocs.txt`",
+  "sha256": "6524dca06397e02e0b76ffa65d63f7f76e7ff9e916ffdf18a4e27f2c91def6f9",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "eip4626",
+  "url": "https://eips.ethereum.org/EIPS/eip-4626",
+  "supports": "ERC-4626 standard",
+  "evidence": "\"ERC-4626: Tokenized Vaults\", Final",
+  "snapshot": "`eip4626.html`, `eip4626.txt`",
+  "sha256": "0f3b3abdb9e37ef4094f0ad5c6c469a56e888fcc52415d4bf8e657e2b34792ab",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "eip7540",
+  "url": "https://eips.ethereum.org/EIPS/eip-7540",
+  "supports": "ERC-7540 standard",
+  "evidence": "\"ERC-7540: Asynchronous ERC-4626 Tokenized Vaults\", Final",
+  "snapshot": "`eip7540.html`, `eip7540.txt`",
+  "sha256": "1191348dda76df6e603350e0b6979c4d09d4a0abab4450cc6a1957f724dc631b",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "layerzero",
+  "url": "https://docs.layerzero.network/v2",
+  "supports": "OFT bridging",
+  "evidence": "Omnichain Fungible Tokens documentation",
+  "snapshot": "`layerzero.html`, `layerzero.txt`",
+  "sha256": "2f7d35c3ef4b80523a7e20566a7ead961ed22eb007128c393900ce19ee017522",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "goldrush",
+  "url": "https://goldrush.dev/docs",
+  "supports": "Data source",
+  "evidence": "GoldRush API documentation",
+  "snapshot": "`goldrush.html`, `goldrush.txt`",
+  "sha256": "67d0e3b22a2a1783c93204eccb77c05f30f651852eb5818611d3a10f46e15068",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "getdeploying",
+  "url": "https://getdeploying.com/dataset/gpu-prices",
+  "supports": "GPU rental prices",
+  "evidence": "Dataset page; the weekly series used is frozen in data/external/ with its SHA-256",
+  "snapshot": "`getdeploying.html`, `getdeploying.txt`",
+  "sha256": "d3a306eae4106f403598b293635ccfe3022b4b3dd74d1d0b68bce72a4df68f8b",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "liquidlabor",
+  "url": "https://liquid-labor.com",
+  "supports": "Machine-hours framing",
+  "evidence": "Essay index incl. \"VI. On Depreciation\"",
+  "snapshot": "`liquidlabor.html`, `liquidlabor.txt`",
+  "sha256": "a99a33f3342de9681e4529eed88cf61584ed63327248de4d59cfd5b3e5915218",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ },
+ {
+  "key": "morpho-curation",
+  "url": "https://data.morpho.org/curation",
+  "supports": "Curator AUC (used in advisory notes, not the paper)",
+  "evidence": "Steakhouse $2.50B, Sentora $1.20B, Gauntlet $981M",
+  "snapshot": "`morpho-curation.html`, `morpho-curation.txt`",
+  "sha256": "56481368e3ad36bda9a636108e6df965ead357f1adca5610664f8f4d6714768c",
+  "retrieved_at": "2026-10-26T23:53:01+00:00"
+ }
+]

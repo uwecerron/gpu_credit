@@ -193,6 +193,22 @@ def spearman(x: list[float], y: list[float]) -> float | None:
 WM = "0x437cc33344a0b27a429f795ff6b469c72698b291"
 
 
+def base_yield_events(events: list[Ev]) -> list[dict]:
+    """Each BaseYieldDeposited with its funding source, for the one-off split."""
+    by_tx: dict[str, list[Ev]] = defaultdict(list)
+    for e in events:
+        by_tx[e.tx].append(e)
+    out = []
+    for e in events:
+        if e.name != "sUSDai.BaseYieldDeposited":
+            continue
+        peers = by_tx[e.tx]
+        src = ("pyusd_harvest" if any(p.name == "USDai.Harvested" for p in peers) else
+               "wm" if any(p.name == "USDai.Deposited" and p.f.get("deposit_token") == WM for p in peers) else "other")
+        out.append({"time": e.time, "tx": e.tx, "source": src, "usd": e.f["deposited_amount"] / WAD})
+    return out
+
+
 def base_yield_by_source(events: list[Ev]) -> dict[str, float]:
     """Split vault base yield by what funded it, using the other events in the same tx:
     a USDai.Harvested in the tx means PYUSD issuer incentives paid out of the Base Yield
