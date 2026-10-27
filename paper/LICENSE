@@ -1,0 +1,17 @@
+Following the Compute Money: An On-Chain Forensic Analysis of GPU-Backed
+Credit and Decentralized Compute Markets
+
+Copyright (c) 2026 Uwe Jens Cerron. All rights reserved.
+
+The manuscript in this directory (the LaTeX source under sections/, main.tex,
+arch.tex, the compiled PDF, and the published version at the repository root)
+is not covered by the MIT license that applies to the code in this repository.
+You may read, cite and link to it. Reproducing the text or figures beyond
+fair use requires the author's permission.
+
+Generated tables (generated/) and figures (figures/) are outputs of the
+MIT-licensed code run on the data described in the repository README; the
+data itself is subject to the terms of its sources (Covalent GoldRush,
+GetDeploying CC BY 4.0, Akash Console API, public RPC nodes, the USD.AI
+metadata host). IEEEtran.cls and IEEEtran.bst are distributed under the
+LaTeX Project Public License by the IEEE.

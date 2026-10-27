@@ -1,26 +1,26 @@
 # Research ledger
 
-Every number in the paper, where it comes from, how it was computed and how it was checked. Values are the ones in `paper/generated/numbers.tex`, which the code writes; nothing in the paper is typed by hand.
+Every number in the paper, where it comes from, how it was computed and how it was checked. Values are the ones in `paper/generated/numbers.tex`, which the code writes; nothing in the paper is typed by hand. The numbers in this file and in `README.md` are filled from the same macros by `scripts/fill_readme.py`, which `reproduce.py` runs.
 
 ## Headline numbers
 
 | Claim | Value | Result field | Method | Independent check |
 |---|---|---|---|---|
-| Loans / borrowers | 39, 13 | `results.json loans.n, loans.borrowers` | LoanOriginated (V1+V2) stitched through migrations and refinances | 22/22 event sets identical to an Arbitrum node (data/verification) |
-| Originated | $290.1 M | `loans.originated` | sum of root principal, test loans < $1k excluded | Same; independent reviewer recomputed from loans.csv |
-| Outstanding | $182.2 M | `loans.outstanding` | current principal minus principal repaid per terms hash | Matches vault pendingLoanBalance within 0.22% (eth_call) |
-| Largest borrower share, HHI | 45.6%, 0.273 | `loans.top1_share, hhi_originated` | from borrowers.csv | Reviewer recomputed |
-| NAV growth | 8.18% | `vault.ann_total` | median assets/shares of sUSDai Deposit events per day | Deposit/redemption share price read by eth_call |
-| Cash coverage | 93.8%, 28.5% | `vault.cash_coverage, cash_coverage_borrowers_only` | cash (interest, base yield, fees, escrow interest) / NAV-accrued yield | Reviewer recomputed; base-yield split by tx peers |
-| Escrow with no loan | $128.9 M, 23.2% | `reconciliation.deposit_timelock_balance; escrow.open` | eth_call depositTimelockBalance vs open escrow deposits | Sum of two open deposits = balance to the cent; live re-read by reviewer |
+| Loans / borrowers | <!--n:NLoans-->39<!--/n-->, <!--n:NBorrowers-->13<!--/n--> | `results.json loans.n, loans.borrowers` | LoanOriginated (V1+V2) stitched through migrations and refinances | 22/22 event sets identical to an Arbitrum node (data/verification) |
+| Originated | <!--n:Originated-->$290.1M<!--/n--> | `loans.originated` | sum of root principal, test loans < $1k excluded | Same; independent reviewer recomputed from loans.csv |
+| Outstanding | <!--n:Outstanding-->$182.2M<!--/n--> | `loans.outstanding` | current principal minus principal repaid per terms hash | Exceeds vault pendingLoanBalance by <!--n:LoanBookGap-->$0.39M<!--/n--> (<!--n:LoanBookGapPct-->0.22%<!--/n-->) at the same block; residual not yet itemized |
+| Largest borrower share, HHI | <!--n:TopOneShare-->45.6%<!--/n-->, <!--n:HHIOrig-->0.273<!--/n--> | `loans.top1_share, hhi_originated` | from borrowers.csv | Reviewer recomputed |
+| NAV growth | <!--n:AnnTotal-->8.17%<!--/n--> | `vault.ann_total` | median assets/shares of sUSDai Deposit events per day | Deposit/redemption share price read by eth_call |
+| Cash coverage | <!--n:CashCoverage-->93.7%<!--/n-->, <!--n:KappaBorrowers-->28.4%<!--/n--> | `vault.cash_coverage, cash_coverage_borrowers_only`, `cash_layers` | cash (interest, base yield, fees, escrow interest) / NAV-accrued yield; six layers in `tab_kappa.tex` | Reviewer recomputed; base-yield split by tx peers; the <!--n:EscrowAnomalous-->$341k<!--/n--> 2026-10-02 transfer is isolated |
+| Escrow with no loan | <!--n:EscrowOpen-->$128.9M<!--/n-->, <!--n:DTShare-->23.2%<!--/n--> | `reconciliation.deposit_timelock_balance; escrow.open` | eth_call depositTimelockBalance vs open escrow deposits | Sum of two open deposits = balance to the cent; live re-read by reviewer |
 | Escrow fund path | `paper/generated/tab_escrow.tex` | `escrow.flows` | decoded ERC-20 transfers + USDai Withdrawn, 2 hops | Redemption receipt re-read from node (onchain_checks.json escrow_receipts) |
-| Collateral, LTV | 4,560, 66.8% | `collateral.*` | tokenURI by eth_call -> USD.AI metadata records | Crucible loan: press says 576 B300 GPUs; record says 72 servers x 8 = 576 |
-| USDai backing | 100.00% | `verification.usdai_backing` | USDai totalSupply (hub + spokes) vs stablecoins held by the USDai contract | eth_call, two separate runs |
-| Median redemption wait | 13.0 days | `queue.wait_days_median` | RedeemRequest matched to RedemptionProcessed by id | Event sets identical to node |
+| Collateral, LTV | <!--n:CollGPUs-->4,560<!--/n-->, <!--n:BookLTV-->66.8%<!--/n--> | `collateral.*` | tokenURI by eth_call -> USD.AI metadata records | Crucible loan: press says 576 B300 GPUs; record says 72 servers x 8 = 576 |
+| USDai backing | <!--n:USDaiCoverage-->100.00%<!--/n--> | `verification.usdai_backing` | USDai totalSupply (hub + spokes) vs stablecoins held by the USDai contract | eth_call, two separate runs |
+| Median redemption wait | <!--n:WaitMedian-->13.0<!--/n--> days (completed requests; <!--n:PendingShares-->20.17M<!--/n--> shares pending, censored) | `queue.wait_days_median` | RedeemRequest matched to RedemptionProcessed by id | Event sets identical to node |
 | Stress table | `paper/generated/tab_stress.tex` | `stress.rows` | arithmetic on reconciled state; recovery assumed | Not a model; assumptions stated in paper |
-| Implied GPUs, breakeven | 5,724, $3.21 | `implied_compute, breakeven` | debt service / price / (8760 x utilization) | Assumptions: 70% utilization, 1.5 kW per GPU |
-| Livepeer spend | $1.01 M | `livepeer.usd_total` | WinningTicketTransfer x daily WETH price | 194,377 logs identical to node after boundary fix |
-| Akash spend | $3.46 M | `akash.usd_window` | Akash Console API, summed by day | Not on an EVM chain; API only |
+| Implied GPUs, breakeven | <!--n:GPUsAkashPrice-->5,729<!--/n-->, <!--n:Breakeven-->$3.22<!--/n--> | `implied_compute, breakeven` | debt service / price / (8760 x utilization) | Assumptions: 70% utilization, 1.5 kW per GPU |
+| Livepeer spend | <!--n:LPUSD-->$1.01M<!--/n--> | `livepeer.usd_total` | WinningTicketTransfer x daily WETH price | 194,377 logs identical to node after boundary fix |
+| Akash spend | <!--n:AKUSD-->$3.47M<!--/n--> | `akash.usd_window` | Akash Console API, summed by day | Not on an EVM chain; API only |
 
 ## Data provenance
 
@@ -45,9 +45,10 @@ Every number in the paper, where it comes from, how it was computed and how it w
 
 ## Verification runs
 
-- Last chain check: 2026-10-24T15:28:05+00:00, block range 335,730,936 to 517,064,905.
-- Event sets matched: 22 of 22, 246,176 logs.
-- USDai backing at block 517,877,817: coverage 100.00%.
+- Last chain check: <!--n:VerifyRetrieved-->2026-10-27 00:20:42 UTC<!--/n-->, block range <!--n:VerifyBlockStart-->335,730,936<!--/n--> to <!--n:VerifyBlockEnd-->517,316,432<!--/n-->, the same block as the vault-state snapshot.
+- Event sets matched: <!--n:NVerifyMatch-->22<!--/n--> of <!--n:NVerify-->22<!--/n-->, <!--n:NVerifyLogs-->246,262<!--/n--> logs.
+- USDai backing at block <!--n:BackingBlock-->518,591,558<!--/n-->: coverage <!--n:USDaiCoverage-->100.00%<!--/n-->.
+- Independent second pass (own decoders, live reads): `data/verification/VALIDATION.md`.
 - One problem found and fixed: GoldRush `events/topics` treats `ending-block` as exclusive. The first scan skipped the last block of each 1M-block window; the patch added 2 Livepeer logs and no USD.AI logs.
 - GoldRush sometimes numbers logs inside a transaction differently from the node, so logs are matched and deduplicated by transaction hash, topics and data, never by index.
 

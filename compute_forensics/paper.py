@@ -393,5 +393,8 @@ def write_verification(ver: dict | None, out: Path) -> dict[str, str]:
             "USDaiPYUSD": usd_m((bk.get("reserves_at_usdai_contract") or {}).get("PYUSD")),
             "USDaiCoverage": pct(bk.get("coverage"), 2),
             "NVerifyLogs": f"{sum(r['rpc_count'] for r in ev):,}",
+            "VerifyRetrieved": str(ver.get("retrieved_at", "n/a"))[:19].replace("T", " ") + " UTC",
+            "VerifyBlockStart": num((ver.get("block_range") or [None])[0]),
+            "VerifyBlockEnd": num((ver.get("block_range") or [None, None])[1]),
             "LPMissing": str(lp.get("only_rpc", 0)),
             "LPMissingETH": f"{sum(x['eth'] for x in lp.get('missing_from_goldrush', [])):.4f}"}

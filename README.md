@@ -4,10 +4,11 @@ On-chain forensics of GPU-backed credit and decentralized compute markets.
 
 Some stablecoin protocols take deposits and lend them to companies that run GPU clusters. The GPUs, the borrowers and the loan contracts are off-chain, but every deposit, loan, repayment, fee, redemption and bridge transfer is logged on a public chain. This repo rebuilds one of these protocols, USD.AI on Arbitrum, from those logs, checks the result against the vault's own accounting, and compares it with the compute that people actually buy and pay for on-chain through Akash and Livepeer.
 
-- Paper (IEEE conference format, LaTeX): [`paper/main.pdf`](paper/main.pdf)
+- Paper, published version (SSRN, 15 pages): [`Following_the_Compute_Money.pdf`](Following_the_Compute_Money.pdf)
+- LaTeX source and a build from it: [`paper/`](paper/) (`paper/main.pdf` is what `reproduce.py --compile` produces; its text matches the published PDF, with two reference dates corrected)
 - Every chart on one page that works offline: [`visuals/index.html`](visuals/index.html)
 
-Study window: 2025-05-12 (vault deployment) to 2026-10-21. Chain data comes from the Covalent GoldRush API unless a section says otherwise.
+Study window: <!--n:StudyStart-->2025-05-12<!--/n--> (vault deployment) to <!--n:StudyEnd-->2026-10-22<!--/n-->. Chain data comes from the Covalent GoldRush API unless a section says otherwise.
 
 ![Key numbers](paper/figures/fig_glance.png)
 
@@ -15,17 +16,17 @@ Study window: 2025-05-12 (vault deployment) to 2026-10-21. Chain data comes from
 
 ### 1. The loan book
 
-39 loans went to 13 borrowers: $290.1M originated, $182.2M still outstanding, at rates from 7% to 15%. No loan has a recorded breach or liquidation so far, which says something about a young loan book, not about full-cycle performance. 17 loans were moved from the V1 to the V2 loan router and 4 were refinanced into new terms; a loan that changed hash is counted once.
+<!--n:NLoans-->39<!--/n--> loans went to <!--n:NBorrowers-->13<!--/n--> borrower addresses: <!--n:Originated-->$290.1M<!--/n--> originated, <!--n:Outstanding-->$182.2M<!--/n--> still outstanding, at rates from <!--n:RateMin-->7.0%<!--/n--> to <!--n:RateMax-->15.0%<!--/n-->. No loan has a recorded breach or liquidation so far, which says something about a young loan book, not about full-cycle performance. <!--n:NMigrated-->17<!--/n--> loans were moved from the V1 to the V2 loan router and <!--n:NRefinanced-->4<!--/n--> were refinanced into new terms; a loan that changed hash is counted once.
 
-The largest borrower received 45.6% of all lending and the top three received 76.8%. The HHI is 0.273, well above the 0.18 line that the 2023 US Merger Guidelines call highly concentrated.
+The largest borrower address received <!--n:TopOneShare-->45.6%<!--/n--> of all lending and the top three received <!--n:TopThreeShare-->76.8%<!--/n-->. The HHI is <!--n:HHIOrig-->0.273<!--/n--> on originations and <!--n:HHIOut-->0.197<!--/n--> on outstanding principal; that is a portfolio concentration measure, and it says nothing about whether the 13 addresses are 13 independent borrowers.
 
 ![Originations by borrower](paper/figures/fig_originations.png)
 
 ### 1a. What the collateral is
 
-I had written that the collateral was opaque. It isn't. Every loan is secured by a token from the protocol's "USD.AI Tokenized Hardware" contract, and each token's on-chain `tokenURI` points to a record the protocol publishes: server model, unit count, stated collateral value, useful life, depreciation start and, for the early loans, serial numbers. We pulled all 85 records.
+I had written that the collateral was opaque. It isn't. Every loan is secured by a token from the protocol's "USD.AI Tokenized Hardware" contract, and each token's on-chain `tokenURI` points to a record the protocol publishes: server model, unit count, stated collateral value, useful life, depreciation start and, for the early loans, serial numbers. The host served <!--n:CollRecords-->87<!--/n--> records, including two for token IDs that are not minted; those two are left out of every total below.
 
-The active book is secured by 630 units, about 4,560 GPUs counting eight per B200, B300 or H200 server, with a stated value of $272.8M against $182.2M outstanding. That is a 66.8% loan-to-value, ranging from 43% to 80% by loan. Every record assumes a three-year useful life with depreciation starting on borrow. The records are the protocol's own statements, hosted off-chain, so they are what USD.AI says the collateral is, not an appraisal.
+The active book is secured by <!--n:CollUnits-->630<!--/n--> units, about <!--n:CollGPUs-->4,560<!--/n--> GPUs counting eight per B200, B300 or H200 server, with a stated value of <!--n:CollValue-->$272.8M<!--/n--> against <!--n:Outstanding-->$182.2M<!--/n--> outstanding. That is a <!--n:BookLTV-->66.8%<!--/n--> loan-to-value, ranging from <!--n:LTVMin-->43%<!--/n--> to <!--n:LTVMax-->80%<!--/n--> by loan. Mixed and workstation rows are not in the GPU count. Every record assumes a three-year useful life with depreciation starting on borrow. The records are the protocol's own statements, hosted off-chain, so they are what USD.AI says the collateral is, not an appraisal.
 
 ![Collateral vs outstanding](paper/figures/fig_collateral.png)
 
@@ -33,23 +34,23 @@ One token matters for the escrow finding: 288 B300 servers with a stated value o
 
 ### 1b. Maturities and payment status
 
-The 21 active loans run 2.1 to 3 years. Weighted by outstanding principal, 2.6 years remain: $13.3M matures in 2028 and $168.9M in 2029. Holders, meanwhile, exit through a queue with a 13-day median wait. Every active loan is current, with the longest gap since a payment at 24 days, inside the monthly schedule. The oldest active loan is under a year old, so the book hasn't yet been through the years when GPU hardware loses most of its value.
+The <!--n:NActive-->21<!--/n--> active loans run <!--n:TermMin-->2.1<!--/n--> to <!--n:TermMax-->3.0<!--/n--> years. Weighted by outstanding principal, <!--n:YearsToMaturity-->2.6<!--/n--> years remain: <!--n:MatTwentyEight-->$13.3M<!--/n--> matures in 2028 and <!--n:MatTwentyNine-->$168.9M<!--/n--> in 2029. Holders, meanwhile, exit through a queue with a <!--n:WaitMedian-->13.0<!--/n-->-day median wait for completed requests. No loan is flagged late by the event test; the longest gap since a payment is <!--n:MaxDaysSincePayment-->25<!--/n--> days, inside the monthly schedule. The oldest active loan is under a year old, so this is a young, right-censored book.
 
 ### 2. Where the yield comes from
 
-sUSDai's NAV grew 8.18% a year, and 93.8% of the yield credited to holders has arrived as cash. Borrower interest was only $6.65M of that cash. Base yield from stablecoin issuers was $15.08M: $6.36M of PYUSD incentives harvested from the reserve and $8.72M minted from M^0's yield-bearing wM. Each source on its own is smaller than borrower interest, but together they are more than twice as large. Over this window, holders received more cash from stablecoin issuers than from GPU borrowers. The one-off $7.82M wM deposit on 2026-02-02 drives much of that, so the mix is a historical fact, not a forecast.
+sUSDai's NAV grew <!--n:AnnTotal-->8.17%<!--/n--> a year, and <!--n:CashCoverage-->93.7%<!--/n--> of the yield credited to holders has arrived as cash. Borrower interest was only <!--n:CashInterest-->$6.65M<!--/n--> of that cash. Base yield from stablecoin issuers was <!--n:CashBase-->$15.08M<!--/n-->: <!--n:CashBasePYUSD-->$6.36M<!--/n--> of PYUSD incentives harvested from the reserve and <!--n:CashBaseWM-->$8.72M<!--/n--> minted from M^0's yield-bearing wM. Each source on its own is smaller than borrower interest, but together they are more than twice as large. Over this window, holders received more cash from stablecoin issuers than from GPU borrowers. The one-off $7.82M wM deposit on 2026-02-02 drives much of that, so the mix is a historical fact, not a forecast.
 
 The layers, cumulative, with the share of credited yield each one brings coverage to:
 
 | Cash layer | This layer | Coverage |
 |---|---|---|
-| Borrower interest and fees | $6.95M | 28.4% |
-| Escrow interest on pre-funded loans | $0.54M | 30.6% |
+| Borrower interest and fees | $6.95M | <!--n:KappaBorrowers-->28.4%<!--/n--> |
+| Escrow interest on pre-funded loans | <!--n:EscrowRegular-->$539k<!--/n--> | <!--n:KappaBorrowerEscrow-->30.6%<!--/n--> |
 | Recurring PYUSD issuer incentives | $6.36M | 56.6% |
-| Recurring wM reserve yield | $0.90M | 60.3% |
-| One-off wM deposit (2026-02-02) | $7.82M | 92.3% |
-| Protocol transfer booked as escrow interest (2026-10-02) | $0.34M | 93.7% |
-| Accrued, not yet received | $1.55M | 100% |
+| Recurring wM reserve yield | $0.90M | <!--n:KappaRecurring-->60.3%<!--/n--> |
+| One-off wM deposit (2026-02-02) | <!--n:OneOffWM-->$7.82M<!--/n--> | <!--n:KappaBeforeTransfer-->92.3%<!--/n--> |
+| Protocol transfer booked as escrow interest (2026-10-02) | <!--n:EscrowAnomalous-->$341k<!--/n--> | <!--n:CashCoverage-->93.7%<!--/n--> |
+| Accrued, not yet received | <!--n:Unreceived-->$1.55M<!--/n--> | 100% |
 
 The last cash row is a $379k gross transfer the contract recorded as "interest" on a $1,000 escrow deposit that was cancelled the same day. Interest many times the principal is a transfer by another name, so it is kept apart from the $539k of escrow interest on the real pre-funded loans.
 
@@ -59,7 +60,7 @@ The last cash row is a $379k gross transfer the contract recorded as "interest" 
 
 ### 3. The vault's balance sheet, and $128.9M of escrow with no loan
 
-We read the vault's accounting with `eth_call` at block 517,316,432, and the event scan ends at that same block, so both describe one moment. Our rebuilt loan book is within 0.22% of the vault's `pendingLoanBalance` (the gap is interest accrued since the last monthly payments), and our share count matches `totalShares` to within 0.00%.
+We read the vault's accounting with `eth_call` at block <!--n:StateBlock-->517,316,432<!--/n-->, and the event scan ends at that same block, so both describe one moment. Our rebuilt loan book exceeds the vault's `pendingLoanBalance` by <!--n:LoanBookGap-->$0.39M<!--/n--> (<!--n:LoanBookGapPct-->0.22%<!--/n-->). Accrued interest is the likely explanation, but the contract does not expose the fields needed to itemize that residual, so it stays unresolved until each component is demonstrated. Event-derived shares plus our pending queue match `totalShares` to about 6e-8 shares, which is exact at any displayed precision; that identity checks share accounting, not cross-chain holder balances.
 
 The same read shows that $128.9M, or 23% of reported assets, is escrow for two loans that no loan router has created. Both deposits were made on 2026-09-23, and together they equal `depositTimelockBalance` to the cent. The timelock contracts hold no tokens.
 
@@ -71,7 +72,7 @@ The USDai went from the vault to an escrow facility. That address is a Gnosis Sa
 
 ### 4. Holders and chains
 
-sUSDai is on five chains. A few contracts and pools hold most of the supply on every one of them. On Arbitrum the ten largest holders own 86.7%, and Pendle alone holds 13.2%. On Plasma, 44% of USDai sits in Pendle and 20% in vault strategies. Ethereum went from almost nothing in June 2026 to 89M shares by October, and two addresses hold 99.7% of that, one of them Morpho Blue.
+sUSDai is on five chains. A few contracts and pools hold most of the supply on every one of them. On Arbitrum the ten largest holder addresses own <!--n:ArbTopTen-->86.7%<!--/n-->, and Pendle alone holds <!--n:PendleArb-->13.2%<!--/n-->. On Plasma, <!--n:PendlePlasmaUSDai-->44.1%<!--/n--> of USDai sits in Pendle and <!--n:VaultPlasmaUSDai-->20.0%<!--/n--> in vault strategies. Ethereum went from almost nothing in June 2026 to <!--n:EthSupplyLast-->89.3M<!--/n--> shares by October, and two addresses hold <!--n:EthTopTwo-->99.7%<!--/n--> of that, one of them Morpho Blue. Address concentration is not owner concentration: pools and bridges stand for many users.
 
 ![Supply by chain](paper/figures/fig_supply.png)
 
@@ -85,7 +86,7 @@ GoldRush's cross-chain activity endpoint lists every chain an address has used. 
 
 ### 5. Exits
 
-Holders filed 2,986 redemption requests. The median wait was 13 days, the 90th percentile 26.6 days and the longest 127 days. The queue is cleared in a few large monthly batches. Priced in PYUSD, USDai never traded below 0.975.
+Holders filed <!--n:NRedeemRequests-->3,002<!--/n--> redemption requests. Among completed requests the median wait was <!--n:WaitMedian-->13.0<!--/n--> days, the 90th percentile <!--n:WaitPNinety-->26.6<!--/n--> days and the longest <!--n:WaitMax-->127.3<!--/n--> days; <!--n:PendingShares-->20.17M<!--/n--> shares were still pending at the cutoff, so their waits are censored. The queue is cleared in a few large monthly batches. Priced in PYUSD, USDai never traded below <!--n:USDaiRatioMin-->0.975<!--/n-->.
 
 ![Redemption queue](paper/figures/fig_queue.png)
 
@@ -95,7 +96,7 @@ Redemptions do not move with GPU rental prices. The Spearman correlation on week
 
 ### 6. GPU credit vs. compute bought on-chain
 
-Over the same period, Livepeer gateways paid orchestrators $1.01M, and Akash users spent $3.46M (from the Akash Console API). USD.AI's lending was about 65 times both combined. None of the GPU use these loans finance shows up on-chain.
+Over the same period, Livepeer gateways paid orchestrators <!--n:LPUSD-->$1.01M<!--/n-->, and Akash users spent <!--n:AKUSD-->$3.47M<!--/n--> (from the Akash Console API). USD.AI's originations were <!--n:CreditMultiple-->65<!--/n--> times both combined. That compares capital advanced with operating payments made by different people; it is not a ratio of credit to compute demand. None of the GPU use these loans finance shows up on-chain.
 
 ![Monthly flows](paper/figures/fig_markets.png)
 
@@ -196,7 +197,7 @@ You do not need an API key to reproduce the paper. Everything runs offline from 
 python3 -m pip install -r requirements.txt
 python3 reproduce.py             # numbers, tables, figures, visuals/index.html
 python3 reproduce.py --compile   # also builds paper/main.pdf (needs pdflatex + bibtex)
-make test                        # 40 tests
+make test                        # 41 tests
 ```
 
 Tested on Python 3.13. Dependencies are pinned in `requirements.txt`.
@@ -234,7 +235,7 @@ Never paste your key into an issue, a notebook you plan to share, or a commit.
 ## Scope and limits
 
 - The chain can verify liabilities and cash. It cannot verify that a GPU exists, that it is rented, or that a borrower can pay.
-- We reconcile against vault state at one block (the same block the event scan ends at), not continuously. Holder snapshots are at a nearby block and the USDai reserve read at a later one.
+- We reconcile against vault state at one block (the same block the event scan ends at), not continuously. The $0.39M loan-book residual is unexplained until each component of it is demonstrated. Holder snapshots are at a nearby block and the USDai reserve read at a later one.
 - Two topic hashes on the V1 loan router do not match any signature in the source history. We count them and leave them out.
 - Holder snapshots are current. Historical holder snapshots are only available on GoldRush Foundational chains, so we have them for Ethereum, not Arbitrum.
 - GoldRush has no `eth_call` and does not index Akash, so vault state comes from the public Arbitrum RPC, Solana supply from the public Solana RPC, and Akash numbers from the Akash Console API. Each is labeled where used.
@@ -243,11 +244,11 @@ Never paste your key into an issue, a notebook you plan to share, or a commit.
 
 ## Right of reply
 
-USD.AI should get to answer the escrow finding before it circulates. As of this version it has not been sent to them. The plan is to send it and add any response to a revised version; until then the reading of that finding is ours alone.
+We invite corrections and an explanation of the escrow accounting from USD.AI, and will incorporate any substantiated response in a revised version. The finding describes contract state and token transfers; it does not claim misuse of funds.
 
 ## AI disclosure
 
-An AI assistant (Claude) helped write the code and draft the text. Every number in the paper, README and visuals is generated by the code from the frozen data, and the method and results were reviewed by the author.
+AI assistants (Claude and ChatGPT) helped with the code, the drafting and editorial consistency checks. Every number in the paper, README and visuals is generated by the code from the frozen data, and the method and results were reviewed by the author.
 
 ## Data and attribution
 
@@ -259,4 +260,8 @@ An AI assistant (Claude) helped write the code and draft the text. Every number 
 
 ## License
 
-MIT. See `LICENSE`.
+Three different things live in this repository, under three different terms:
+
+- **Code** (`compute_forensics/`, `scripts/`, `tests/`, `reproduce.py`): MIT, see [`LICENSE`](LICENSE).
+- **Paper** (`paper/sections`, `paper/main.tex`, the PDFs): copyright Uwe Jens Cerron, all rights reserved, see [`paper/LICENSE`](paper/LICENSE). Cite and link freely; ask before reproducing text or figures beyond fair use.
+- **Data**: each source keeps its own terms. GetDeploying prices are CC BY 4.0; GoldRush responses are subject to Covalent's terms; Akash Console API, public RPC data and the USD.AI metadata records are used as published by their operators. The frozen files are provided so the paper can be reproduced, not as a redistributable dataset.

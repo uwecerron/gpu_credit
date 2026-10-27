@@ -1,4 +1,43 @@
-# Independent validation of the USD.AI GPU-credit paper (second pass)
+# Independent validation of the USD.AI GPU-credit paper
+
+Two passes by a validator that did not see the analysis code, each using its own decoders (`independent/*.py`, `eth_abi` plus keccak topic hashes). The third section below is the re-run against the **final frozen dataset** (event scan and vault state both at block 517,316,432, `data/frozen/MANIFEST.sha256` of 2026-10-27). The earlier pass, kept for the record further down, ran against the previous snapshot (scan to block 517,064,905) and so quotes 2,986 redemption requests and a 0.006% share gap; those figures are superseded by the ones here.
+
+## Final-snapshot re-run (2026-10-27)
+
+Same scripts, pointed at the current `data/frozen`. Pipeline values are from `results/results.json`.
+
+| Quantity | Validator | Pipeline | Status |
+|---|---|---|---|
+| Real loans / test loans / borrowers | 39 / 2 / 13 | 39 / 2 / 13 | match |
+| Originated | $290,117,597 | $290,117,597 | match (exact) |
+| Outstanding | $182,235,692 | $182,235,692 | match (exact) |
+| Repaid / active | 18 / 21 | 18 / 21 | match |
+| Interest / principal repaid / fees | $6.941 M / $108.148 M / $515 k | $6.941 M / $108.148 M / $515 k | match |
+| Top-1 / top-3 / HHI (originations) | 45.64% / 76.80% / 0.2735 | 45.64% / 76.80% / 0.2735 | match |
+| HHI / top-1 (outstanding) | 0.1968 / 29.85% | 0.1968 / see paper 29.9% | match |
+| Migration events / refinance events | 17 / 5 | migrated loans 17, refinanced loans 4, loans with more than one hash 18 | match: 5 refinance events touch 4 loans (one loan was refinanced twice) |
+| Breaches / liquidations | 0 | 0 | match |
+| Collateral: active units / GPUs / stated value | 630 / 4,560 / $272,837,420 | 630 / 4560 / $272,837,420 | match (exact) |
+| Book LTV, min, max | 66.79% / 43.0% / 80.0% | 66.79% / 43.0% / 80.0% | match |
+| Deposit-side NAV start / end | 1.000312 / 1.120137 (through 2026-10-21) | 1.000312 / 1.120194 (through 2026-10-22) | match; the pipeline window now ends one day later |
+| Accrued yield Y | $24.436 M | $24.463 M | within 0.11% (one extra day) |
+| Base yield net / admin fee | $13.405 M / $1.676 M | $13.405 M / $1.676 M | match |
+| Redemption requests / completed / pending shares | 3,002 / 2,840 / 20.174 M | 3,002 / 2,840 / 20.174 M | match |
+| Median / p90 / max wait (days) | 13.01 / 26.66 / 127.35 | 13.01 / 26.60 / 127.35 | match |
+| Escrow deposits: count / total / open | 9 / $223.09 M / $128,895,244.10 | 9 / $223.09 M / $128,895,244.10 | match |
+| Escrow interest gross / net of 10% | $977.4 k / $879.7 k | regular net $538.8 k + booked transfer net $340.9 k = $879.7 k | match |
+| The 2026-10-02 escrow `0xfdd957cb` | $1,000 deposited 16:34 UTC at rate 0.0524/s, cancelled 18:34 UTC with $378,798 gross "interest" | same; isolated as its own layer in `tab_kappa.tex` | match |
+| Share-accounting identity at block 517,316,432 | event shares + pending queue vs `totalShares` | gap 6.0e-08 shares | exact at displayed precision |
+| Loan book vs `pendingLoanBalance` | reconstructed exceeds vault by $393,426 (0.216%) | $393,427 | match; **residual not itemized**: the contract exposes no per-loan accrued-interest field, so this stays open |
+
+Live reads on 2026-10-27 16:14 UTC, block 518,789,612 (`independent/live_checks_final.json`): `depositTimelockBalance()` still 128,895,244.1 USDai; `totalAssets` $556.06 M; USDai hub supply 265.37 M against 266.37 M PYUSD at the USDai contract; `ownerOf(1006)` is the reserve account 0xce242ccc…7ff2; `tokenURI(1002)` and `tokenURI(1006)` metadata unchanged ("NVIDIA B300 [72]", "NVIDIA B300 [288]").
+
+What this pass does and does not establish: it shows that a second, independent decoding of the same frozen GoldRush data gives the same numbers, and that the live contract state agrees with the snapshot. It does not establish the correctness of any off-chain claim, the identity behind any address, or the economic meaning of the 2026-10-02 transfer.
+
+---
+
+# Earlier pass against the previous snapshot (scan to block 517,064,905)
+
 
 Validator run: 2026-10-26. I made no changes to `/home/claude/covalent_onchain_compute`. One exception: a `pytest --collect-only` run created `tests/__pycache__`, and I deleted it straight away. My scripts are in `data/verification/independent/` (loans.py, coll.py, vault.py, misc.py, live.py). The live chain reads are saved in `data/verification/independent/live_checks.json`.
 
