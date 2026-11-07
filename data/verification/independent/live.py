@@ -1,7 +1,8 @@
 import requests,json,time
 from Crypto.Hash import keccak
 from eth_abi import decode,encode
-CA='/root/.ccr/ca-bundle.crt';RPC='https://arb1.arbitrum.io/rpc'
+CA=True;  # system CA bundle
+RPC='https://arb1.arbitrum.io/rpc'
 def sel(s):
     h=keccak.new(digest_bits=256);h.update(s.encode());return h.hexdigest()[:8]
 def rpc(m,p):

@@ -1,8 +1,9 @@
+import os
 import gzip,json,sys
 from collections import defaultdict
 from Crypto.Hash import keccak
 from eth_abi import decode
-D='/home/claude/covalent_onchain_compute/data/frozen/'
+D=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','frozen','')
 def k(s):
     h=keccak.new(digest_bits=256);h.update(s.encode());return '0x'+h.hexdigest()
 LR1='0x0c2ed170f2bb1df1a44292ad621b577b3c9597d1';LR2='0x1c2ed170de32846316784c4fd58a5e3c7563e12f'

@@ -1,3 +1,4 @@
+import os
 import gzip,json,statistics as st
 from collections import defaultdict
 from datetime import date,timedelta
@@ -5,7 +6,7 @@ from eth_abi import decode
 from Crypto.Hash import keccak
 def k(s):
     h=keccak.new(digest_bits=256);h.update(s.encode());return '0x'+h.hexdigest()
-D='/home/claude/covalent_onchain_compute/data/frozen/'
+D=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','frozen','')
 H=json.load(gzip.open(D+'hub_events.json.gz'))
 E=H['events']
 B=lambda x:bytes.fromhex(x[2:])

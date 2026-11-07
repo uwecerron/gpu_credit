@@ -13,3 +13,4 @@ paper/*.log
 paper/*.out
 paper/*.bbl
 paper/*.blg
+_to_delete/

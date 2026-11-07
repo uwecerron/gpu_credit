@@ -26,6 +26,7 @@ def main() -> int:
         print(f"Frozen data checksum mismatch: {bad}", file=sys.stderr)
         return 2
     run(ROOT / "data" / "frozen", ROOT / "results", ROOT / "paper")
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "fill_readme.py")], check=True)
     if a.compile:
         tex = ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "main.tex"]
         for cmd in (tex, ["bibtex", "main"], tex, tex):

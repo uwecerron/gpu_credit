@@ -1,6 +1,7 @@
+import os
 import gzip,json,re
 from collections import defaultdict
-C=json.load(gzip.open('/home/claude/covalent_onchain_compute/data/frozen/collateral.json.gz'))
+C=json.load(gzip.open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','frozen','')+'collateral.json.gz'))
 L=json.load(open('loans_mine.json'))
 bund=defaultdict(set)
 for w in C['wrapped']: bund[w['bundle_id']].add(w['token_id'])

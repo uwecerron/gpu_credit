@@ -1,10 +1,11 @@
+import os
 import gzip,json
 from collections import Counter,defaultdict
 from eth_abi import decode
 from Crypto.Hash import keccak
 def k(s):
     h=keccak.new(digest_bits=256);h.update(s.encode());return '0x'+h.hexdigest()
-D='/home/claude/covalent_onchain_compute/data/frozen/'
+D=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','frozen','')
 B=lambda x:bytes.fromhex(x[2:])
 H=json.load(gzip.open(D+'hub_events.json.gz'))['events']
 c=Counter((l['h'],tuple(l['tp']),l['d']) for l in H['sUSDai.Deposit'])
