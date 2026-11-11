@@ -424,20 +424,28 @@ def redemptions_vs_gpu(weekly_req: dict, nav_daily: dict, gpu: list[tuple[str, f
 # ---------------------------------------------------------------------------- compute markets
 
 def markets_monthly(series: dict[str, dict[str, float]], out: Path) -> None:
-    """Monthly USD flows on one log axis, each line labeled at its end."""
+    """Cumulative USD flows by month on one log axis.
+
+    Monthly values are too lumpy to compare on a log scale (months with no loans leave gaps and
+    one-off receipts spike), so each line is the running total from May 2025.
+    """
     fig, ax = plt.subplots(figsize=(COL, 2.4))
+    months = _fill_months("2025-05", "2026-10")
     for i, (label, s) in enumerate(series.items()):
-        ks = sorted(k for k, v in s.items() if v > 0 and "2025-05" <= k <= "2026-10")
-        if not ks:
-            continue
-        span = _fill_months(ks[0], ks[-1])            # a month with no flow is a gap, not a line to zero
-        xs = [_d(k + "-15") for k in span]
-        ys = [s[k] if s.get(k, 0) > 0 else float("nan") for k in span]
-        ax.plot(xs, ys, color=SERIES[i], lw=1.4, marker="o", ms=2.6, mfc=SERIES[i], mew=0, label=label)
+        tot, xs, ys = 0.0, [], []
+        for m in months:
+            tot += max(s.get(m, 0.0), 0.0)
+            if tot > 0:
+                xs.append(_d(m + "-15"))
+                ys.append(tot)
+        if xs:
+            ax.plot(xs, ys, color=SERIES[i], lw=1.4, marker="o", ms=2.4, mfc=SERIES[i], mew=0, label=label)
     ax.set_yscale("log")
+    ax.yaxis.set_major_locator(matplotlib.ticker.LogLocator(base=10, numticks=10))
+    ax.yaxis.set_minor_locator(matplotlib.ticker.NullLocator())
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(
         lambda v, _: f"${v / 1e6:,.0f}M" if v >= 1e6 else f"${v / 1e3:,.0f}k"))
-    ax.set_ylabel("USD per month, log scale")
+    ax.set_ylabel("Cumulative USD, log scale")
     _legend_top(ax, ncol=2)
     _save(fig, out, "fig_markets")
 

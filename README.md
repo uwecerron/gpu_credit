@@ -4,8 +4,9 @@ On-chain forensics of GPU-backed credit and decentralized compute markets.
 
 Some stablecoin protocols take deposits and lend them to companies that run GPU clusters. The GPUs, the borrowers and the loan contracts are off-chain, but every deposit, loan, repayment, fee, redemption and bridge transfer is logged on a public chain. This repo rebuilds one of these protocols, USD.AI on Arbitrum, from those logs, checks the result against the vault's own accounting, and compares it with the compute that people actually buy and pay for on-chain through Akash and Livepeer.
 
-- Paper, published version (SSRN, 15 pages): [`Following_the_Compute_Money.pdf`](Following_the_Compute_Money.pdf)
-- LaTeX source and a build from it: [`paper/`](paper/) (`paper/main.pdf` is what `reproduce.py --compile` produces; its text matches the published PDF, with two reference dates corrected)
+- Paper, published version (15 pages): [`Following_the_Compute_Money.pdf`](Following_the_Compute_Money.pdf), also on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7675642)
+- LaTeX source of the published version: [`Following_the_Compute_Money_latex.zip`](Following_the_Compute_Money_latex.zip)
+- Maintained LaTeX source and a build from it: [`paper/`](paper/) (`paper/main.pdf` is what `reproduce.py --compile` produces; it carries later corrections to reference dates and authors and small layout differences, so it is not byte-for-byte the SSRN version)
 - Every chart on one page that works offline: [`visuals/index.html`](visuals/index.html)
 
 Study window: <!--n:StudyStart-->2025-05-12<!--/n--> (vault deployment) to <!--n:StudyEnd-->2026-10-22<!--/n-->. Chain data comes from the Covalent GoldRush API unless a section says otherwise.
@@ -24,7 +25,7 @@ The largest borrower address received <!--n:TopOneShare-->45.6%<!--/n--> of all 
 
 ### 1a. What the collateral is
 
-I had written that the collateral was opaque. It isn't. Every loan is secured by a token from the protocol's "USD.AI Tokenized Hardware" contract, and each token's on-chain `tokenURI` points to a record the protocol publishes: server model, unit count, stated collateral value, useful life, depreciation start and, for the early loans, serial numbers. The host served <!--n:CollRecords-->87<!--/n--> records, including two for token IDs that are not minted; those two are left out of every total below.
+The collateral is less opaque than it first looks. Every loan is secured by a token from the protocol's "USD.AI Tokenized Hardware" contract, and each token's on-chain `tokenURI` points to a record the protocol publishes: server model, unit count, stated collateral value, useful life, depreciation start and, for the early loans, serial numbers. The host served <!--n:CollRecords-->87<!--/n--> records, including two for token IDs that are not minted; those two are left out of every total below.
 
 The active book is secured by <!--n:CollUnits-->630<!--/n--> units, about <!--n:CollGPUs-->4,560<!--/n--> GPUs counting eight per B200, B300 or H200 server, with a stated value of <!--n:CollValue-->$272.8M<!--/n--> against <!--n:Outstanding-->$182.2M<!--/n--> outstanding. That is a <!--n:BookLTV-->66.8%<!--/n--> loan-to-value, ranging from <!--n:LTVMin-->43%<!--/n--> to <!--n:LTVMax-->80%<!--/n--> by loan. Mixed and workstation rows are not in the GPU count. Every record assumes a three-year useful life with depreciation starting on borrow. The records are the protocol's own statements, hosted off-chain, so they are what USD.AI says the collateral is, not an appraisal.
 
@@ -38,7 +39,7 @@ The <!--n:NActive-->21<!--/n--> active loans run <!--n:TermMin-->2.1<!--/n--> to
 
 ### 2. Where the yield comes from
 
-sUSDai's NAV grew <!--n:AnnTotal-->8.17%<!--/n--> a year, and <!--n:CashCoverage-->93.7%<!--/n--> of the yield credited to holders has arrived as cash. Borrower interest was only <!--n:CashInterest-->$6.65M<!--/n--> of that cash. Base yield from stablecoin issuers was <!--n:CashBase-->$15.08M<!--/n-->: <!--n:CashBasePYUSD-->$6.36M<!--/n--> of PYUSD incentives harvested from the reserve and <!--n:CashBaseWM-->$8.72M<!--/n--> minted from M^0's yield-bearing wM. Each source on its own is smaller than borrower interest, but together they are more than twice as large. Over this window, holders received more cash from stablecoin issuers than from GPU borrowers. The one-off $7.82M wM deposit on 2026-02-02 drives much of that, so the mix is a historical fact, not a forecast.
+sUSDai's NAV grew <!--n:AnnTotal-->8.17%<!--/n--> a year, and <!--n:CashCoverage-->93.7%<!--/n--> of the yield credited to holders has arrived as cash. Borrower interest was only <!--n:CashInterest-->$6.65M<!--/n--> of that cash. Base yield from stablecoin issuers was <!--n:CashBase-->$15.08M<!--/n-->: <!--n:CashBasePYUSD-->$6.36M<!--/n--> of PYUSD incentives harvested from the reserve and <!--n:CashBaseWM-->$8.72M<!--/n--> minted from M^0's yield-bearing wM. The PYUSD incentives alone were close to borrower interest and the wM yield alone was larger; together they were more than twice as large. Over this window, holders received more cash from stablecoin issuers than from GPU borrowers. The one-off $7.82M wM deposit on 2026-02-02 drives much of that, so the mix is a historical fact, not a forecast.
 
 The layers, cumulative, with the share of credited yield each one brings coverage to:
 
@@ -98,7 +99,7 @@ Redemptions do not move with GPU rental prices. The Spearman correlation on week
 
 Over the same period, Livepeer gateways paid orchestrators <!--n:LPUSD-->$1.01M<!--/n-->, and Akash users spent <!--n:AKUSD-->$3.47M<!--/n--> (from the Akash Console API). USD.AI's originations were <!--n:CreditMultiple-->65<!--/n--> times both combined. That compares capital advanced with operating payments made by different people; it is not a ratio of credit to compute demand. None of the GPU use these loans finance shows up on-chain.
 
-![Monthly flows](paper/figures/fig_markets.png)
+![Cumulative flows](paper/figures/fig_markets.png)
 
 ![Akash GPUs and spend](paper/figures/fig_akash.png)
 
@@ -108,7 +109,7 @@ Over the same period, Livepeer gateways paid orchestrators <!--n:LPUSD-->$1.01M<
 
 ### 6b. What the debt implies about the compute
 
-The chain doesn't show the GPUs, but it shows what they have to earn. Interest plus straight-line amortization on the active loans comes to $89.9M a year. At the Akash H100 price of $2.56 an hour, borrowers must sell 35.1M GPU-hours a year to service that from rental income alone: 5,724 H100s running at 70% utilization, drawing about 8.6 MW before cooling. At $1.50 it's 9,769 GPUs and 14.7 MW. The whole Akash network has 390 GPUs. This is a floor, since it ignores the borrowers' own costs. The pledged fleet is about 4,560 GPUs, so at 70% utilization it covers debt service at $3.21 per GPU-hour, and at full utilization at $2.25. B200 and B300 parts rent above H100 rates today, so the fleet can carry the debt if it's rented. What the protocol doesn't publish is utilization, revenue, location or power contract.
+The chain doesn't show the GPUs, but it shows what they have to earn. Interest plus straight-line amortization on the active loans comes to <!--n:DebtService-->$89.9M<!--/n--> a year. At the Akash H100 price of $2.56 an hour, borrowers must sell <!--n:GPUhAkashPrice-->35.1<!--/n-->M GPU-hours a year to service that from rental income alone: <!--n:GPUsAkashPrice-->5,729<!--/n--> H100s running at 70% utilization, drawing about <!--n:MWAkashPrice-->8.6<!--/n--> MW before cooling. At $1.50 it's <!--n:GPUsLowPrice-->9,778<!--/n--> GPUs and <!--n:MWLowPrice-->14.7<!--/n--> MW. The whole Akash network has 390 GPUs. This is a floor, since it ignores the borrowers' own costs. The pledged fleet is about 4,560 GPUs, so at 70% utilization it covers debt service at <!--n:Breakeven-->$3.22<!--/n--> per GPU-hour, and at full utilization at <!--n:BreakevenFull-->$2.25<!--/n-->. B200 and B300 parts rent above H100 rates today, so the fleet can carry the debt if it's rented. What the protocol doesn't publish is utilization, revenue, location or power contract.
 
 ![GPUs needed to service the debt](paper/figures/fig_implied_gpus.png)
 
@@ -116,14 +117,14 @@ The framing comes from [Liquid Labor](https://liquid-labor.com), which measures 
 
 ### 7. What a neocloud unwind would do
 
-The borrowers are GPU operators, the sector that now carries more than $20B of GPU-backed debt and where CoreWeave's credit default swaps hit distressed levels in October 2026. USD.AI is a small on-chain slice of the same trade. Using the reconciled vault state, a default by the largest borrower (29.9% of outstanding principal) at a 40% recovery on the GPUs costs 5.9% of assets and leaves NAV at 1.054. The three largest borrowers (70.5%) take it to 0.965, below par. Every borrower takes it to 0.900, and if the open escrow is not returned either, to 0.640. These are arithmetic, not a credit model.
+The borrowers are GPU operators, the sector that now carries more than $20B of GPU-backed debt and where the cost of insuring CoreWeave's debt against default hit record highs in October 2026 ([Semafor](https://www.semafor.com/article/10/15/2026/the-cost-of-insuring-against-ai-company-defaults-spikes)). USD.AI is a small on-chain slice of the same trade. Using the reconciled vault state, a default by the largest borrower (29.9% of outstanding principal) at a 40% recovery on the GPUs costs 5.9% of assets and leaves NAV at 1.054. The three largest borrowers (70.5%) take it to 0.965, below par. Every borrower takes it to 0.900, and if the open escrow is not returned either, to 0.640. These are arithmetic, not a credit model.
 
 Three design features decide how that would play out. Nothing marks a loan down before a breach event, so holders who watch the queue could exit at par first. Exits are a queue, and today idle cash covers it 11 times over, but after the idle cash is gone the vault waits on 2.6 years of maturities. And sUSDai is collateral in Morpho and Pendle, so a NAV mark would trigger liquidations into thin pools. Every GPU-backed dollar shares these mechanics, the same borrowers' customers and the same used-GPU market, so an unwind would hit them together. The code here measures the three things that separate survivors: borrower-only cash yield, borrower concentration, and idle cash against the queue.
 
 ### 8. Risks the chain shows only in outline
 
 - **Related parties.** The same accounts submit the protocol multisig and the escrow Safe. The largest borrower, the fee recipient and the escrow all route to one off-ramp wallet. Fine on its face, but "13 independent borrowers" needs an entity map the chain doesn't give.
-- **Key compromise.** Admin roles and the escrow Safe sit with a few signer accounts. The [Railway incident](https://github.com/uwecerron/railway_blockchain_incident) this week showed what one leaked key does: 231 wallets, 22 chains, about seven hours.
+- **Key compromise.** Admin roles and the escrow Safe sit with a few signer accounts. The [Railway incident](https://github.com/uwecerron/railway_blockchain_incident) of October 21, 2026 showed what one leaked key does: 231 wallets, 22 chains, about seven hours.
 - **Fixed loans, floating benchmark.** Loans are fixed at 7% to 15% for 2.6 more years while the yield holders compare against moves.
 - **Custody, title and valuation.** The hardware is described on-chain down to model and serial number, but not who holds it, where, under what filing or insurance, or whether the stated values are appraisals. At 67% LTV on a three-year life, there's little room for error.
 - **Bridged exits.** 41% of shares are on other chains and must bridge back before they can queue.
@@ -133,7 +134,7 @@ Three design features decide how that would play out. Nothing marks a loan down 
 ### 9. Who this is for
 
 - **Traders:** three signals lead a NAV mark, and the code polls all three: a missed monthly repayment, the queue rising against idle cash (11x covered today), and the DEX discount to NAV.
-- **Allocators:** underwrite the $128.9M escrow first, price yield on borrower cash alone (28.5% coverage), treat the book as one neocloud exposure with 30% in a single name at 67% LTV, and ask who appraised the stated collateral values and what the fleet's utilization is.
+- **Allocators:** underwrite the $128.9M escrow first, price yield on borrower cash alone (<!--n:KappaBorrowers-->28.4%<!--/n--> coverage), treat the book as one neocloud exposure with 30% in a single name at 67% LTV, and ask who appraised the stated collateral values and what the fleet's utilization is.
 - **Neoclouds:** USD.AI already publishes model, count and stated value for every pledge. A borrower that added utilization, revenue and a power contract would be the first a lender could underwrite from public data, and could ask for less than the 10.26% weighted rate.
 - **Researchers:** frozen dataset, offline reproduction, method that transfers to any GPU-credit protocol. Open questions are collateral counts, borrower revenue and recoveries after the first default.
 
@@ -149,7 +150,7 @@ Three design features decide how that would play out. Nothing marks a loan down 
 | Akash spend, GPUs, providers, prices | Akash Console API |
 | H100 rental prices | GetDeploying (CC BY 4.0) |
 
-To be sure the GoldRush data is complete and correct, `python3 -m compute_forensics verify` pulls the same logs again from a public Arbitrum node with `eth_getLogs`, without GoldRush, and compares the two log by log (by transaction hash, topics and data) and by summed amounts. All 22 event sets match exactly: 246,176 logs covering every loan origination, repayment, migration, refinance, lender payout, fee, USDai mint and redemption, vault deposit, redemption request, escrow event and Livepeer ticket payment. It also compares token supply with the sum of holder balances and re-reads the escrow redemption receipt. Results are in `data/verification/onchain_checks.json` and in the verification table of the paper (Section IV).
+To be sure the GoldRush data is complete and correct, `python3 -m compute_forensics verify` pulls the same logs again from a public Arbitrum node with `eth_getLogs`, without GoldRush, and compares the two log by log (by transaction hash, topics and data) and by summed amounts. All 22 event sets match exactly: <!--n:NVerifyLogs-->246,262<!--/n--> logs covering every loan origination, repayment, migration, refinance, lender payout, fee, USDai mint and redemption, vault deposit, redemption request, escrow event and Livepeer ticket payment. It also compares token supply with the sum of holder balances and re-reads the escrow redemption receipt. Results are in `data/verification/onchain_checks.json` and in the verification table of the paper (Section IV).
 
 ![GoldRush vs node, every event set](paper/figures/fig_verification.png)
 
@@ -174,7 +175,7 @@ data/external/       GetDeploying weekly GPU prices (CC BY 4.0), unmodified
 results/             results.json, loans.csv, borrowers.csv, monthly_yield.csv, nav_daily.csv
 paper/               IEEE LaTeX source, generated numbers/tables, figures, main.pdf
 visuals/index.html   the whole study as one offline page
-tests/               40 offline unit tests, including key-leak tests
+tests/               41 offline unit tests, including key-leak tests
 data/verification/   the GoldRush-vs-chain check results
 ```
 

@@ -38,7 +38,7 @@ SECTIONS = [
         ("fig_redemptions", "Redemption requests and the H100 rental price on the same time axis. They do not move together."),
     ]),
     ("6. GPU credit vs. compute bought on-chain", [
-        ("fig_markets", "Monthly USD on a log scale: USD.AI lending and cash yield next to Akash and Livepeer spending."),
+        ("fig_markets", "Cumulative USD by month on a log scale: USD.AI lending and cash yield next to Akash and Livepeer spending."),
         ("fig_akash", "Akash leased GPUs and monthly spend (Akash Console API)."),
         ("fig_gpu_prices", "GPU rental prices on Akash and on centralized clouds (GetDeploying)."),
         ("fig_lorenz_markets", "How concentrated each side is: Livepeer gateways and orchestrators, and USD.AI borrowers."),
